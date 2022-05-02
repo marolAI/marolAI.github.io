@@ -42,7 +42,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Andriamarolahy Rabetokotany - [@Massa_Be](https://https://twitter.com/Massa_Be) - https://marolai.github.io
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/marolAI/marolAI.github.io](https://github.com/marolAI/marolAI.github.io)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
