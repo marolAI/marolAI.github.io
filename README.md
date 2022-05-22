@@ -2,7 +2,6 @@
 
 [![Github][github-shield]][github-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-[![Gmail][gmail-shield]][gmail-address]
 [![Twitter][twitter-shield]][twitter-url]
 [![Stackoverflow][stackoverflow-shield]][stackoverflow-url]
 [![Kaggle][kaggle-shield]][kaggle-url]
@@ -45,9 +44,12 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Andriamarolahy Rabetokotany - [@Massa_Be](https://https://twitter.com/Massa_Be) - https://marolai.github.io
+Website: https://marolai.github.io
 
 Project Link: [https://github.com/marolAI/marolAI.github.io](https://github.com/marolAI/marolAI.github.io)
+
+Mail: [*marolahyrabe@gmail.com*](mailto:marolahyrabe@gmail.com) or 
+[*arabetokotany@aimsammi.org*](mailto:arabetokotany@aimsammi.org)
 
 <p align="right">(<a href="#top">⏫back to top</a>)</p>
 
@@ -55,8 +57,6 @@ Project Link: [https://github.com/marolAI/marolAI.github.io](https://github.com/
 
 [github-shield]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
 [github-url]: https://github.com/marolAI
-[gmail-shield]:https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
-[gmail-address]: arabetokotany@aimsammi.org
 [linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
 [linkedin-url]: https://www.linkedin.com/in/andriamarolahy-rabetokotany-a84986143/
 [twitter-shield]: https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white
