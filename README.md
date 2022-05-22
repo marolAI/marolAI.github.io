@@ -1,14 +1,19 @@
 <div id="top"></div>
 
-[![MIT License][license-shield]][license-url]
+[![Github][github-shield]][github-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![Gmail][gmail-shield]][gmail-address]
+[![Twitter][twitter-shield]][twitter-url]
+[![Stackoverflow][stackoverflow-shield]][stackoverflow-url]
+[![Kaggle][kaggle-shield]][kaggle-url]
+
 
 <br />
 
-- 👋 Hi, I’m @marolAI
-- 👀 I’m interested in NLP, Computer Vision and AI in general.
-- 💞️ I’m looking to collaborate on AI projects
-- 📫 You can reach me at [marolahyrabe@gmail.com](mailto:marolahyrabe@gmail.com) or [arabetokotany@aimsammi.org](mailto:arabetokotany@aimsammi.org)
+    👋 Hi, I’m @marolAI
+    🎓 I have a Master's degree in Artificial Intelligence.
+    👀 I’m interested in NLP, Computer Vision and AI in general.
+    💞️ Currently I am open for a PhD or a Data Science position.
 
 
 <!-- ABOUT THE PROJECT -->
@@ -25,7 +30,7 @@
 * [Smart Identity](https://github.com/marolAI/Smart-Identity)
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">⏫back to top</a>)</p>
 
 
 <!-- LICENSE -->
@@ -33,7 +38,7 @@
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">⏫back to top</a>)</p>
 
 
 
@@ -44,13 +49,21 @@ Andriamarolahy Rabetokotany - [@Massa_Be](https://https://twitter.com/Massa_Be) 
 
 Project Link: [https://github.com/marolAI/marolAI.github.io](https://github.com/marolAI/marolAI.github.io)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+<p align="right">(<a href="#top">⏫back to top</a>)</p>
 
 
 
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/marolAI/marolAI.github.io/blob/main/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: img/screenshot.png
+[github-shield]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
+[github-url]: https://github.com/marolAI
+[gmail-shield]:https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white
+[gmail-address]: arabetokotany@aimsammi.org
+[linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
+[linkedin-url]: https://www.linkedin.com/in/andriamarolahy-rabetokotany-a84986143/
+[twitter-shield]: https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white
+[twitter-url]:https://twitter.com/Massa_Be
+[stackoverflow-shield]: https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white
+[stackoverflow-url]: https://stackoverflow.com/users/9560986/r-marolahy
+[kaggle-shield]: https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white
+[kaggle-url]: https://www.kaggle.com/gasymrepresent2018
+[product-screenshot]:img/homepage.png
 
