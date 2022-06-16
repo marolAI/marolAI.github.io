@@ -1,4 +1,4 @@
-<div id="top"></div>
+<!--div id="top"></div>
 
 [![Github][github-shield]][github-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
@@ -13,13 +13,13 @@
     🎓 I have a Master's degree in Artificial Intelligence.
     👀 I’m interested in NLP, Computer Vision and AI in general.
     💞️ Currently I am open for a PhD or a Data Science position.
+-->
 
-
-<!-- ABOUT THE PROJECT -->
+<!-- ABOUT THE PROJECT 
 ## My portfolio website
 
 [![Product Name Screen Shot][product-screenshot]](https://marolai.github.io/)
-
+-->
 
 ## My Projects
 
@@ -32,13 +32,13 @@
 <p align="right">(<a href="#top">⏫back to top</a>)</p>
 
 
-<!-- LICENSE -->
+<!-- LICENSE 
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">⏫back to top</a>)</p>
-
+-->
 
 
 <!-- CONTACT -->
@@ -51,10 +51,11 @@ Project Link: [https://github.com/marolAI/marolAI.github.io](https://github.com/
 Mail: [*marolahyrabe@gmail.com*](mailto:marolahyrabe@gmail.com) or 
 [*arabetokotany@aimsammi.org*](mailto:arabetokotany@aimsammi.org)
 
+
 <p align="right">(<a href="#top">⏫back to top</a>)</p>
 
 
-
+<!--
 [github-shield]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
 [github-url]: https://github.com/marolAI
 [linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
@@ -67,3 +68,4 @@ Mail: [*marolahyrabe@gmail.com*](mailto:marolahyrabe@gmail.com) or
 [kaggle-url]: https://www.kaggle.com/gasymrepresent2018
 [product-screenshot]:img/homepage.png
 
+-->
