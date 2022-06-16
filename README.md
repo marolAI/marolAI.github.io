@@ -28,11 +28,11 @@
 * [Robust Machine Learning with Imbalanced Data: Expanding Mixup](https://github.com/marolAI/Expanding-Mixup)
 * [Smart Identity](https://github.com/marolAI/Smart-Identity)
 
-
+<!--
 <p align="right">(<a href="#top">⏫back to top</a>)</p>
 
 
-<!-- LICENSE 
+ LICENSE 
 ## License
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
@@ -51,11 +51,11 @@ Project Link: [https://github.com/marolAI/marolAI.github.io](https://github.com/
 Mail: [*marolahyrabe@gmail.com*](mailto:marolahyrabe@gmail.com) or 
 [*arabetokotany@aimsammi.org*](mailto:arabetokotany@aimsammi.org)
 
-
+<!--
 <p align="right">(<a href="#top">⏫back to top</a>)</p>
 
 
-<!--
+
 [github-shield]: https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white
 [github-url]: https://github.com/marolAI
 [linkedin-shield]: https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white
