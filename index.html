@@ -1,538 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My portfolio</title>
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+    <script scr="js/script.js" type="text/javascript">
+
+    </script>
 </head>
 
-<body class="">
-  <nav class="navbar navbar-expand-md navbar-light bg-light mb-5 pt-3">
-    <div class="container">
-      <div class="collapse navbar-collapse" id="navbar4">
-        <ul class="navbar-nav">
-          <li class="nav-link">
-            <img class="nav-im img-fluid float-right rounded-circle" src="img/profile.jpeg">
-            <!--<a class="nav-link" href="https://marolai.github.io/data/andriamarolahy_rabetokotany_resume.pdf"><button class="button-cv"><span>CV</span></button></a>-->
-          </li>
-        </ul>
-      </div>
-      <!--<div class="col-md-3 pt-2 me-auto"><img class="img-fluid float-right rounded-circle" src="img/profile.jpeg" width="100" height="100"></div>-->
-      <div class="social-icons ml-auto">
-        <a href="https://www.linkedin.com/in/andriamarolahy-rabetokotany-a84986143/" title="linkedin">
-          <i class="fa fa-linkedin-square"></i>
-        </a>
-        <a href="https://github.com/marolAI" title="github">
-          <i class="fa fa-github-square"></i>
-        </a>
-        </a>
-        <a href="https://twitter.com/Massa_Be" title="twitter">
-          <i class="fa fa-twitter-square"></i>
-        </a>
-      </div>
-    </div>
-  </nav>
-  <section id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 pb-3" style="">
-          <h2 class="pb-3"><i>Hey, I am Marolahy <span class="wave"><img src="img/waving.png" width="45" height="45"/></span></i></h2> <!--👋-->
-          <p class="w-100">I am a full time R&D Scientist at Pulse Madagascar. 
-            I obtained a Master's degree in Artificial Intelligence from the African Masters Of Machine Intelligence (AMMI) Rwanda.
-            <br><br>My research interest is in Computer Vision, Natural Language Processing, and deep learning in general. Currently I am open for a <b>PhD</b> or a <b>Data Science</b> position.<br>
-            <br><a href="https://marolai.github.io/data/andriamarolahy_rabetokotany_resume.pdf"><button class="button-cv"><span>CV</span></button></a>
-          </p>
-        </div>
-        <!--<div class="col-md-3 pt-2"><img class="img-fluid float-right rounded-circle" src="img/profile.jpeg" width="350" height="350"></div>-->
-      </div>
-    </div>
-  </section>
-  <section id="skills">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-12 pt-4">
-          <h2><i>Skills</i></h2>
-          <hr class="mb-4">
-          <div class="row">
-            <div class="col-md-6">
-              <ul class="skills">
-                <li><b>Math & Statistics</b>: calculus, linear algebra, maximum likelihood estimators, distributors, and statistical tests</li>
-                <li><b>Programming</b>: Python, libraries: numpy, pandas, scikit-learn, pytorch, tensorflow, keras and openCV.</li>
-                <li><b>Data Visualization</b>: Matplotlib, Seaborn and Plotly.</li>
-                <li><b>Analytics and Modeling</b>: analyze data, create models to gather new insights and predict possible outcomes.</li>
-                <li><b>Machine Learning Methods</b>: regression, classification, ensemble methods, neural networks and deep learning, transfert learning, clustering, dimensionality reduction, and reinforcement learning.</li>
-              </ul>
+<body>
+    <!-- ============= Navbar ============== -->
+    <header class="header-outer">
+        <div class="header-inner responsive-wrapper">
+            <div class="header-logo">
+                <h1>Marolahy</h1>
             </div>
-            <div class="col-md-6">
-              <div id="chartdiv"></div>
-            </div>
-          </div>
+            <nav class="header-navigation">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
-      </div>
-    </div>
-  </section>
-  <section id="projects">
-    <div class="py-4">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h2><i>Projects</i></h2>
-            <hr class="mb-4">
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-4 p-3">
-            <div class="img-card iCard-style3">
-              <div class="card-content">
-                <div class="card-image">
-                    <span class="card-title">VQA-BERT</span>
-                    <img src="img/BERT-VQA.png"/>
-                </div>
-                
-                <div class="card-text">
-                    <p>Evaluating Modern Unimodal Baselines for Visual Question Answering</p>
-                </div>
-              </div>
-              <div class="card-link">
-                <a href="https://github.com/marolAI/VQA-BERT" title="Read Full">
-                    <i class="fa fa-github fa-3x"></i>
-                </a>
-              </div>
+    </header>
+
+    <!-- ============= About ============== -->
+    <section id="about" class="section section-1">
+        <div class="container intro">
+            <div class="container d-flex justify-content-center">
+                <img class="avatar" src="images/profile.jpeg">
+            </div><br>
+            <h2 class="container d-flex justify-content-center"><i>Hello <span class="wave"><img
+                            src="images/waving-white.png" width="45" height="45" /></span></i>
+            </h2>
+            <br>
+            <div class="container d-flex justify-content-center">
+                <p>
+                    I am Marolahy. I am a full time R&D Scientist at Pulse Madagascar.
+                    I obtained a Master's degree in Artificial Intelligence from the African Masters Of Machine
+                    Intelligence (AMMI) Rwanda. My research interest is in Computer Vision, Natural Language Processing,
+                    and deep
+                    learning in general. Currently I am open for a <b>PhD</b> or a <b>Data Science</b> position.<br>
+
+                </p>
             </div>
-          </div>    
-          <div class="col-md-4 p-3">
-            <div class="img-card iCard-style3">
-              <div class="card-content">
-                <div class="card-image">
-                    <span class="card-title">Smart Identity</span>
-                    <img src="img/smart_identity.png"/>
-                </div>
-                
-                <div class="card-text">
-                    <p>Digitize the ECOWAS ID card</p>
-                </div>
-              </div>
-              <div class="card-link">
-                <a href="https://github.com/marolAI/Smart-Identity" title="Read Full">
-                    <i class="fa fa-github fa-3x"></i>
-                </a>
-              </div>
-            </div>
-          </div> 
-          <div class="col-md-4 p-3">
-            <div class="img-card iCard-style3">
-              <div class="card-content">
-                <div class="card-image">
-                    <span class="card-title">Mixup</span>
-                    <img src="img/mixup_SMOTE1.png"/>
-                </div>
-                
-                <div class="card-text">
-                    <p>Robust Machine Learning with Imbalanced Data: Expanding Mixup</p>
-                </div>
-              </div>
-              <div class="card-link">
-                <a href="https://github.com/marolAI/Expanding-Mixup" title="Read Full">
-                    <i class="fa fa-github fa-3x"></i>
-                </a>
-              </div>
-            </div>
-          </div>
+            <span class="container d-flex justify-content-center"><a href="#about"><i
+                        class="fa fa-angle-down fa-4x"></i></a></span>
         </div>
-      </div>
-    </div>
-  </section>
-  <section id="workshop">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 col-md-12 pt-4">
-          <h2><i>Workshop</i></h2>
-          <hr class="mb-4">
-          <div class="row">
-            <div class="col-md-12">
-                <i class="fa fa-hand-o-right" aria-hidden="true"></i>
-                <a href="https://seams-workshop.gitlab.io/participants/dec2018/">  
-                    https://seams-workshop.gitlab.io/participants/dec2018/
-                </a>
-                <br style="margin-bottom:3cm;">
+    </section>
+
+    <!-- ============= Projets ============== -->
+    <section id="projects">
+        <div class="py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2><i>Projects</i></h2>
+                        <hr class="mb-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="img-card iCard-style3">
+                            <div class="card-content">
+                                <div class="card-image">
+                                    <span class="card-title">VQA-BERT</span>
+                                    <img src="images/BERT-VQA.png" />
+                                </div>
+
+                                <div class="card-text">
+                                    <p>Evaluating Modern Unimodal Baselines for Visual Question Answering</p>
+                                </div>
+                            </div>
+                            <div class="card-link">
+                                <a target="_blank" rel="noopener noreferrer" href="https://github.com/marolAI/VQA-BERT"
+                                    title="Read Full">
+                                    code <i class="fa fa-external-link"></i>
+                                </a>
+                                &nbsp;&nbsp;&nbsp;
+                                <a target="_blank" rel="noopener noreferrer"
+                                    href="https://marolai.github.io/data/vqa-bert.pdf" title="Read Full">
+                                    report <i class="fa fa-external-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="img-card iCard-style3">
+                            <div class="card-content">
+                                <div class="card-image">
+                                    <span class="card-title">Smart Identity</span>
+                                    <img src="images/smart_identity.png" />
+                                </div>
+
+                                <div class="card-text">
+                                    <p>Digitize the ECOWAS ID card</p>
+                                </div>
+                            </div>
+                            <div class="card-link">
+                                <a target="_blank" rel="noopener noreferrer"
+                                    href="https://github.com/marolAI/Smart-Identity" title="Read Full">
+                                    code <i class="fa fa-external-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="img-card iCard-style3">
+                            <div class="card-content">
+                                <div class="card-image">
+                                    <span class="card-title">Mixup</span>
+                                    <img src="images/mixup_SMOTE1.png" />
+                                </div>
+
+                                <div class="card-text">
+                                    <p>Robust Machine Learning with Imbalanced Data: Expanding Mixup</p>
+                                </div>
+                            </div>
+                            <div class="card-link">
+                                <a target="_blank" rel="noopener noreferrer"
+                                    href="https://github.com/marolAI/Expanding-Mixup" title="Read Full">
+                                    code <i class="fa fa-external-link"></i>
+                                </a>
+                                &nbsp;&nbsp;&nbsp;
+                                <a target="_blank" rel="noopener noreferrer"
+                                    href="https://marolai.github.io/data/mixup.pdf" title="Read Full">
+                                    report <i class="fa fa-external-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <div class="bg-light">
-    <div class="container">
-      <div class="row text-center pb-5">
-        <div class="col-md-12 text-center pt-4" style="">
-          <p class="">© Andriamarolahy Rabetokotany 2022</p>
+    </section>
+    <!-- ============= Contact ============== -->
+    <section id="contact">
+        <div class="container footer-container">
+            <div class="row">
+                <div class="col-12">
+                    <h2><i>Let's keep in touch</i></h2>
+                    <hr class="mb-4">
+                </div>
+            </div>
+            <div class="row footer-row">
+                <div class="col-xs-12 col-sm-6 col-md-6 text-center">
+                    <h4 class="text-center">Contact me at</h4>
+                    <p>
+                        <span>arabetokotany[at]aimsammi[dot]org</span><br>
+                        <i class="fa fa-mobile"></i><span> +261346171397</span>
+                    </p>
+                    <h4 class="text-center">Find my CV <a
+                            href="https://marolai.github.io/data/andriamarolahy_rabetokotany_resume.pdf">here</a>.
+                    </h4>
+                </div>
+
+                <div class="col-xs-12 col-md-6 col-sm-6 social-section">
+                    <div class="text-center">
+                        <h4 class="text-center">Also, follow me on</h4>
+                        <div class="text-center social-buttons">
+                            <a href="https://www.linkedin.com/in/andriamarolahy-rabetokotany-a84986143/"
+                                class="btn btn-default btn-lg"><i class="fa fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/marolAI" class="btn btn-default btn-lg"><i
+                                    class="fa fa-github"></i>
+                            </a>
+
+                            <a href="https://twitter.com/Massa_Be" class="btn btn-default btn-lg"><i
+                                    class="fa fa-twitter"></i>
+                            </a>
+                            <a href="https://stackoverflow.com/users/9560986/r-marolahy"
+                                class="btn btn-default btn-lg"><i class="fa fa-stack-overflow"></i>
+                            </a>
+                            <a href="https://www.duolingo.com/profile/Maro8132" class="btn btn-default btn-lg">
+                                <iconify-icon icon="simple-icons:duolingo"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+    </section>
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-  </script>
+    <!-- ============= Footer ============== -->
+    <footer>
+        <div class="row text-center pb-5">
+            <div class="col-md-12 text-center pt-4">
+                <p class="">© MarolAI 2022</p>
+            </div>
+        </div>
+    </footer>
 
-  <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
-  <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
-  <script src="https://cdn.amcharts.com/lib/4/plugins/wordCloud.js"></script>
-  <script src="https://cdn.amcharts.com/lib/4/themes/moonrisekingdom.js"></script>
-  <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
-      <script>
-        // Themes begin
-        am4core.useTheme(am4themes_moonrisekingdom);
-        am4core.useTheme(am4themes_animated);
-        // Themes end
-
-        var chart = am4core.create("chartdiv", am4plugins_wordCloud.WordCloud);
-        chart.fontFamily = "Courier New";
-        var series = chart.series.push(new am4plugins_wordCloud.WordCloudSeries());
-        series.randomness = 0;
-        series.rotationThreshold = 0.2;
-
-        series.data = [ {
-            "tag": "python",
-            "count": "1765836"
-        }, {
-            "tag": "linear-algebra",
-            "count": "1517355"
-        }, {
-            "tag": "data-analysis",
-            "count": "1287629"
-        }, {
-            "tag": "machine-learning",
-            "count": "1263946"
-        }, {
-            "tag": "deep-learning",
-            "count": "1174721"
-        }, {
-            "tag": "artificial-intelligence",
-            "count": "1116769"
-        }, {
-            "tag": "supervised-learning",
-            "count": "944983"
-        }, {
-            "tag": "unsupervised-learning",
-            "count": "805679"
-        }, {
-            "tag": "classification",
-            "count": "606051"
-        }, {
-            "tag": "regression",
-            "count": "591410"
-        }, {
-            "tag": "neural-networks",
-            "count": "574684"
-        }, {
-            "tag": "calculus",
-            "count": "550916"
-        }, {
-            "tag": "modeling",
-            "count": "479892"
-        }, {
-            "tag": "SQL",
-            "count": "343092"
-        }, {
-            "tag": "mysql",
-            "count": "303311"
-        }, {
-            "tag": "linux",
-            "count": "296963"
-        }, {
-            "tag": "numpy",
-            "count": "288445"
-        }, {
-            "tag": "matplotlib",
-            "count": "286823"
-        }, {
-            "tag": "pandas",
-            "count": "280079"
-        }, {
-            "tag": "scikit-learn",
-            "count": "277144"
-        }, {
-            "tag": "pytorch",
-            "count": "263451"
-        }, {
-            "tag": "tensorflow",
-            "count": "257159"
-        }, {
-            "tag": "keras",
-            "count": "255661"
-        }, {
-            "tag": "opencv",
-            "count": "253824"
-        }, {
-            "tag": "statistics",
-            "count": "222387"
-        }, {
-            "tag": "bash",
-            "count": "219827"
-        }, {
-            "tag": "regex",
-            "count": "203121"
-        }, {
-            "tag": "git",
-            "count": "202547"
-        }, {
-            "tag": "postgresql",
-            "count": "196727"
-        }, {
-            "tag": "django",
-            "count": "191174"
-        }, {
-            "tag": "excel",
-            "count": "188787"
-        }, {
-            "tag": "xml",
-            "count": "180742"
-        }, {
-            "tag": "asp.net-mvc",
-            "count": "178291"
-        }, {
-            "tag": "linux",
-            "count": "173278"
-        }, {
-            "tag": "angular",
-            "count": "154447"
-        }, {
-            "tag": "database",
-            "count": "153581"
-        }, {
-            "tag": "wpf",
-            "count": "147538"
-        }, {
-            "tag": "spring",
-            "count": "147456"
-        }, {
-            "tag": "wordpress",
-            "count": "145801"
-        }, {
-            "tag": "python-3.x",
-            "count": "145685"
-        }, {
-            "tag": "vba",
-            "count": "139940"
-        }, {
-            "tag": "string",
-            "count": "136649"
-        }, {
-            "tag": "xcode",
-            "count": "130591"
-        }, {
-            "tag": "windows",
-            "count": "127680"
-        }, {
-            "tag": "reactjs",
-            "count": "125021"
-        }, {
-            "tag": "vb.net",
-            "count": "122559"
-        }, {
-            "tag": "html5",
-            "count": "118810"
-        }, {
-            "tag": "eclipse",
-            "count": "115802"
-        }, {
-            "tag": "multithreading",
-            "count": "113719"
-        }, {
-            "tag": "mongodb",
-            "count": "110348"
-        }, {
-            "tag": "laravel",
-            "count": "109340"
-        }, {
-            "tag": "bash",
-            "count": "108797"
-        }, {
-            "tag": "git",
-            "count": "108075"
-        }, {
-            "tag": "oracle",
-            "count": "106936"
-        }, {
-            "tag": "pandas",
-            "count": "96225"
-        }, {
-            "tag": "postgresql",
-            "count": "96027"
-        }, {
-            "tag": "twitter-bootstrap",
-            "count": "94348"
-        }, {
-            "tag": "forms",
-            "count": "92995"
-        }, {
-            "tag": "image",
-            "count": "92131"
-        }, {
-            "tag": "macos",
-            "count": "90327"
-        }, {
-            "tag": "algorithm",
-            "count": "89670"
-        }, {
-            "tag": "python-2.7",
-            "count": "88762"
-        }, {
-            "tag": "scala",
-            "count": "86971"
-        }, {
-            "tag": "visual-studio",
-            "count": "85825"
-        }, {
-            "tag": "list",
-            "count": "84392"
-        }, {
-            "tag": "excel-vba",
-            "count": "83948"
-        }, {
-            "tag": "winforms",
-            "count": "83600"
-        }, {
-            "tag": "apache",
-            "count": "83367"
-        }, {
-            "tag": "facebook",
-            "count": "83212"
-        }, {
-            "tag": "matlab",
-            "count": "82452"
-        }, {
-            "tag": "performance",
-            "count": "81443"
-        }, {
-            "tag": "css3",
-            "count": "78250"
-        }, {
-            "tag": "entity-framework",
-            "count": "78243"
-        }, {
-            "tag": "hibernate",
-            "count": "76123"
-        }, {
-            "tag": "typescript",
-            "count": "74867"
-        }, {
-            "tag": "linq",
-            "count": "73128"
-        }, {
-            "tag": "swing",
-            "count": "72333"
-        }, {
-            "tag": "function",
-            "count": "72043"
-        }, {
-            "tag": "amazon-web-services",
-            "count": "71155"
-        }, {
-            "tag": "qt",
-            "count": "69552"
-        }, {
-            "tag": "rest",
-            "count": "69138"
-        }, {
-            "tag": "shell",
-            "count": "68854"
-        }, {
-            "tag": "azure",
-            "count": "67431"
-        }, {
-            "tag": "firebase",
-            "count": "66411"
-        }, {
-            "tag": "api",
-            "count": "66158"
-        }, {
-            "tag": "maven",
-            "count": "66113"
-        }, {
-            "tag": "powershell",
-            "count": "65467"
-        }, {
-            "tag": ".htaccess",
-            "count": "65014"
-        }, {
-            "tag": "sqlite",
-            "count": "64888"
-        }, {
-            "tag": "file",
-            "count": "62783"
-        }, {
-            "tag": "codeigniter",
-            "count": "62393"
-        }, {
-            "tag": "unit-testing",
-            "count": "61909"
-        }, {
-            "tag": "perl",
-            "count": "61752"
-        }, {
-            "tag": "loops",
-            "count": "61015"
-        }, {
-            "tag": "symfony",
-            "count": "60820"
-        }, {
-            "tag": "selenium",
-            "count": "59855"
-        }, {
-            "tag": "google-maps",
-            "count": "59616"
-        }, {
-            "tag": "csv",
-            "count": "59600"
-        }, {
-            "tag": "uitableview",
-            "count": "59011"
-        }, {
-            "tag": "web-services",
-            "count": "58916"
-        }, {
-            "tag": "cordova",
-            "count": "58195"
-        }, {
-            "tag": "class",
-            "count": "58055"
-        }, {
-            "tag": "google-chrome",
-            "count": "56836"
-        }, {
-            "tag": "ruby-on-rails-3",
-            "count": "55962"
-        }, {
-            "tag": "android-studio",
-            "count": "55801"
-        }, {
-            "tag": "tsql",
-            "count": "55736"
-        }, {
-            "tag": "validation",
-            "count": "55531"
-        }];
-
-        series.dataFields.word = "tag";
-        series.dataFields.value = "count";
-
-        series.heatRules.push({
-        "target": series.labels.template,
-        "property": "fill",
-        "min": am4core.color("#BEBFBF"), //#0000CC
-        "max": am4core.color("#222222"), //#CC00CC
-        "dataField": "value"
-        });
-
-        var hoverState = series.labels.template.states.create("hover");
-        hoverState.properties.fill = am4core.color("#FF0000");
-    </script>
 </body>
+
 </html>
