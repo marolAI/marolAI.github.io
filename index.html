@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div>
+    <div class="navbar-container">
         <div class="menu-icon" onclick="toggleNavActive()">
             <span class="menu-icon-line menu-icon-line-left"></span>
             <span class="menu-icon-line"></span>
@@ -27,11 +27,11 @@
         <div class="nav">
             <div class="nav-content">
                 <ul class="nav-list">
-                    <a href="#home" class="nav-list-item" onclick="scrollToSection('home')">
+                    <a href="#" class="nav-list-item" onclick="scrollToSection('home')">
                         <i class="fa fa-home"></i>
                         <span class="label">Home</span>
                     </a>
-                    <a href="#" class="nav-list-item" onclick="scrollToSection('home')">
+                    <a href="#about" class="nav-list-item" onclick="scrollToSection('about')">
                         <i class="fa fa-info-circle"></i>
                         <span class="label">About</span>
                     </a>
@@ -48,188 +48,163 @@
         </div>
     </div>
     
-    <section id="home">
-        <div class="container">
-            <div class="intro">
-                <div class="avatar">
-                    <img src="img/profile.jpg">
-                </div>
-                <div class="title">
-                    <h3>Andriamarolahy Rabetokotany</h3>
-                    <h5>Data Scientist & AI/ML Engineer</h5>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/andriamarolahy-rabetokotany-a84986143/">
-                            <i class="fa fa-linkedin fa-lg fa-fw"></i>
-                        </a>
-                        <a href="https://github.com/marolAI">
-                            <i class="fa fa-github fa-lg fa-fw"></i>
-                        </a>
-                        <a href="https://twitter.com/Massa_Be">
-                            <i class="fa fa-twitter fa-lg fa-fw"></i>
-                        </a>
-                        <a href="https://stackoverflow.com/users/9560986/r-marolahy">
-                            <i class="fa fa-stack-overflow fa-lg fa-fw"></i>
-                        </a>
+    <div class="fullpage" id="fullpage">
+        <div class="section" id="home">
+            <div class="container">
+                <div class="intro">
+                    <div class="avatar">
+                        <img src="img/profile.jpg">
+                    </div>
+                    <div class="title">
+                        <b>Andriamarolahy Rabetokotany</b>
+                        <h5>Data Scientist & AI/ML Engineer</h5>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/andriamarolahy-rabetokotany-a84986143">
+                                <i class="fa fa-linkedin fa-lg fa-fw"></i>
+                            </a>
+                            <a href="https://github.com/marolAI">
+                                <i class="fa fa-github fa-lg fa-fw"></i>
+                            </a>
+                            <a href="https://twitter.com/Massa_Be">
+                                <i class="fa fa-twitter fa-lg fa-fw"></i>
+                            </a>
+                            <a href="https://stackoverflow.com/users/9560986/r-marolahy">
+                                <i class="fa fa-stack-overflow fa-lg fa-fw"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bio">
+                        <b>Welcome to my portfolio website!</b>
+                        <p class="what-i-do">
+                            I use data and machine learning techniques to solve business challenges. 
+                            I find joy in expanding my knowledge through continuous learning.
+                            Find out more about my background, skills, and experience in the sections below.
+                        </p>
                     </div>
                 </div>
-                <div class="bio">
-                    <p>I use data and machine learning to solve business problems. I enjoy learning new things.</p>
-                    <ul class="tags">
-                        <li><a href="#" class="tag">SQL</a></li>
-                        <li><a href="#" class="tag">Python</a></li>
-                        <li><a href="#" class="tag">Data Analysis</a></li>
-                        <li><a href="#" class="tag">Data Visualization</a></li>
-                        <li><a href="#" class="tag">Machine Learning</a></li>
+            </div>
+        </div>
+
+        <!--================= About ============== -->
+        <div class="section" id="about">
+            <div class="container">
+                <div id="about-section">
+                    <img id="about-image" src="img/about.png" alt="About Me">
+                    <div id="about-text">
+                        <b>Hi, I am Marolahy.</b>
+                        <p>
+                            I hold <b>a Master of Science degree in AI/ML Engineering</b>, which has equipped me with a solid foundation in the latest techniques and methodologies.
+                            Over the past two years, I have honed my skills by applying AI and ML in various business domains to deliver effective solutions.
+                            My expertise lies in leveraging Python to develop innovative algorithms and models.
+                            I am passionate about problem-solving, I constantly explore new technologies and stay updated with the latest advancements in the AI/ML domain.
+                            Explore my portfolio projects to see how I have leveraged AI and ML to drive positive outcomes for businesses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============= Projects ============== -->    
+        <div class="section" id="projects">
+            <div class="container">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>
+                                <b>Evaluating Modern Language-Only Baseline (BERT) for Visual Question Answering (VQA)</b>
+                            </h3>
+                            <p>
+                                VQA involves answering questions about images using natural language. 
+                                Initially, RNNs, LSTMs, and GRUs with pretrained word embeddings were used for question-only baselines. 
+                                However, with advancements, large-scale pretrained language models like BERT have become involved. 
+                                This project aims to retrain and evaluate a language-only baseline VQA model using BERT.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/marolAI/VQA-BERT" title="Read Full">
+                                <i class="fa fa-github fa-fw"></i>
+                            </a>
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://github.com/marolAI/VQA-BERT/blob/main/report/vqa-bert.pdf" title="Read Full">
+                                <i class="fa fa-link fa-fw"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>
+                                <b>Robust Machine Learning With Imbalanced Data: Expanding Mixup</b>
+                            </h3>
+                            <p>
+                                Imbalanced learning focuses on learning from imbalanced data.
+                                SMOTE is a technique to address this issue, but it has limitations in predicting the minority class when data is highly skewed or outside the training set.
+                                This is because of the use of ERM for training. Mixup is an algorithm that can overcome this limitation. 
+                                The project aims to combine SMOTE and Mixup to predict fraudulent credit card transactions in an imbalanced dataset.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/marolAI/Expanding-Mixup" title="Read Full">
+                                <i class="fa fa-github fa-fw"></i>
+                            </a>
+                            <a target="_blank" rel="noopener noreferrer"
+                                href="https://github.com/marolAI/Expanding-Mixup/blob/main/report/mixup.pdf" title="Read Full">
+                                <i class="fa fa-link fa-fw"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>
+                                <b>Smart Identity: classify and extract personal information from the ECOWAS ID card.</b>
+                            </h3>
+                            <p>
+                                Processing paper-based documents is a significant industry problem. 
+                                It not only demands human resources but also consumes time, leading to frustration and inefficiency. 
+                                This project aims to automate the extraction of personal information from ECOWAS ID cards using a model based on CNN for classification and Pytesseract for OCR.
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a target="_blank" rel="noopener noreferrer" href="https://github.com/marolAI/Smart-Identity" title="Read Full">
+                                <i class="fa fa-github fa-fw"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <!-- Pagination links will be dynamically created here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- ============= Contacts ============== -->
+        <div class="section" id="contact">
+            <div class="contact-wrapper">
+                <div class="direct-contact-container">
+                    <ul class="contact-list">
+                        <li class="contact-list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Antananarivo, Madagascar</span></i></li>
+                        <li class="contact-list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail">marolahyrabe@gmail.com</span></i></li>
                     </ul>
+                    Connect with me on:
+                    <ul class="social-media-list">
+                        <li><a href="https://www.linkedin.com/in/andriamarolahy-rabetokotany-a84986143" target="_blank" class="contact-icon">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="https://github.com/marolAI" target="_blank" class="contact-icon">
+                            <i class="fa fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="https://twitter.com/Massa_Be" target="_blank" class="contact-icon">
+                            <i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="https://stackoverflow.com/users/9560986/r-marolahy" target="_blank" class="contact-icon">
+                            <i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
+                        </li>       
+                    </ul>
+                    <hr>
+                    <div class="copyright">&copy; 2023 Marolahy</div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- ============= Projects ============== -->    
-    
-    <section id="projects">
-        <div class="container">
-            <div class="row">
-                <div class="card">
-                    <!-- <div class="card-header">
-                        <img src="img/portfolio/BERT-VQA.png" alt="vqa-bert" />
-                    </div> -->
-                    <div class="card-body">
-                        <h5>
-                            Evaluating Modern Language-Only Baseline (BERT) for Visual Question Answering (VQA)
-                        </h5>
-                        <div >
-                            <ul class="tags">
-                                <li id="" class="tag">Python</li>
-                                <li id="" class="tag">DL</li>
-                                <li id="" class="tag">NLP</li>
-                                <li id="" class="tag">CV</li>
-                            </ul>
-                        </div>
-                        <p>
-                            VQA is the task consists of answering natural language questions about any given image. When the task was originally 
-                            released in 2015, deep sequence models like RNNs, LSTMs, GRUs over pretrained word-embeddings (word2vec, GloVE) were used to 
-                            design question-only baselines. Since then, large scale pretrained language models like Bidirectional Encoder Representation from 
-                            Transformers are involved. The aim of this project is to retrain and evaluate the performance of a language-only baseline VQA model using BERT.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/marolAI/VQA-BERT" title="Read Full">
-                            <i class="fa fa-github fa-fw"></i>
-                        </a>
-                        <a target="_blank" rel="noopener noreferrer"
-                            href="https://github.com/marolAI/VQA-BERT/blob/main/report/vqa-bert.pdf" title="Read Full">
-                            <i class="fa fa-link fa-fw"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <!-- <div class="card-header">
-                        <img src="img/portfolio/mixup_SMOTE1.png" alt="mixup_SMOTE1" />
-                    </div> -->
-                    <div class="card-body">
-                        <h5>
-                            Robust Machine Learning With Imbalanced Data: Expanding Mixup
-                        </h5>
-                        <div>
-                            <ul class="tags">
-                                <li class="tag">Python</li>
-                                <li class="tag">ML</li>
-                                <li class="tag">SMOTE</li>
-                                <li class="tag">ERM</li>
-                                <li class="tag">Mixup</li>
-                            </ul>
-                        </div>
-                        <p>
-                            Imbalanced learning is a subfield of Machine Learning which consists of learning from imbalanced data. Synthetic Minority Oversampling
-                            Technique (SMOTE) is one of the best techniques to approach this issue. However it still exhibits poor prediction toward minority class when data
-                            is highly skewed and outside the training data. This relates to the fact that we use Empirical Risk Minimization (ERM) technique to train the model.
-                            Mixup is one of the prominent algorithm that can mitigate this drawback of ERM. The aim of this project is to combine the advantages of both SMOTE 
-                            and Mixup to predict fraudulant transactions on a very imbalanced credit card transactions dataset.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/marolAI/Expanding-Mixup" title="Read Full">
-                            <i class="fa fa-github fa-fw"></i>
-                        </a>
-                        <a target="_blank" rel="noopener noreferrer"
-                            href="https://github.com/marolAI/Expanding-Mixup/blob/main/report/mixup.pdf" title="Read Full">
-                            <i class="fa fa-link fa-fw"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="card">
-                    <!-- <div class="card-header">
-                        <img src="img/portfolio/smart_identity.png" alt="smart_identity"/>
-                    </div> -->
-                    <div class="card-body">
-                        <h5>
-                            Smart Identity: classify and extract personal information from the ECOWAS ID card.
-                        </h5>
-                        <div>
-                            <ul class="tags">
-                                <li class="tag">Python</li>
-                                <li class="tag">CNN</li>
-                                <li class="tag">OCR</li>
-                            </ul>
-                        </div>
-                        <p>
-                            Paper-based document processing is one of the major problems in the industry. In addition to the human resources it requires, 
-                            the time it takes can be frustrating and wasteful. The goal of this project is to automate the process of extracting personal information 
-                            from the ECOWAS ID card using a model based on CNN for classification and Pytesseract for OCR.
-                        </p>
-                    </div>
-                    <div class="card-footer">
-                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/marolAI/Smart-Identity" title="Read Full">
-                            <i class="fa fa-github fa-fw"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="pagination">
-                <!-- Pagination links will be dynamically created here -->
-            </div>
-        </div>
-    </section>
-
-    <!-- ============= Contacts ============== -->
-    <section id="contact">
-        <div class="contact-wrapper">
-          <div class="direct-contact-container">
-            <ul class="contact-list">
-              <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Antananarivo, Madagascar</span></i></li>
-              <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone">(261) 346171397</span></i></li>
-              <li class="list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail">marolahyrabe@gmail.com</span></i></li>
-            </ul>
-            <hr>
-            <ul class="social-media-list">
-              <li><a href="https://www.linkedin.com/in/andriamarolahy-rabetokotany-a84986143/" target="_blank" class="contact-icon">
-                <i class="fa fa-linkedin" aria-hidden="true"></i></a>
-              </li>
-              <li><a href="https://github.com/marolAI" target="_blank" class="contact-icon">
-                <i class="fa fa-github" aria-hidden="true"></i></a>
-              </li>
-              <li><a href="https://twitter.com/Massa_Be" target="_blank" class="contact-icon">
-                <i class="fa fa-twitter" aria-hidden="true"></i></a>
-              </li>
-              <li><a href="https://stackoverflow.com/users/9560986/r-marolahy" target="_blank" class="contact-icon">
-                <i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
-              </li>       
-            </ul>
-            <hr>
-            <div class="copyright">&copy; 2023 Marolahy</div>
-          </div>
-        </div>
-    </section>
-      
-
-    <div class="bottom-navbar">
-        <a href="#home" class="nav-item"><i class="fa fa-home"></i><span class="label">Home</span></a>
-        <a href="#" class="nav-item"><i class="fa fa-info-circle"></i><span class="label">About</span></a>
-        <a href="#projects" class="nav-item"><i class="fa fa-folder-open"></i><span class="label">Projects</span></a>
-        <a href="#contact" class="nav-item"><i class="fa fa-address-book"></i><span class="label">Contacts</span></a>
-    </div>   
+    </div>
 </body>
 <script>
     //*******************************
@@ -315,6 +290,122 @@
 
     // Display the projects for the initial page (page 1)
     showProjects(1);
+
+    //******************************************
+    //         Fullpage scroll                 *
+    //******************************************
+    (function() {
+        "use strict";
+        /*[pan and fullpage CSS scrolls]*/
+        var pnls = document.querySelectorAll('.section').length,
+            scdir, hold = false;
+    
+        function _scrollY(obj) {
+            var slength, plength, pan, step = 100,
+            <!-- <hr> -->
+                vh = window.innerHeight / 100,
+                vmin = Math.min(window.innerHeight, window.innerWidth) / 100;
+            if ((this !== undefined && this.id === 'fullpage') || (obj !== undefined && obj.id === 'fullpage')) {
+                pan = this || obj;
+                plength = parseInt(pan.offsetHeight / vh);
+            }
+            if (pan === undefined) {
+                return;
+            }
+            plength = plength || parseInt(pan.offsetHeight / vmin);
+            slength = parseInt(pan.style.transform.replace('translateY(', ''));
+            if (scdir === 'up' && Math.abs(slength) < (plength - plength / pnls)) {
+                slength = slength - step;
+            } else if (scdir === 'down' && slength < 0) {
+                slength = slength + step;
+            } else if (scdir === 'top') {
+                slength = 0;
+            }
+            if (hold === false) {
+                hold = true;
+                pan.style.transform = 'translateY(' + slength + 'vh)';
+                setTimeout(function() {
+                    hold = false;
+                }, 1000);
+            }
+            console.log(scdir + ':' + slength + ':' + plength + ':' + (plength - plength / pnls));
+        }
+        /*[swipe detection on touchscreen devices]*/
+        function _swipe(obj) {
+            var swdir,
+                sX,
+                sY,
+                dX,
+                dY,
+                threshold = 100,
+                /*[min distance traveled to be considered swipe]*/
+                slack = 50,
+                /*[max distance allowed at the same time in perpendicular direction]*/
+                alT = 500,
+                /*[max time allowed to travel that distance]*/
+                elT, /*[elapsed time]*/
+                stT; /*[start time]*/
+            obj.addEventListener('touchstart', function(e) {
+                var tchs = e.changedTouches[0];
+                swdir = 'none';
+                sX = tchs.pageX;
+                sY = tchs.pageY;
+                stT = new Date().getTime();
+                //e.preventDefault();
+            }, false);
+    
+            obj.addEventListener('touchmove', function(e) {
+                e.preventDefault(); /*[prevent scrolling when inside DIV]*/
+            }, false);
+    
+            obj.addEventListener('touchend', function(e) {
+                var tchs = e.changedTouches[0];
+                dX = tchs.pageX - sX;
+                dY = tchs.pageY - sY;
+                elT = new Date().getTime() - stT;
+                if (elT <= alT) {
+                    if (Math.abs(dX) >= threshold && Math.abs(dY) <= slack) {
+                        swdir = (dX < 0) ? 'left' : 'right';
+                    } else if (Math.abs(dY) >= threshold && Math.abs(dX) <= slack) {
+                        swdir = (dY < 0) ? 'up' : 'down';
+                    }
+                    if (obj.id === 'fullpage') {
+                        if (swdir === 'up') {
+                            scdir = swdir;
+                            _scrollY(obj);
+                        } else if (swdir === 'down' && obj.style.transform !== 'translateY(0)') {
+                            scdir = swdir;
+                            _scrollY(obj);
+    
+                        }
+                        e.stopPropagation();
+                    }
+                }
+            }, false);
+        }
+        /*[assignments]*/
+        var fullpage = document.getElementById('fullpage');
+        fullpage.style.transform = 'translateY(0)';
+        fullpage.addEventListener('wheel', function(e) {
+            if (e.deltaY < 0) {
+                scdir = 'down';
+            }
+            if (e.deltaY > 0) {
+                scdir = 'up';
+            }
+            e.stopPropagation();
+        });
+        fullpage.addEventListener('wheel', _scrollY);
+        _swipe(fullpage);
+        var tops = document.querySelectorAll('.top');
+        for (var i = 0; i < tops.length; i++) {
+            tops[i].addEventListener('click', function() {
+                scdir = 'top';
+                _scrollY(fullpage);
+            });
+        }
+    })();
+
 </script>
 
 </html>
