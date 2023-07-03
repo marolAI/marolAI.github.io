@@ -14,40 +14,27 @@
 
   <!-- JS files-->  
   <script type="text/javascript" scr="js/script.js"></script>  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
-    <div class="navbar-container">
-        <div class="menu-icon" onclick="toggleNavActive()">
-            <span class="menu-icon-line menu-icon-line-left"></span>
-            <span class="menu-icon-line"></span>
-            <span class="menu-icon-line menu-icon-line-right"></span>
-        </div>
-        
-        <div class="nav">
-            <div class="nav-content">
-                <ul class="nav-list">
-                    <a href="#" class="nav-list-item" onclick="scrollToSection('home')">
-                        <i class="fa fa-home"></i>
-                        <span class="label">Home</span>
-                    </a>
-                    <a href="#about" class="nav-list-item" onclick="scrollToSection('about')">
-                        <i class="fa fa-info-circle"></i>
-                        <span class="label">About</span>
-                    </a>
-                    <a href="#projects" class="nav-list-item" onclick="scrollToSection('projects')">
-                        <i class="fa fa-folder-open"></i>
-                        <span class="label">Projects</span>
-                    </a>
-                    <a href="#contact" class="nav-list-item" onclick="scrollToSection('contact')">
-                        <i class="fa fa-address-book"></i>
-                        <span class="label">Contacts</span>
-                    </a>
-                </ul>
-            </div>
-        </div>
+    <header class="header">
+        <div class="header_in">
+          <button type="button" class="toggle" id="toggle">
+            <span></span>
+           </button>
+       </div>
+     </header>
+     
+    <div class="sidebar" id='sidebar'>
+        <ul>
+            <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="#about"><i class="fa fa-info-circle"></i>About</a></li>
+            <li><a href="#projects"><i class="fa fa-folder-open"></i>Projects</a></li>
+            <li><a href="#contact"><i class="fa fa-address-book"></i>Contact</a></li>
+        </ul>
     </div>
-    
+
     <div class="fullpage" id="fullpage">
         <div class="section" id="home">
             <div class="container">
@@ -55,20 +42,22 @@
                     <div class="avatar">
                         <img src="img/profile.jpg">
                     </div>
-                    <div class="title">
-                        <b>Andriamarolahy Rabetokotany</b>
-                        <h5>Data Scientist & AI/ML Engineer</h5>
+                    <div class="name-title-social">
+                        <div>
+                            <p class="name">Andriamarolahy Rabetokotany</p>
+                            <p class="title">Data Scientist & AI/ML Engineer</p>
+                        </div>
                         <div class="social-icons">
-                            <a href="https://www.linkedin.com/in/andriamarolahy-rabetokotany-a84986143">
+                            <a href="https://www.linkedin.com/in/andriamarolahy-rabetokotany-a84986143/">
                                 <i class="fa fa-linkedin fa-lg fa-fw"></i>
                             </a>
-                            <a href="https://github.com/marolAI">
+                            <a href="https://github.com/marolAI/">
                                 <i class="fa fa-github fa-lg fa-fw"></i>
                             </a>
-                            <a href="https://twitter.com/Massa_Be">
+                            <a href="https://twitter.com/Massa_Be/">
                                 <i class="fa fa-twitter fa-lg fa-fw"></i>
                             </a>
-                            <a href="https://stackoverflow.com/users/9560986/r-marolahy">
+                            <a href="https://stackoverflow.com/users/9560986/r-marolahy/">
                                 <i class="fa fa-stack-overflow fa-lg fa-fw"></i>
                             </a>
                         </div>
@@ -110,10 +99,10 @@
                 <div class="row">
                     <div class="card">
                         <div class="card-body">
-                            <h3>
+                            <p class="project-title">
                                 <b>Evaluating Modern Language-Only Baseline (BERT) for Visual Question Answering (VQA)</b>
-                            </h3>
-                            <p>
+                            </p>
+                            <p class="project-description">
                                 VQA involves answering questions about images using natural language. 
                                 Initially, RNNs, LSTMs, and GRUs with pretrained word embeddings were used for question-only baselines. 
                                 However, with advancements, large-scale pretrained language models like BERT have become involved. 
@@ -132,10 +121,10 @@
                     </div>
                     <div class="card">
                         <div class="card-body">
-                            <h3>
+                            <p class="project-title">
                                 <b>Robust Machine Learning With Imbalanced Data: Expanding Mixup</b>
-                            </h3>
-                            <p>
+                            </p>
+                            <p class="project-description">
                                 Imbalanced learning focuses on learning from imbalanced data.
                                 SMOTE is a technique to address this issue, but it has limitations in predicting the minority class when data is highly skewed or outside the training set.
                                 This is because of the use of ERM for training. Mixup is an algorithm that can overcome this limitation. 
@@ -154,10 +143,10 @@
                     </div>
                     <div class="card">
                         <div class="card-body">
-                            <h3>
+                            <p class="project-title">
                                 <b>Smart Identity: classify and extract personal information from the ECOWAS ID card.</b>
-                            </h3>
-                            <p>
+                            </p>
+                            <p class="project-description">
                                 Processing paper-based documents is a significant industry problem. 
                                 It not only demands human resources but also consumes time, leading to frustration and inefficiency. 
                                 This project aims to automate the extraction of personal information from ECOWAS ID cards using a model based on CNN for classification and Pytesseract for OCR.
@@ -179,7 +168,7 @@
         <!-- ============= Contacts ============== -->
         <div class="section" id="contact">
             <div class="contact-wrapper">
-                <div class="direct-contact-container">
+                <div>
                     <ul class="contact-list">
                         <li class="contact-list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Antananarivo, Madagascar</span></i></li>
                         <li class="contact-list-item"><i class="fa fa-envelope fa-2x"><span class="contact-text gmail">marolahyrabe@gmail.com</span></i></li>
@@ -200,7 +189,7 @@
                         </li>       
                     </ul>
                     <hr>
-                    <div class="copyright">&copy; 2023 Marolahy</div>
+                    <!-- <div class="copyright">&copy; 2023 Marolahy</div> -->
                 </div>
             </div>
         </div>
@@ -210,17 +199,21 @@
     //*******************************
     //         Toggle NAVBAR        *
     //*******************************
-    function toggleNavActive() {
-        document.body.classList.toggle('nav-active');
+    var btn = document.querySelector('.toggle');
+    var btnst = true;
+    btn.onclick = function() {
+    if(btnst == true) {
+        document.querySelector('.toggle span').classList.add('toggle');
+        document.getElementById('sidebar').classList.add('sidebarshow');
+        btnst = false;
+    }else if(btnst == false) {
+        document.querySelector('.toggle span').classList.remove('toggle');
+        document.getElementById('sidebar').classList.remove('sidebarshow');
+        btnst = true;
     }
-    function scrollToSection(sectionId) {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-            toggleNavActive(); 
-        }
     }
-
+</script>
+<script>
     //******************************************
     //         Projects card pagination        *
     //******************************************
@@ -294,6 +287,7 @@
     //******************************************
     //         Fullpage scroll                 *
     //******************************************
+
     (function() {
         "use strict";
         /*[pan and fullpage CSS scrolls]*/
@@ -302,18 +296,21 @@
     
         function _scrollY(obj) {
             var slength, plength, pan, step = 100,
-            <!-- <hr> -->
                 vh = window.innerHeight / 100,
                 vmin = Math.min(window.innerHeight, window.innerWidth) / 100;
+        
             if ((this !== undefined && this.id === 'fullpage') || (obj !== undefined && obj.id === 'fullpage')) {
                 pan = this || obj;
                 plength = parseInt(pan.offsetHeight / vh);
             }
+        
             if (pan === undefined) {
                 return;
             }
+        
             plength = plength || parseInt(pan.offsetHeight / vmin);
             slength = parseInt(pan.style.transform.replace('translateY(', ''));
+        
             if (scdir === 'up' && Math.abs(slength) < (plength - plength / pnls)) {
                 slength = slength - step;
             } else if (scdir === 'down' && slength < 0) {
@@ -321,15 +318,19 @@
             } else if (scdir === 'top') {
                 slength = 0;
             }
+        
             if (hold === false) {
                 hold = true;
                 pan.style.transform = 'translateY(' + slength + 'vh)';
+        
                 setTimeout(function() {
                     hold = false;
                 }, 1000);
             }
+        
             console.log(scdir + ':' + slength + ':' + plength + ':' + (plength - plength / pnls));
-        }
+        }            
+    
         /*[swipe detection on touchscreen devices]*/
         function _swipe(obj) {
             var swdir,
@@ -397,15 +398,7 @@
         });
         fullpage.addEventListener('wheel', _scrollY);
         _swipe(fullpage);
-        var tops = document.querySelectorAll('.top');
-        for (var i = 0; i < tops.length; i++) {
-            tops[i].addEventListener('click', function() {
-                scdir = 'top';
-                _scrollY(fullpage);
-            });
-        }
     })();
-
 </script>
 
 </html>
