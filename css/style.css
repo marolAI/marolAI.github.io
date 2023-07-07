@@ -410,3 +410,112 @@ hr {
     line-height: 60px;
   }
 }
+
+/* Styles for devices with a maximum width of 768px (e.g., tablets) */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+  .header {
+    padding: 10px 15px;
+  }
+  .toggle span,
+  .toggle span:before,
+  .toggle span:after {
+    background: #fff;
+  }
+  .sidebar {
+    padding-top: 70px;
+    width: 200px;
+    left: -200px;
+  }
+  .sidebar ul li a {
+    font-size: 20px;
+  }
+  .intro {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+  .avatar > img {
+    height: 150px;
+  }
+  .name-title-social {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .name {
+    margin-bottom: 0;
+  }
+  .title {
+    font-size: 18px;
+  }
+  .bio {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .what-i-do {
+    max-width: 400px;
+  }
+  #about-image {
+    width: 100%;
+    height: auto;
+    shape-outside: none;
+    float: none;
+    margin-right: 0;
+  }
+  #about-text {
+    shape-margin: 0;
+    margin-top: 20px;
+  }
+  .row {
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* Styles for devices with a maximum width of 480px (e.g., mobile phones) */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+  .header {
+    padding: 5px 10px;
+  }
+  .toggle span {
+    width: 80%;
+  }
+  .sidebar {
+    width: 180px;
+    padding-top: 50px;
+  }
+  .sidebar ul li a {
+    font-size: 16px;
+  }
+  .intro {
+    padding-top: 30px;
+    padding-bottom: 70px;
+  }
+  .avatar > img {
+    height: 120px;
+  }
+  .name {
+    font-size: 24px;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .social-icons {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .what-i-do {
+    max-width: 300px;
+  }
+  #about-image {
+    display: none;
+  }
+}
+
