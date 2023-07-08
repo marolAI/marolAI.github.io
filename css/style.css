@@ -19,22 +19,7 @@ body {
   min-height: 100vh;
   flex-direction: column;
 }
-/*---------------------------------------
-/*      FULLPAGE SCROLL
-/*---------------------------------------*/
-.fullpage {
-	position: relative;
-	overflow: hidden;
-	transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
-  z-index: 1;
-}
-.top {
-	font-size: 80%;
-	color: #000;
-	position: relative;
-	top: 5em;
-	cursor: pointer;
-}
+
 .section {
 	position: relative;
 	height: 100vh;
@@ -133,7 +118,6 @@ button {
 }
 
 .sidebar ul li a {
-  /* padding:8px 15px; */
   margin-bottom: 32px;
   font-size:28px;
   color:#222;
@@ -315,7 +299,7 @@ button {
   color: #fff;
 }
 /*---------------------------------------
-/* CONTACT
+/*      CONTACT
 /*---------------------------------------*/
 #contact {
   display: flex;
@@ -411,7 +395,7 @@ hr {
   }
 }
 
-/* Styles for devices with a maximum width of 768px (e.g., tablets) */
+/* Styles for devices with a maximum width of 768px*/
 @media screen and (max-width: 768px) {
   body {
     font-size: 20px;
@@ -457,7 +441,7 @@ hr {
     max-width: 400px;
   }
   #about-image {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     shape-outside: none;
     float: none;
@@ -476,7 +460,7 @@ hr {
   }
 }
 
-/* Styles for devices with a maximum width of 480px (e.g., mobile phones) */
+/* Styles for devices with a maximum width of 480px*/
 @media screen and (max-width: 480px) {
   body {
     font-size: 16px;
@@ -515,7 +499,15 @@ hr {
     max-width: 300px;
   }
   #about-image {
-    display: none;
+    max-width: 100%;
+    height: auto;
+    shape-outside: none;
+    float: none;
+    margin-right: 0;
+  }
+  .card {
+    width: 100%;
+    height: auto;
   }
 }
 
