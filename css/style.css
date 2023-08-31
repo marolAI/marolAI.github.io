@@ -35,7 +35,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1em;
 }
 
 .link-button {
@@ -180,6 +179,7 @@ body {
 #about-section {
   display: flex;
   align-items: center;
+  padding-top: -200px;
 }
 #about-image {
   width: 1000px;
@@ -203,7 +203,7 @@ body {
 }
 
 .project-list-item {
-  margin-bottom: 1em;
+  padding-bottom: 30px;
 }
 
 .project-title {
@@ -265,8 +265,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 20%;
+  padding-top: 30px;
   margin: 1em 0;
+}
+.row>p{
+  padding-bottom: 20px;
 }
 #contact {
   justify-content: center;
@@ -277,8 +280,8 @@ body {
   list-style-type: none;
   display: inline-block;
   vertical-align: top;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  /* margin-right: 20px;
+  margin-bottom: 20px; */
 }
 .contact-list-item {
   display: flex;
@@ -335,5 +338,5 @@ body {
   font-size: medium;
   width: 100%;
   color: black;
-  padding: 10px;
+  padding: 50px;
 }
