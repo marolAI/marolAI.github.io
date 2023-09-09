@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Montserrat:ital,wght@0,700;1,700&family=Open+Sans&display=swap');
+
+
 html { 
     -webkit-text-size-adjust: 100%; 
     font-feature-settings: normal; 
-    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    // font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; 
+    font-family: 'Bacasime Antique', serif;
+    // font-size: 18px;
     line-height: 1.5; 
     -moz-tab-size: 4; 
     -o-tab-size: 4; 
@@ -55,7 +60,7 @@ body {
 }
 
 .brand-link{
-    font-size: .875rem; 
+    font-size: 1.2rem;
     line-height: 1.25rem;
 }
 
@@ -83,7 +88,7 @@ body {
     padding-bottom: .5rem; 
     padding-top: .5rem;
     margin-top: 0;
-    font-size: .875rem; 
+    font-size: 1.2rem;
     line-height: 1.25rem;
     text-decoration: none; 
     color: rgba(17, 24, 39, 1);
@@ -119,7 +124,7 @@ body {
 }
 
 .title{
-    font-size: .875rem; 
+    font-size: 1.2rem;
     line-height: 1rem;
     color: rgba(17, 24, 39, 1);
     margin-bottom: 0.1rem;
@@ -127,7 +132,7 @@ body {
 
 .location{
     display: flex;
-    font-size: .875rem; 
+    font-size: 1rem;
     line-height: 1rem; 
     color: rgba(75, 85, 99, 1);
     margin-top: 0.25rem;
@@ -157,15 +162,15 @@ body {
 
 .section-title{
     display: flex;
-    font-size: .875rem; 
+    font-size: 1.25rem;
     line-height: 1rem;
     margin-bottom: .5rem; 
     color: rgba(75, 85, 99, 1);
-    font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
+    // font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 }
 
 .bio{
-    font-size: .875rem; 
+    font-size: 1.2rem;
     line-height: 1.2rem;
     margin-bottom: 2.5rem; 
     color: rgba(17, 24, 39, 1);
@@ -222,7 +227,7 @@ body {
     padding-right: 1rem;
     padding-bottom: .5rem; 
     padding-top: .5rem;
-    font-size: .875rem; 
+    font-size: 1rem;
     line-height: 1rem;
     font-weight: 400;
     border-radius: 9999px; 
@@ -260,7 +265,7 @@ body {
 
 .project-links{
     display: flex;
-    font-size: .875rem; 
+    font-size: 0.5rem;
     line-height: 1rem; 
     color: rgba(75, 85, 99, 1);
 }
@@ -286,7 +291,7 @@ body {
     padding-left: .25rem; 
     padding-right: .25rem;
     border-radius: 9999px;
-    font-size: .875rem; 
+    font-size: 0.75rem;
     line-height: 1.25rem;
     border-width: 0; 
     color: rgba(17, 24, 39, 1);
@@ -300,8 +305,8 @@ body {
 
 .project-description{
     max-width: 64rem;
-    font-size: .875rem; 
-    line-height: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
 }
 
 .about-project{
@@ -313,7 +318,7 @@ body {
 .projects-grid{
     display: grid;
     margin-top: .5rem;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .projects-grid-image{
@@ -329,7 +334,7 @@ body {
     color: rgba(17, 24, 39, 1);
     margin-bottom: .25rem;
     margin-top: .5rem;
-    font-size: .875rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -349,7 +354,7 @@ body {
 }
 
 .projects-grid-description{
-    font-size: .875rem; 
+    font-size: 1.2rem;
     line-height: 1.25rem; 
     color: rgba(75, 85, 99, 1);
     margin-bottom: .25rem;
@@ -360,7 +365,7 @@ body {
     display: flex;
     align-items: center;
     margin-top: .25rem;
-    font-size: .875rem; 
+    font-size: 1.2rem;
     line-height: 1.25rem; 
     border-color: rgba(2, 10, 245, 1);
     border-width: 0; 

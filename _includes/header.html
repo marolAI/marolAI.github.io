@@ -1,7 +1,0 @@
-<div class="fix-bar">
-  <ul class="nav-bar">
-    {% for item in site.data.navigation %}
-      <li class="nav-bar-item"><a href="{{ item.link }}" {% if page.url == item.link %}{% endif %}>{{ item.name }}</a></li>
-    {% endfor %}
-  </ul>
-</div>
