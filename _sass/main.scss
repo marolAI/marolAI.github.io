@@ -5,11 +5,6 @@ html {
     -webkit-text-size-adjust: 100%; 
     font-feature-settings: normal; 
     font-family: 'Bacasime Antique', serif;
-    font-size: 1.35rem;
-    line-height: 1rem;
-    -moz-tab-size: 4; 
-    -o-tab-size: 4; 
-    tab-size: 4;
 } 
 
 body { 
@@ -58,6 +53,11 @@ body {
     align-items: center;
 }
 
+.brand-link{
+    font-size: 1.2rem;
+    line-height: 1.25rem;
+}
+
 .brand-span{
     color: rgba(2, 10, 245, 1);
 }
@@ -82,6 +82,7 @@ body {
     padding-bottom: .5rem; 
     padding-top: .5rem;
     margin-top: 0;
+    font-size: 1.2rem;
     line-height: 1.25rem;
     text-decoration: none; 
     color: rgba(17, 24, 39, 1);
@@ -109,13 +110,15 @@ body {
     object-fit:cover;
 }
 
-.name{ 
+.name{
+    font-size: 1.25rem; 
     line-height: 1.5rem;
     font-weight: 600;
     margin-top: 0.5rem;
 }
 
 .title{
+    font-size: 1.25rem;
     line-height: 1rem;
     color: rgba(17, 24, 39, 1);
     margin-bottom: 0.1rem;
@@ -123,7 +126,7 @@ body {
 
 .location{
     display: flex;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1rem; 
     color: rgba(75, 85, 99, 1);
     margin-top: 0.25rem;
@@ -160,8 +163,8 @@ body {
 }
 
 .bio{
-    line-height: 1.65rem;
-    margin-top: .25rem;
+    font-size: 1.22rem;
+    line-height: 1.75rem;
     margin-bottom: 2.5rem; 
     color: rgba(17, 24, 39, 1);
 }
@@ -217,7 +220,7 @@ body {
     padding-right: 1rem;
     padding-bottom: .5rem; 
     padding-top: .5rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 1rem;
     font-weight: 400;
     border-radius: 9999px; 
@@ -235,7 +238,7 @@ body {
 
 /* project details */
 .project-title{
-    font-size: 1.5rem; 
+    font-size: 1.25rem; 
     line-height: 1.25rem;
     font-weight: 600;
     margin-bottom: .1rem;
@@ -255,8 +258,8 @@ body {
 
 .project-links{
     display: flex;
-    font-size: 0.5rem;
-    line-height: 1rem; 
+    font-size: 1.25rem;
+    line-height: 1.2rem; 
     color: rgba(75, 85, 99, 1);
 }
 
@@ -268,6 +271,7 @@ body {
 
 .project-link{
     align-items: center;
+    text-decoration: none;
 }
 
 .project-links-icon{
@@ -295,8 +299,8 @@ body {
 
 .project-description{
     max-width: 64rem;
-    line-height: 1.65rem;
-    margin-top: 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
 }
 
 .about-project{
@@ -322,8 +326,9 @@ body {
 
 .projects-grid-title{ 
     color: rgba(17, 24, 39, 1);
-    margin-bottom: .5rem;
+    margin-bottom: .25rem;
     margin-top: .5rem;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
@@ -343,7 +348,8 @@ body {
 }
 
 .projects-grid-description{
-    line-height: 1.65rem; 
+    font-size: 1.25rem;
+    line-height: 1.75rem; 
     color: rgba(75, 85, 99, 1);
     margin-bottom: .25rem;
     margin-top: .5rem;
@@ -353,6 +359,7 @@ body {
     display: flex;
     align-items: center;
     margin-top: .25rem;
+    font-size: 1.2rem;
     line-height: 1.25rem; 
     border-color: rgba(2, 10, 245, 1);
     border-width: 0; 
