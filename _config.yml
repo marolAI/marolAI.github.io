@@ -1,6 +1,7 @@
 domain: marolAI.github.io      
 url: https://marolAI.github.io 
-baseurl: /portfolio/     
+baseurl: /     
+github: [metadata]
 
 collections:
   authors:
