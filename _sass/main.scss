@@ -5,6 +5,8 @@ html {
     -webkit-text-size-adjust: 100%; 
     font-feature-settings: normal; 
     font-family: 'Bacasime Antique', serif;
+    font-size: 1.35rem;
+    line-height: 1rem;
     -moz-tab-size: 4; 
     -o-tab-size: 4; 
     tab-size: 4;
@@ -56,11 +58,6 @@ body {
     align-items: center;
 }
 
-.brand-link{
-    // font-size: 1.2rem;
-    line-height: 1.25rem;
-}
-
 .brand-span{
     color: rgba(2, 10, 245, 1);
 }
@@ -85,7 +82,6 @@ body {
     padding-bottom: .5rem; 
     padding-top: .5rem;
     margin-top: 0;
-    // font-size: 1.2rem;
     line-height: 1.25rem;
     text-decoration: none; 
     color: rgba(17, 24, 39, 1);
@@ -113,15 +109,13 @@ body {
     object-fit:cover;
 }
 
-.name{
-    // font-size: 1.2rem; 
+.name{ 
     line-height: 1.5rem;
     font-weight: 600;
     margin-top: 0.5rem;
 }
 
 .title{
-    // font-size: 1.2rem;
     line-height: 1rem;
     color: rgba(17, 24, 39, 1);
     margin-bottom: 0.1rem;
@@ -163,12 +157,11 @@ body {
     line-height: 1rem;
     margin-bottom: .5rem; 
     color: rgba(75, 85, 99, 1);
-    // font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;
 }
 
 .bio{
-    // font-size: 1.2rem;
-    line-height: 1.75rem;
+    line-height: 1.65rem;
+    margin-top: .25rem;
     margin-bottom: 2.5rem; 
     color: rgba(17, 24, 39, 1);
 }
@@ -302,8 +295,8 @@ body {
 
 .project-description{
     max-width: 64rem;
-    // font-size: 1.2rem;
-    line-height: 1.75rem;
+    line-height: 1.65rem;
+    margin-top: 0.5rem;
 }
 
 .about-project{
@@ -329,9 +322,8 @@ body {
 
 .projects-grid-title{ 
     color: rgba(17, 24, 39, 1);
-    margin-bottom: .25rem;
+    margin-bottom: .5rem;
     margin-top: .5rem;
-    // font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -351,8 +343,7 @@ body {
 }
 
 .projects-grid-description{
-    // font-size: 1.2rem;
-    line-height: 1.75rem; 
+    line-height: 1.65rem; 
     color: rgba(75, 85, 99, 1);
     margin-bottom: .25rem;
     margin-top: .5rem;
@@ -362,7 +353,6 @@ body {
     display: flex;
     align-items: center;
     margin-top: .25rem;
-    // font-size: 1.2rem;
     line-height: 1.25rem; 
     border-color: rgba(2, 10, 245, 1);
     border-width: 0; 
