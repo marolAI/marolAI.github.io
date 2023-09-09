@@ -1,0 +1,30 @@
+<div class="right-section">
+    <div class="right-container">
+        <!-- projects grid-->
+        <p class="section-title">Projects</p>
+        <div class="projects-grid">
+            {% for project in site.projects %}
+                <div class="">
+                    <img class="projects-grid-image" src="{{project.image}}" alt="Project photo">
+                    <p class="projects-grid-title">{{project.title}}</p>
+                    <div>
+                        {% for tag in project.tags %}
+                            <button class="projects-grid-tag" data-bcup-haslogintext="no">{{ tag }}</button>
+                        {% endfor %}
+                    </div>
+                    <p class="projects-grid-description">
+                            {{ project.content  | strip_html | truncatewords: 15 }}
+                    </p>
+                    <div class="read-more">
+                        <a href="{{ project.url }}">
+                            Read more 
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" stroke-width="1.5" stroke="currentColor" class="read-more-array">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

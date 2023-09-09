@@ -1,0 +1,64 @@
+<div class="right-section">
+    <div class="right-container">
+        <div class="top-right">
+            <a href="/" data-bcup-haslogintext="no">
+                <button class="back-button" data-bcup-haslogintext="no">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" stroke-width="1.5" stroke="currentColor" class="back-arrow">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75">
+                    </path>
+                    </svg>
+                    back
+                </button>
+            </a>
+        </div>
+        <p class="project-title">
+            {{ page.title }}
+        </p>
+        <img class="project-image" src="{{ page.image }}" alt="Project photo">
+        <p class="section-title">
+            Project links
+        </p>
+        <div class="project-links-icons">
+            {% if page.file_link %}
+                <a href="{{ page.file_link }}" target="_blank" class="project-link" data-bcup-haslogintext="no">
+                    <button class="project-links-icon" data-bcup-haslogintext="no">
+                        <a target="_blank" rel="noopener noreferrer" href="{{ page.file_link }}" title="Read Full">
+                        <i class="fa fa-file-pdf-o fa-fw"></i>
+                        </a>
+                        Read
+                    </button>
+                </a>
+            {% endif %}
+            
+            {% if page.github_link %}
+                <a href="{{ page.github_link }}" target="_blank" class="project-link" data-bcup-haslogintext="no">
+                    <button class="project-links-icon" data-bcup-haslogintext="no">
+                        <a target="_blank" rel="noopener noreferrer" href="{{ page.github_link }}" title="Read Full">
+                        <i class="fa fa-github fa-fw"></i>
+                        </a>
+                        Star
+                    </button>
+                </a>
+            {% endif %}
+
+            {% if page.demo_link %}
+                <a href="{{ page.demo_link }}" target="_blank" class="project-link" data-bcup-haslogintext="no">
+                <button class="project-links-icon" data-bcup-haslogintext="no">
+                    <a target="_blank" rel="noopener noreferrer" href="{{ page.demo_link }}" title="Read Full">
+                    <i class="fa fa-play fa-fw"></i>
+                    </a>
+                    Demo
+                </button>
+                </a>
+            {% endif %}
+        </div>
+        <p class="section-title">Skills</p>
+        {% for tag in page.tags %}
+            <button class="skills-tag" data-bcup-haslogintext="no">{{ tag }}</button>
+        {% endfor %}
+        <div class="about-project">
+            <p class="section-title">About this project</p>
+            <p class="project-description">{{ page.content  | strip_html  }}</p>
+        </div>
+    </div>
+</div>
