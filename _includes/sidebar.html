@@ -1,19 +1,19 @@
-<div class="about">
-    <div class="about-wrapper">
+<div class="sidebar">
+    <div class="profile-wrapper">
         <img src="/assets/images/profile.jpg" alt=""> 
         <p class="name"> Andriamarolahy Rabetokotany </p>
         <p class="title"> Data Scientist | AI/ML Engineer </p>
         <p class="location"> Based in Antananarivo, MG </p>
-        <div class="about-contacts">
+        <div class="contacts">
             {% for contact in site.data.contact %}
-                <a href="{{ contact.link }}" class="about-social-links" target="_blank">
+                <a href="{{ contact.link }}" class="social-links" target="_blank">
                     <i class="fa {{ contact.icon }} fa-fw"></i>
                 </a>
             {% endfor %}
         </div>
         <div>
             <p class="section-title">About</p>
-            <p class="about-bio">
+            <p class="bio">
                 I use data and machine learning techniques to solve business challenges. 
                 I find joy in expanding my knowledge through continuous learning.
             </p>
@@ -25,7 +25,7 @@
             {% endfor %}
         </div>
         <!-- <div>
-            <p class="about-copy-right">&copy; created with ❤️ by <a href="https://github.com/marolAI">marolAI</a> </p>
+            <p class="copy-right">&copy; created with ❤️ by <a href="https://github.com/marolAI">marolAI</a> </p>
         </div> -->
     </div>
 </div>

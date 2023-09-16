@@ -3,6 +3,16 @@ url: https://marolAI.github.io
 baseurl: /     
 github: [metadata]
 
+email: marolahyrabe@gmail.com
+twitter_username: Massa_Be
+github_username: marolAI
+
+permalink: /:collection/:year-:month-:day-:title:output_ext
+show_excerpts: true
+
+paginate: 3
+paginate_path: "/page:num/"
+
 collections:
   authors:
     output: true
@@ -34,3 +44,4 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-paginate

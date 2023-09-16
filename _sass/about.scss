@@ -1,0 +1,64 @@
+/*======================================================
+                   About
+  ======================================================*/
+.about { 
+    width: 280px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    margin-left: 16px;  
+    margin-top: 100px;
+    z-index: 99; 
+    background-color: rgba(249, 250, 251, 1);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+} 
+
+.about-wrapper{
+    flex-direction: column;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.about-wrapper img{
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    object-fit:cover;
+    align-items: center;
+}  
+
+.about-contacts{
+    display: flex;
+    margin-bottom: 40px;
+    color: rgba(75, 85, 99, 1);
+    justify-content: center;
+    align-items: center;
+}
+
+.about-social-links{
+    margin-right: 6px; 
+    color: rgba(75, 85, 99, 1);
+}
+
+.about-social-links:hover{ 
+    color: rgba(2, 10, 245, 1);
+}
+
+.about-bio{
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 40px; 
+    color: rgba(17, 24, 39, 1);
+    text-align: center;
+}
+
+/* rigt section */
+.right-section{
+    flex: 1;
+    margin-left: 32px;
+}
+
+

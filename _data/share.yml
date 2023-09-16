@@ -1,0 +1,24 @@
+platforms:
+  -
+    type: Twitter
+    icon: fa-twitter
+    link: "https://twitter.com/intent/tweet?text=TITLE&url=URL"
+    button:
+      class: btn--twitter
+    title: Post
+
+  -
+    type: Linkedin
+    icon: fa-linkedin
+    link: "https://www.linkedin.com/sharing/share-offsite/?url=URL"
+    button:
+      class: btn--linkedin
+    title: Post
+
+  -
+    type: Facebook
+    icon: fa-facebook
+    link: "https://www.facebook.com/sharer/sharer.php?title=TITLE&u=URL"
+    button:
+      class: btn--facebook
+    title: Share

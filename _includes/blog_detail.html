@@ -1,0 +1,90 @@
+<div class="blog-wrapper">
+  <div class="blog-content">
+    <div class="blog-header">
+        <p class="blog-title">{{ page.title }}</p>
+        <div class="blog-sub-title">
+            <span class="blog-date"> {{ page.published_date | date: "%b %d, %Y" }} </span>
+            <span class="blog-read-time"> {{ page.read_time }} read </span>
+            <span class="blog-all"><a href="/blog.html">All posts</a></span>
+        </div>
+    </div>
+    <div class="">
+      {{ page.content }}
+    </div>
+    <div class="blog-share">
+      {% capture title %}{{ page.title }} - {{ site.title }}{% endcapture %}
+      {% assign title = title | uri_escape %}
+      {% assign url = page.url | absolute_url | url_encode %}
+      
+      {% for share in site.data.share.platforms %}
+      {% assign link = share.link | replace: 'TITLE', title | replace: 'URL', url %}
+        <a href="{{ link }}" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn {{ share.button.class }} blog-share-btn--small">
+            <i class="fa {{ share.icon }} fa-fw fa-w-14"></i>
+            <span>{{ share.title }}</span>
+        </a>
+      {% endfor %}
+    </div>
+
+    <div class="blog-pagination" role="navigation">
+      {% if page.previous.url %}
+        <a class="blog-previous" href="{{ page.previous.url }}">
+          <h4 class="blog-pagination-label">Previous</h4>
+          <span class="blog-pagination-title">
+            <i class="fa fa-arrow-left fa-fw"></i>
+            {{ page.previous.title }}
+          </span>
+        </a>
+      {% endif %}
+      {% if page.next.url %}
+        <a class="blog-next" href="{{ page.next.url }}">
+            <h4 class="blog-pagination-label">Next</h4>
+            <span class="blog-pagination-title">
+                {{ page.next.title }}
+                <i class="fa fa-arrow-right fa-fw"></i>
+            </span>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+  <div class="blog-sidebar">
+    <div class="blog-author">
+        <img src="/assets/images/profile.jpg" alt="Marolahy">
+        <div class="blog-author-info">
+            <div class="blog-author-name">
+                <em> by </em> <a href="/"><span> {{ page.author }} </span></a>
+            </div>
+            <ul class="blog-author-links">
+                {% for contact in site.data.contact %}
+                <li class="blog-author-link">
+                    <a href="{{ contact.link }}" target="_blank">
+                        <i class="fa {{ contact.icon }} fa-fw"></i>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <h3 class="blog-sidebar-section-title">Tags</h3>
+    <div class="">
+      {% for tag in page.tags %}
+        <button class="skills-tag">{{ tag }}</button>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div id="footer" class="blog-site-footer">
+  <div class="blog-social-icons">
+    {% for contact in site.data.contact %}
+      <a class="blog-social-icon" href="{{ contact.link }}" target="_blank">
+        <i class="fa {{ contact.icon }} fa-w-14 fa-2x"></i>
+      </a>
+    {% endfor %}
+  </div>
+  <div class="copyright">
+    <p>
+      &copy; created with ❤️ by <a href="https://github.com/marolAI">marolAI</a>
+    </p>
+  </div>
+</div>
