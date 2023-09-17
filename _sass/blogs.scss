@@ -35,7 +35,7 @@
 
 .blogs-list-entry-meta  { 
   margin-bottom: 16px; 
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 0;
 } 
 
@@ -53,12 +53,12 @@
 } 
 
 .blogs-list-entry-content { 
-  font-size: 16px;
+  font-size: 18px;
   line-height: 20px;
 } 
 
 .blogs-list-entry-read-more{
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 0;
 }
 
@@ -102,10 +102,25 @@
     margin-top: 8px;
 }
   
+.blog-date{
+  font-size: 16px;
+  font-style: italic;
+}
+
+.blog-read-time{
+  font-size: 16px;
+  font-style: italic;
+}
+
 .blog-date + .blog-read-time::before { 
   content: "\2022"; 
   padding: 0 8px;
 } 
+
+.blog-all{
+  font-size: 16px;
+  font-style: italic;
+}
 
 .blog-all a { 
   text-decoration: none;
@@ -190,6 +205,8 @@
 } 
 
 .blog-author-name{
+  font-size: 18px;
+  font-style: italic;
   margin-bottom: 8px;
 }
 
@@ -330,7 +347,8 @@ a:hover {
 } 
 
 .copyright { 
-  font-size: 12px;
+  font-size: 14px;
+  font-style: italic;
   color: #404040;
 } 
 

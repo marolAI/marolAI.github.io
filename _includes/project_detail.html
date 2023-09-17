@@ -1,8 +1,8 @@
 <div class="right-section">
     <div class="top-right">
-        <a href="/projects.html" data-bcup-haslogintext="no">
-            <button class="back-button" data-bcup-haslogintext="no">
-                <i class="back-arrow fa fa-arrow-left fa-fw"></i>
+        <a href="/projects.html">
+            <button class="back-button">
+                <i class="back-arrow fa fa-arrow-left"></i>
                 back
             </button>
         </a>
@@ -17,8 +17,8 @@
         </p>
         <div class="project-links-icons">
             {% if page.file_link %}
-                <a href="{{ page.file_link }}" target="_blank" class="project-link" data-bcup-haslogintext="no">
-                    <button class="project-links-icon" data-bcup-haslogintext="no">
+                <a href="{{ page.file_link }}" target="_blank" class="project-link">
+                    <button class="project-links-icon">
                         <a target="_blank" rel="noopener noreferrer" href="{{ page.file_link }}" title="Read Full">
                         <i class="fa fa-file-pdf-o fa-fw"></i>
                         </a>
@@ -28,8 +28,8 @@
             {% endif %}
             
             {% if page.github_link %}
-                <a href="{{ page.github_link }}" target="_blank" class="project-link" data-bcup-haslogintext="no">
-                    <button class="project-links-icon" data-bcup-haslogintext="no">
+                <a href="{{ page.github_link }}" target="_blank" class="project-link">
+                    <button class="project-links-icon">
                         <a target="_blank" rel="noopener noreferrer" href="{{ page.github_link }}" title="Read Full">
                         <i class="fa fa-github fa-fw"></i>
                         </a>
@@ -39,8 +39,8 @@
             {% endif %}
 
             {% if page.demo_link %}
-                <a href="{{ page.demo_link }}" target="_blank" class="project-link" data-bcup-haslogintext="no">
-                <button class="project-links-icon" data-bcup-haslogintext="no">
+                <a href="{{ page.demo_link }}" target="_blank" class="project-link">
+                <button class="project-links-icon">
                     <a target="_blank" rel="noopener noreferrer" href="{{ page.demo_link }}" title="Read Full">
                     <i class="fa fa-play fa-fw"></i>
                     </a>
@@ -51,7 +51,7 @@
         </div>
         <p class="section-title">Skills</p>
         {% for tag in page.tags %}
-            <button class="skills-tag" data-bcup-haslogintext="no">{{ tag }}</button>
+            <button class="skills-tag">{{ tag }}</button>
         {% endfor %}
         <div class="about-project">
             <p class="section-title">About this project</p>

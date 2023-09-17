@@ -39,7 +39,7 @@
 }
 
 .about-social-links{
-    margin-right: 6px; 
+    // margin-right: 6px; 
     color: rgba(75, 85, 99, 1);
 }
 
@@ -48,11 +48,29 @@
 }
 
 .about-bio{
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px;
     margin-bottom: 40px; 
     color: rgba(17, 24, 39, 1);
     text-align: center;
+}
+
+.about-copy-right{
+    // position: absolute;
+    font-size: 14px; 
+    font-style: italic;
+    padding-top: 20px;
+    bottom: 0;
+}
+
+.about-copy-right a{
+    color: #000;
+    text-decoration: none;
+}
+
+.about-copy-right a:hover{
+    color: rgba(2, 10, 245, 1);
+    text-decoration: underline;
 }
 
 /* rigt section */

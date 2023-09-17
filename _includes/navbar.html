@@ -1,15 +1,15 @@
 
-<nav id="navbar" class="">
-    <div class="nav-wrapper">
-      <ul id="menu">
-        {% for item in site.data.navigation %}
-            <li>
-                <a href="{{ item.link }}" {% if page.url == item.link %}{% endif %}{% if item.name == "Home" %}id="home-link"{% endif %}>
-                    {{ item.name | strip_html }}
-                </a>
-            </li>
-        {% endfor %}
-      </ul>
-    </div>
-</nav>
+<div id="navbar" class="navbar">
+  <div class="nav-wrapper">
+    <ul id="menu">
+      {% for item in site.data.navigation %}
+          <li>
+              <a href="{{ item.link }}" {% if page.url == item.link %}{% endif %}{% if item.name == "Home" %}id="home-link"{% endif %}>
+                  {{ item.name | strip_html }}
+              </a>
+          </li>
+      {% endfor %}
+    </ul>
+  </div>
+  </div>
  

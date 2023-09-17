@@ -15,7 +15,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Bacasime Antique', serif;
     line-height: inherit;
     padding-bottom: 100px;
@@ -27,24 +27,30 @@ body {
 /*======================================================
                     Navbar
   ======================================================*/
-#navbar {
+.navbar {
     background: white;
     color: rgb(13, 26, 38);
     position: fixed;
-    top: 20px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     height: 60px;
     line-height: 60px;
-    width: 100vw;
+    width: 100%;
     z-index: 10;
 }
 
 .nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: right;
     margin: auto;
-    text-align: center;
-    width: 50%;
+    width: 960px;
+    height: 100%;
+    padding-top: 32px;   
 }
 
-#navbar ul {
+.navbar ul {
     float: right;
     list-style: none;
     margin-top: -2px;
@@ -53,14 +59,14 @@ body {
     -webkit-transition: transform 0.5s ease-out;
 }
 
-#navbar li {
+.navbar li {
     display: inline-block;
 }
 
-#navbar li a {
+.navbar li a {
     color: rgb(13, 26, 38);
     display: block;
-    font-size: 0.7em;
+    font-size: 16px;
     height: 50px;
     letter-spacing: 1px;
     margin: 0 20px;
@@ -72,14 +78,14 @@ body {
     -webkit-transition: all 0.5s ease;
   }
   
-  #navbar li a:hover {
+  .navbar li a:hover {
     color: rgb(28, 121, 184);
     transition: all 1s ease;
     -webkit-transition: all 1s ease;
 }
   
   /* Animated Bottom Line */
-  #navbar li a:before, #navbar li a:after {
+  .navbar li a:before, .navbar li a:after {
     content: '';
     position: absolute;
     width: 0%;
@@ -88,27 +94,26 @@ body {
     background: rgb(13, 26, 38);
 }
   
-  #navbar li a:before {
+  .navbar li a:before {
     left: 0;
     transition: 0.5s;
 }
   
-  #navbar li a:after {
+  .navbar li a:after {
     background: rgb(13, 26, 38);
     right: 0;
 }
   
-  #navbar li a:hover:before {
+  .navbar li a:hover:before {
     background: rgb(13, 26, 38);
     width: 100%;
     transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
 }
   
-  #navbar li a:hover:after {
+  .navbar li a:hover:after {
     background: transparent;
     width: 100%;
 }
-
 
 /*======================================================
                    Sidebar
@@ -137,7 +142,6 @@ body {
 }   
 
 .name{
-    font-size: 18px; 
     line-height: 16px;
     font-weight: 600;
     margin-top: 16px;
@@ -145,12 +149,12 @@ body {
 }
 
 .title{
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 4px;
 }
 
 .location{
-    font-size: 14px;
+    font-size: 16px;
     color: rgba(75, 85, 99, 1);
     margin-bottom: 16px;
 }
@@ -162,7 +166,6 @@ body {
 }
 
 .social-links{
-    margin-right: 6px; 
     color: rgba(75, 85, 99, 1);
 }
 
@@ -178,7 +181,7 @@ body {
 }
 
 .bio{
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px;
     margin-bottom: 40px; 
     color: rgba(17, 24, 39, 1);
@@ -188,7 +191,7 @@ body {
     padding-bottom: 4px; 
     padding-top: 4px;
     border-radius: 9999px;
-    font-size: 12px; 
+    font-size: 14px; 
     font-style: italic;
     margin-bottom: 4px;
     background-color: rgba(239, 241, 255, 1); 
@@ -198,12 +201,17 @@ body {
 
 .copy-right{
     position: absolute;
-    font-size: 12px; 
+    font-size: 14px; 
+    font-style: italic;
     bottom: 0;
-    
 }
 
 .copy-right a{
     color: #000;
     text-decoration: none;
+}
+
+.copy-right a:hover{
+    color: rgba(2, 10, 245, 1);
+    text-decoration: underline;
 }

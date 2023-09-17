@@ -26,7 +26,7 @@
     color: rgba(17, 24, 39, 1);
     margin-bottom: 4px;
     margin-top: 8px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
 }
 
@@ -36,7 +36,8 @@
     padding-bottom: 2px; 
     padding-top: 2px;
     border-radius: 9999px;
-    font-size: 12px; 
+    font-size: 14px; 
+    font-style: italic;
     line-height: 16px;
     background-color: rgba(239, 241, 255, 1); 
     color: rgba(2, 10, 245, 1);
@@ -46,7 +47,7 @@
 }
 
 .projects-grid-description{
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px; 
     color: rgba(75, 85, 99, 1);
     margin-bottom: 4px;
@@ -102,7 +103,8 @@
     padding-right: 16px;
     padding-bottom: 8px; 
     padding-top: 8px;
-    font-size: 0.8rem;
+    font-size: 14px;
+    font-style: italic;
     line-height: 16px;
     font-weight: 400;
     border-radius: 9999px; 
@@ -119,7 +121,7 @@
 }
 
 .project-title{
-    font-size: 18px; 
+    font-size: 24px; 
     font-weight: 600;
     margin-top: 32px;
 }
@@ -137,7 +139,7 @@
 .project-links{
     display: flex;
     font-size: 20px;
-    line-height: 1.2rem; 
+    line-height: 18px; 
     color: rgba(75, 85, 99, 1);
 }
 
@@ -163,7 +165,7 @@
     padding-left: 4px; 
     padding-right: 4px;
     border-radius: 9999px;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 20px;
     border-width: 0; 
     color: rgba(17, 24, 39, 1);
@@ -185,7 +187,7 @@
 
 .project-description{
     max-width: 768px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
 }
 
