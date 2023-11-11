@@ -3,12 +3,12 @@ title: "My Journey of Lifelong Learning"
 published_date: 2023-09-16
 author: Marolahy
 permalink: /posts/2023/09/launching/
-tags: 
-    - AI/ML journey
-    - Lifelong Learning
+tags: [AI/ML journey, Lifelong Learning]
+description: "Join me on my journey of lifelong learning as I explore the world of AI and machine learning. Discover the endless creativity of AI/ML, how it's solving real-world problems, and the vibrant community of enthusiasts behind it."
+comments: true
 ---
 
-##### Introduction:
+##### **Introduction:**
 Welcome to the thrilling world of AI and machine learning, where algorithms come to life, and the possibilities are limitless. I'm on a journey of discovery, and I invite you to join me as I unravel the beauty of AI.
 
 ##### Embracing Lifelong Learning:

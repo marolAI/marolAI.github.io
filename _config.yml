@@ -40,6 +40,8 @@ defaults:
     values:
       layout: "project"
 
+disqus:
+  shortname: {{ disqus.shortname }}
 plugins:
   - jekyll-feed
   - jekyll-sitemap

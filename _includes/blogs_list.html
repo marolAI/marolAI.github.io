@@ -11,11 +11,11 @@
                     <span class="blogs-list-entry-read-time">{{ post.content | strip_html | number_of_words | divided_by: 200 }} minute read</span>
                 </div>
                 <div class="blogs-list-entry-content">
-                    {{ post.content | truncatewords: 50 }}
+                    {{ post.description }}
                 </div>
                 <div class="blogs-list-entry-read-more">
                     <a href="{{ post.url }}">
-                        Continue reading
+                        Read more
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" stroke-width="1.5" stroke="currentColor" class="read-more-array">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
                         </svg>
