@@ -8,7 +8,7 @@
                 </h3>
                 <div class="blogs-list-entry-meta">
                     <time class="blogs-list-entry-date">{{ post.published_date | date: "%b %d, %Y" }}</time>
-                    <span class="blogs-list-entry-read-time">{{ post.read_time}} read</span>
+                    <span class="blogs-list-entry-read-time">{{ post.content | strip_html | number_of_words | divided_by: 200 }} minute read</span>
                 </div>
                 <div class="blogs-list-entry-content">
                     {{ post.content | truncatewords: 50 }}

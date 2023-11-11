@@ -1,8 +1,8 @@
 ---
 title: "My Journey of Lifelong Learning"
-read_time: ~1 min
 published_date: 2023-09-16
 author: Marolahy
+permalink: /posts/2023/09/launching/
 tags: 
     - AI/ML journey
     - Lifelong Learning

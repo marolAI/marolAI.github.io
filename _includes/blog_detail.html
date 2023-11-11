@@ -1,10 +1,16 @@
+---
+{% assign post_content = content | strip_html %}
+{% assign word_count = post_content | number_of_words %}
+{% assign read_time = word_count | divided_by: 200 %}
+---
+
 <div class="blog-wrapper">
   <div class="blog-content">
     <div class="blog-header">
         <p class="blog-title">{{ page.title }}</p>
         <div class="blog-sub-title">
             <span class="blog-date"> {{ page.published_date | date: "%b %d, %Y" }} </span>
-            <span class="blog-read-time"> {{ page.read_time }} read </span>
+            <span class="blog-read-time"> {{ read_time }} minute read </span>
             <span class="blog-all"><a href="/blog.html">All posts</a></span>
         </div>
     </div>
