@@ -22,7 +22,7 @@
   }
   
   .card[data-state="#contact"] {
-    height: 550; //430px;
+    height: 430px;
   }
   
   .card[data-state="#experience"] {
@@ -33,43 +33,39 @@
     .card-header {
       height: 92px;
       border: none;
-    }
-  
-    .card-social {
-      left: 72px;
-      padding: 0 10px;
-      svg {
-        width: 12px;
+      &-social {
+        left: 72px;
+        padding: 0 10px;
+        svg {
+          width: 12px;
+        }
+        a {
+          height: 24px;
+          width: 24px;
+        }
       }
-      a {
-        height: 24px;
-        width: 24px;
+      &-avatar {
+        transform: none;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
       }
-    }
-  
-    .card-avatar {
-      transform: none;
-      left: 20px;
-      width: 50px;
-      height: 50px;
-      bottom: 15px;
-    }
-  
-    .card-fullname,
-    .card-jobtitle {
-      left: 86px;
-      transform: none;
-    }
-  
-    .card-fullname {
-      bottom: 30px;
-      font-size: 19px;
-    }
-  
-    .card-jobtitle {
-      bottom: 28px;
-      letter-spacing: 1px;
-      font-size: 10px;
+      &-fullname,
+      &-jobtitle {
+        left: 86px;
+        transform: none;
+      }
+      &-fullname {
+        bottom: 30px;
+        font-size: 19px;
+      }
+    
+      &-jobtitle {
+        bottom: 28px;
+        letter-spacing: 1px;
+        font-size: 10px;
+      }
     }
   }
   
@@ -87,47 +83,84 @@
     * {
       transition: 0.3s;
     }
-  }
+    &-avatar {
+      width: 100px;
+      height: 100px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+      border-radius: 50%;
+      object-position: center;
+      object-fit: cover;
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-64px);
+    }
+    &-fullname {
+      position: absolute;
+      bottom: 32px;
+      line-height: 1.6;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+      white-space: nowrap;
+      transform: translateY(-10px) translateX(-50%);
+      left: 50%;
+    }
+    &-jobtitle {
+      position: absolute;
+      bottom: 32px;
+      font-size: 11px;
+      white-space: nowrap;
+      font-weight: 500;
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-7px);
+    }
+    &-social {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      bottom: -30px;
+      margin-bottom: 30px;
+      &-links {
+        color: #636b6f; 
+        font-size: 20px;
+        display: block;
+        transition: 0.3s;
   
-  .card-avatar {
-    width: 100px;
-    height: 100px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
-    border-radius: 50%;
-    object-position: center;
-    object-fit: cover;
-    position: absolute;
-    bottom: 32px;
-    left: 50%;
-    transform: translateX(-50%) translateY(-64px);
+      }
+      a {
+        color: #8797a1;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: 0.3s;
+        background-color: rgba(93, 133, 193, 0.05);
+        border-radius: 50%;
+        margin-right: 10px;
+    
+        &:hover {
+          svg {
+            fill: darken(rgb(165, 181, 206), 20%);
+          }
+        }
+    
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
   }
-  
-  .card-fullname {
-    position: absolute;
-    bottom: 32px;
-    line-height: 1.6;
-    font-size: 18px;
-    font-weight: 700;
-    text-align: center;
-    white-space: nowrap;
-    transform: translateY(-10px) translateX(-50%);
-    left: 50%;
-  }
-  
-  .card-jobtitle {
-    position: absolute;
-    bottom: 32px;
-    font-size: 11px;
-    white-space: nowrap;
-    font-weight: 500;
-    opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin: 0;
-    left: 50%;
-    transform: translateX(-50%) translateY(-7px);
-  }
-  
+
   .card-main {
     position: relative;
     flex: 1;
@@ -155,47 +188,6 @@
     text-align: left;
     font-weight: 400;
     font-family: "DM Sans", sans-serif;
-  }
-  
-  .card-social {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    bottom: -30px;
-    margin-bottom: 30px;
-    &-links {
-      color: #636b6f; 
-      font-size: 20px;
-      display: block;
-      transition: 0.3s;
-
-    }
-    a {
-      color: #8797a1;
-      height: 32px;
-      width: 32px;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      transition: 0.3s;
-      background-color: rgba(93, 133, 193, 0.05);
-      border-radius: 50%;
-      margin-right: 10px;
-  
-      &:hover {
-        svg {
-          fill: darken(rgb(165, 181, 206), 20%);
-        }
-      }
-  
-      &:last-child {
-        margin-right: 0;
-      }
-    }
   }
   
   .card-buttons {
