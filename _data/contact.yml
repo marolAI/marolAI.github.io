@@ -1,24 +1,24 @@
 -
+  type: Github
+  icon: fa-github-square
+  link: https://github.com/marolAI
+
+-
   type: Linkedin
   icon: fa-linkedin-square
   link: https://www.linkedin.com/in/andriamarolahy-rabetokotany-a84986143/
+
+-
+  type: Stackoverflow
+  icon: fa-stack-overflow 
+  link: https://stackoverflow.com/users/9560986/r-marolahy
 
 -
   type: Twitter
   icon: fa-twitter-square
   link: https://twitter.com/Massa_Be
 
--
-  type: Github
-  icon: fa-github-square
-  link: https://github.com/marolAI
-
 # -
 #   type: Facebook
-#   icon: 
+#   icon: fa-facebook-square  
 #   link: https://www.facebook.com/massa.be.9/
-
--
-  type: Feed
-  icon: fa-rss-square
-  link: /feed.xml

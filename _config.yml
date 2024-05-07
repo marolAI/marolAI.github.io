@@ -13,37 +13,9 @@ show_excerpts: true
 paginate: 3
 paginate_path: "/page:num/"
 
-collections:
-  authors:
-    output: true
-  projects:
-    output: true
-
 defaults:
-  - scope:
-      path: ""
-      type: "authors"
-    values:
-      layout: "author"
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
   - scope:
       path: ""
     values:
       layout: "default"
-  - scope:
-      path: ""
-      type: "projects"
-    values:
-      layout: "project"
-
-disqus:
-  shortname: {{ disqus.shortname }}
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-  - jekyll-paginate
+  
