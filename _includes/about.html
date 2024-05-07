@@ -4,9 +4,9 @@
       <h1 class="card-fullname">A. Rabetokotany</h1>
       <h2 class="card-jobtitle">ML/AI Engineer</h2>
       <div class="card-social">
-        {% for contact in site.data.contact %}
-            <a href="{{ contact.link }}" target="_blank">
-                <i class="fa {{ contact.icon }} fa-fw card-social-links"></i>
+        {% for medium in site.data.media %}
+            <a href="{{ medium.link }}" target="_blank">
+                <i class="fa {{ medium.icon }} fa-fw card-social-links"></i>
             </a>
         {% endfor %}
       </div>
@@ -25,18 +25,12 @@
         <div class="card-content">
           <div class="card-subtitle">WORK EXPERIENCE</div>
           <div class="card-timeline">
-            <div class="card-item" data-year="2023">
-              <div class="card-item-title">AI/ML Engineer at <span>Exponent Switzerland (remote) </span></div>
-              <div class="card-item-desc">Develop deep learning models and building AI-based applications.</div>
-            </div>
-            <div class="card-item" data-year="2021">
-              <div class="card-item-title">R&D Scientist at <span>Pulse Madagascar</span></div>
-              <div class="card-item-desc">Designed AI-based APIs and built machine learning prototypes.</div>
-            </div>
-            <div class="card-item" data-year="2018">
-              <div class="card-item-title">Data science intern at <span>Sonatel Group Senegal</span></div>
-              <div class="card-item-desc">Developed an image recognition prototype.</div>
-            </div>
+            {%for experience in site.data.experiences %}
+                <div class="card-item" data-year="{{ experience.year }}">
+                    <div class="card-item-title">{{ experience.title }} at <span>{{ experience.company }}</span></div>
+                    <div class="card-item-desc">{{ experience.description }}</div>
+                </div>
+            {% endfor %} 
           </div>
         </div>
       </div>
@@ -44,22 +38,16 @@
         <div class="card-content">
           <div class="card-subtitle">CONTACT</div>
           <div class="card-contact-wrapper">
-            <div class="card-contact">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-                <circle cx="12" cy="10" r="3" /></svg>
-              Antananarivo, Madagascar
-            </div>
-            <div class="card-contact">
-              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" /></svg>(261) 331847507</div>
-            <div class="card-contact">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                <path d="M22 6l-10 7L2 6" /></svg>
-              marolahyrabe@gmail.com
-            </div>
-            <button class="contact-me">WORK TOGETHER</button>
+            {% assign contacts = site.data.contacts %}
+            {% for contact in contacts %}
+              <div class="card-contact">
+                {% include contact_icon.html icon=contact.icon %}
+                {{ contact.text }}
+              </div>
+            {% endfor %}
+            <a href="mailto:marolahyrabe@gmail.com">
+              <button class="contact-me">WORK TOGETHER</button>
+            </a>
           </div>
         </div>
       </div>
