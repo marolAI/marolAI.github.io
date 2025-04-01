@@ -1,10 +1,10 @@
 # My Personal Website
 
-This repository contains the source code for my personal website. It showcases information about me, featured projects, and my blogs.
+This is my personal/porfolio website. It showcases information about me, featured projects, and my blogs.
 
 ## About Me
 I am an AI/ML practitioner.
-I use data and machine learning techniques to solve business challenges. I find joy in expanding my knowledge through continuous learning.
+I use Python, data and Machine Learning techniques to solve business challenges. I find joy in expanding my knowledge through continuous learning.
 
 ## Featured Projects
 
