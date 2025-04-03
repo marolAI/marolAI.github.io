@@ -1,12 +1,12 @@
-# My Personal Website
+# My personal website
 
-This is my personal/porfolio website. It showcases information about me, featured projects, and my blogs.
+This is my personal/porfolio website. It showcases information about me, featured projects, and my blogs (WIP).
 
-## About Me
+## About me
 I am an AI/ML practitioner.
 I use Python, data and Machine Learning techniques to solve business challenges. I find joy in expanding my knowledge through continuous learning.
 
-## Featured Projects
+## Featured projects
 
 - [Podcast Summarizer](https://github.com/marolAI/podcast_summarizer)
 - [Smart Identity](https://github.com/marolAI/Smart-Identity)

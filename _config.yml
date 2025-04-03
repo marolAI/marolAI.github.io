@@ -7,7 +7,7 @@ email: marolahyrabe@gmail.com
 twitter_username: Massa_Be
 github_username: marolAI
 
-permalink: /:collection/:year-:month-:day-:title:output_ext
+permalink: /:title/
 show_excerpts: true
 
 paginate: 3
