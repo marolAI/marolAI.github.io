@@ -29,3 +29,18 @@ body {
 .section-title{
   text-transform: uppercase;
 }
+
+footer {
+  background: inherit;
+  color: #000;
+  position: fixed; 
+  left: 50%; 
+  bottom: 0;
+  transform: translateX(-50%); 
+  width: 100%;
+  text-align: center; 
+}
+
+footer img {
+  width: 44px;
+}
