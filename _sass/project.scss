@@ -56,8 +56,7 @@
 // }
 
 .project-card-description{
-    font-size: 18px;
-    line-height: 20px; 
+    font-size: 16px;
     color: #636b6f;
     margin-bottom: 4px;
     margin-top: 8px;
@@ -70,7 +69,6 @@
     margin-top: 4px;
     margin-left: 12px;
     font-size: 16px;
-    line-height: 20px; 
     border-color: rgb(130, 150, 180);
     border-width: 0; 
     color: rgb(130, 150, 180);
@@ -112,10 +110,9 @@
     padding-right: 16px;
     padding-bottom: 8px; 
     padding-top: 8px;
-    font-size: 14px;
+    font-size: 16px;
     font-style: italic;
     line-height: 16px;
-    font-weight: 400;
     border-radius: 9999px; 
     color: rgba(75, 85, 99, 1);
     background-color: rgba(243, 244, 246, 1);
@@ -130,7 +127,7 @@
 }
 
 .project-title{
-    font-size: 24px; 
+    font-size: 18px; 
     font-weight: 600;
     margin-top: 32px;
 }
@@ -147,7 +144,7 @@
 
 .project-links{
     display: flex;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 18px; 
     color: rgba(75, 85, 99, 1);
 }
@@ -174,7 +171,7 @@
     padding-left: 4px; 
     padding-right: 4px;
     border-radius: 9999px;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     border-width: 0; 
     color: rgba(17, 24, 39, 1);
@@ -196,9 +193,9 @@
 
 .project-description{
     max-width: 768px;
-    font-size: 18px;
+    font-size: 16x;
     color: #636b6f;
-    line-height: 24px;
+    // line-height: 24px;
 }
 
 .about-project{
