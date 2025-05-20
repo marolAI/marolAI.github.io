@@ -1,0 +1,418 @@
+---
+layout: default
+title: Contact
+permalink: /contact/
+---
+
+<section class="contact-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Get In Touch</h2>
+      <p>Have a project in mind or want to discuss a collaboration? I'd love to hear from you.</p>
+    </div>
+    
+    <div class="contact-container">
+      <div class="contact-info animate-fade-in">
+        <h3>Contact Information</h3>
+        <p>Feel free to reach out through any of the following channels, and I'll get back to you as soon as possible.</p>
+        
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Email</h4>
+              <p><a href="mailto:marolahyrabe@gmail.com">marolahyrabe@gmail.com</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Phone</h4>
+              <p><a href="tel:+1234567890">+261 (38) 8016223</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Location</h4>
+              <p>Antananarivo, MG (remote)</p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="far fa-clock"></i>
+            </div>            
+            <div class="contact-text">
+              <h4>Working Hours</h4>
+              <p>Monday - Friday: 9am - 6pm EAT</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="social-links-large">
+          {% for medium in site.data.media %}
+          {% if medium.label != "Email" %}
+          <a href="{{ medium.link }}" target="_blank" rel="noopener noreferrer" aria-label="{{ medium.label }}">
+            <i class="{{ medium.icon }}"></i>
+            <span>{{ medium.label }}</span>
+          </a>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      
+      <div class="contact-form-container animate-fade-in animate-delay-1">
+        <h3>Send a Message</h3>
+        
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section bg-alt">
+  <div class="container">
+    <div class="section-title">
+      <h2>Frequently Asked Questions</h2>
+      <p>Answers to common questions about my services and workflow.</p>
+    </div>
+    
+    <div class="faq-container">
+      {% for faq in site.data.faq %}
+      <div class="faq-item animate-fade-in {{ faq.animate }}">
+        <div class="faq-question">
+          <h4>{{ faq.question }}</h4>
+          <button class="faq-toggle"><i class="fas fa-plus"></i></button>
+        </div>
+        <div class="faq-answer">
+          <p>{{ faq.answer }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+.contact-section {
+  padding: var(--space-8) 0;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.contact-info, .contact-form-container {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: 0 4px 16px var(--color-shadow);
+}
+
+.contact-info h3, .contact-form-container h3 {
+  margin-bottom: var(--space-3);
+  position: relative;
+  display: inline-block;
+  padding-bottom: var(--space-1);
+}
+
+.contact-info h3::after, .contact-form-container h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--color-primary-500);
+}
+
+.contact-info p {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-primary-100);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary-500);
+}
+
+.contact-text h4 {
+  margin-bottom: 4px;
+  font-size: var(--font-size-md);
+}
+
+.contact-text p {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.social-links-large {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.social-links-large a {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.social-links-large a:hover {
+  background-color: var(--color-primary-500);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.form-group input, .form-group textarea {
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: var(--font-family);
+  font-size: var(--font-size-md);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  border-color: var(--color-primary-400);
+  box-shadow: 0 0 0 3px var(--color-primary-100);
+  outline: none;
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-primary-500);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.submit-btn:hover {
+  background-color: var(--color-primary-600);
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+.error-message {
+  color: var(--color-error-500);
+  font-size: var(--font-size-sm);
+  margin-top: 4px;
+}
+
+.form-group.error input, .form-group.error textarea {
+  border-color: var(--color-error-500);
+}
+
+.form-success {
+  margin-top: var(--space-3);
+  padding: var(--space-2);
+  background-color: var(--color-success-100);
+  color: var(--color-success-700);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-weight: var(--font-weight-medium);
+}
+
+/* FAQ Section */
+.faq-section {
+  padding: var(--space-8) 0;
+  background-color: var(--color-bg-alt);
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: var(--color-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 16px var(--color-shadow);
+  transition: transform var(--transition-normal);
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+}
+
+.faq-question {
+  padding: var(--space-3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question h4 {
+  margin: 0;
+  font-size: var(--font-size-md);
+}
+
+.faq-toggle {
+  background: none;
+  border: none;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+}
+
+.faq-toggle.active {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding: 0 var(--space-3) var(--space-3);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal), padding var(--transition-normal);
+}
+
+.faq-answer.active {
+  max-height: 200px;
+  padding: 0 var(--space-3) var(--space-3);
+}
+
+.faq-answer p {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bg-alt {
+  background-color: var(--color-bg-alt);
+}
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // FAQ toggle functionality
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        const answer = faqItem.querySelector('.faq-answer');
+        const toggle = question.querySelector('.faq-toggle');
+        
+        // Toggle this FAQ item
+        answer.classList.toggle('active');
+        toggle.classList.toggle('active');
+        
+        // If we're opening this item, close others
+        if (answer.classList.contains('active')) {
+          document.querySelectorAll('.faq-answer.active').forEach(openAnswer => {
+            if (openAnswer !== answer) {
+              openAnswer.classList.remove('active');
+              openAnswer.parentElement.querySelector('.faq-toggle').classList.remove('active');
+            }
+          });
+        }
+      });
+    });
+  });
+</script>

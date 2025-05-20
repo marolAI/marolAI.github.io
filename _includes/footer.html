@@ -1,3 +1,18 @@
-<footer>
-    <p>Copyright &copy; 2025</p>
-</footer>
+<footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}. All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+          <div class="social-links">
+            {% for medium in site.data.media %}
+            <a href="{{ medium.link }}" target="_blank" rel="noopener noreferrer" aria-label="{{medium.label }}">
+              <i class="{{ medium.icon }}"></i>
+            </a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>

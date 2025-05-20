@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Professional Portfolio</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <div class="logo">
+          <a href="/about">
+            <span>AR</span>
+          </a>
+        </div>
+        
+        <nav class="main-nav">
+          <ul>
+            <li><a href="/about" >About</a></li>
+            <li><a href="/projects" >Projects</a></li>
+            <li><a href="/blog" >Blog</a></li>
+            <li><a href="/contact" >Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="nav-controls">
+          <button id="theme-toggle" aria-label="Toggle dark/light mode">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+          </button>
+          <button id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+      
+      <div class="mobile-nav">
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  
+  <main class="container">
+    <script>
+  // Redirect from home page to about page
+  window.location.href = '/about';
+</script>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <p>&copy; 2025 Andriamarolahy R.. All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+          <div class="social-links">
+            
+            <a href="https://github.com/marolAI" target="_blank" rel="noopener noreferrer" aria-label="Github">
+              <i class="fab fa-github"></i>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/andriamarolahy-rabetokotany-a84986143/" target="_blank" rel="noopener noreferrer" aria-label="Linkedin">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            
+            <a href="https://twitter.com/Massa_Be" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            
+            <a href="https://stackoverflow.com/users/9560986/r-marolahy" target="_blank" rel="noopener noreferrer" aria-label="Stackoverflow">
+              <i class="fab fa-stack-overflow"></i>
+            </a>
+            
+            <a href="mailto:{{ site.email }}" target="_blank" rel="noopener noreferrer" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

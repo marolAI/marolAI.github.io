@@ -1,35 +1,10 @@
 ---
-title: Home
 layout: default
+title: About Me
+permalink: /
 ---
-<div class="right-section">
-    <p class="section-title">Projects</p>
-    <div class="projects-grid">
-        {% for project in site.projects %}
-        <div class="project-card">
-            <div class="project-card-header">
-                <img class="project-card-image" src="{{project.image}}" alt="Project photo">
-                <p class="project-card-title">{{project.title}}</p>
-                {% for tag in project.tags %}
-                <button class="project-card-tag" data-bcup-haslogintext="no">{{ tag }}</button>
-                {% endfor %}
-            </div>
-            <div class="project-card-main">
-                <p class="project-card-description">
-                    {{ project.content | strip_html | truncatewords: 40 }}
-                </p>
-                <div class="read-more">
-                    <a href="{{ project.url }}">
-                        Learn more
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" stroke-width="1.5"
-                            stroke="currentColor" class="read-more-array">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-</div>
+
+<script>
+  // Redirect from home page to about page
+  window.location.href = '/about';
+</script>
