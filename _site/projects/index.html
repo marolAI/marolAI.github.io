@@ -65,15 +65,96 @@
       <button class="filter-btn" data-filter="cnn">CNN</button>
       <button class="filter-btn" data-filter="nlp">NLP</button>
       <button class="filter-btn" data-filter="llm">LLM</button>
+      <button class="filter-btn" data-filter="chatbot">Chatbot</button>
+      <button class="filter-btn" data-filter="rag">RAG</button>
+      <button class="filter-btn" data-filter="text-to-speech">Text-to-Speech</button>
       <button class="filter-btn" data-filter="other">Other</button>
     </div>
     
     <div class="projects-grid">
       
+      <div class="project-item animate-fade-in" data-categories="llm,text-to-speech,chatbot">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/assets/images/projects/podlite.png" alt="Project Image">
+            <div class="project-overlay">
+              <a href="https://podlite.streamlit.app/" class="project-link">View Project</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              
+              <span>LLM</span>
+              
+              <span>Text-to-Speech</span>
+              
+              <span>Chatbot</span>
+              
+            </div>
+            <h3>PODLITE: AI-Powered Podcast Intelligence</h3>
+            <p>Revolutionize how you consume podcasts. PODLITE is an AI application that generates intelligent summaries, identifies guests, and extracts key highlights directly from episode transcripts. Built with cutting-edge technologies like faster-whisper for accurate transcription and orchestrated via Langchain with high-speed Groq LLMs, it offers a streamlined way to gain insights from audio content.
+</p>
+            <div class="project-tech">
+              
+              
+              <span>Python</span>
+              
+              <span>langchain</span>
+              
+              <span>Whisper</span>
+              
+              <span>Groq-API</span>
+              
+              <span>Streamlit</span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-item animate-fade-in" data-categories="chatbot,rag,llm,agent">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="/assets/images/projects/ragi.png" alt="Project Image">
+            <div class="project-overlay">
+              <a href="https://rag-agent-chatbot.streamlit.app/" class="project-link">View Project</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              
+              <span>Chatbot</span>
+              
+              <span>RAG</span>
+              
+              <span>LLM</span>
+              
+              <span>Agent</span>
+              
+            </div>
+            <h3>RAGi: Agentic RAG Chatbot</h3>
+            <p>An intelligent chatbot for deep document understanding. RAGi leverages agentic design and Retrieval Augmented Generation (RAG) to autonomously find, verify, and deliver accurate, citable answers from complex documents, preventing hallucinations. Interact via a Streamlit interface. Built with Langchain/LangGraph and high-speed Groq LLMs.
+</p>
+            <div class="project-tech">
+              
+              
+              <span>Python</span>
+              
+              <span>langgraph</span>
+              
+              <span>langchain</span>
+              
+              <span>Streamlit</span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div class="project-item animate-fade-in" data-categories="computer-vision,cnn,ocr">
         <div class="project-card">
           <div class="project-image">
-            <img src="/assets/images/projects/smart-identity.png" alt="Project 1">
+            <img src="/assets/images/projects/smart-identity.png" alt="Project Image">
             <div class="project-overlay">
               <a href="https://smart-identity.streamlit.app" class="project-link">View Project</a>
             </div>
@@ -109,7 +190,7 @@ This challenge not only necessitates a considerable amount of human workforce bu
       <div class="project-item animate-fade-in" data-categories="computer-vision,cnn">
         <div class="project-card">
           <div class="project-image">
-            <img src="/assets/images/projects/tomato.webp" alt="Project 1">
+            <img src="/assets/images/projects/tomato.webp" alt="Project Image">
             <div class="project-overlay">
               <a href="https://marolahy-tomatoripenessdetection.hf.space/?__theme=dark" class="project-link">View Project</a>
             </div>
@@ -139,130 +220,6 @@ This challenge not only necessitates a considerable amount of human workforce bu
         </div>
       </div>
       
-      
-      <!-- <div class="project-item animate-fade-in animate-delay-1" data-categories="mobile,design">
-        <div class="project-card">
-          <div class="project-image">
-            <img src="/assets/images/projects/image.webp" alt="Project 2">
-            <div class="project-overlay">
-              <a href="#" class="project-link">View Project</a>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-tags">
-              <span>Mobile App</span>
-              <span>UI/UX Design</span>
-            </div>
-            <h3>Health & Fitness App</h3>
-            <p>A mobile app that helps users track their fitness goals, nutrition, and workout routines with personalized recommendations.</p>
-            <div class="project-tech">
-              <span>React Native</span>
-              <span>Firebase</span>
-              <span>Redux</span>
-              <span>Figma</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="project-item animate-fade-in animate-delay-2" data-categories="web,other">
-        <div class="project-card">
-          <div class="project-image">
-            <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Project 3">
-            <div class="project-overlay">
-              <a href="#" class="project-link">View Project</a>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-tags">
-              <span>Web Development</span>
-              <span>Data Visualization</span>
-            </div>
-            <h3>Analytics Dashboard</h3>
-            <p>An interactive dashboard for data visualization with real-time updates, custom reporting, and user permission management.</p>
-            <div class="project-tech">
-              <span>Vue.js</span>
-              <span>D3.js</span>
-              <span>Express</span>
-              <span>PostgreSQL</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="project-item animate-fade-in animate-delay-3" data-categories="design">
-        <div class="project-card">
-          <div class="project-image">
-            <img src="https://images.pexels.com/photos/5082579/pexels-photo-5082579.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Project 4">
-            <div class="project-overlay">
-              <a href="#" class="project-link">View Project</a>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-tags">
-              <span>UI/UX Design</span>
-              <span>Branding</span>
-            </div>
-            <h3>Brand Identity System</h3>
-            <p>A comprehensive brand identity system for a tech startup, including logo design, typography, color palette, and usage guidelines.</p>
-            <div class="project-tech">
-              <span>Figma</span>
-              <span>Adobe Illustrator</span>
-              <span>Adobe Photoshop</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="project-item animate-fade-in" data-categories="mobile,other">
-        <div class="project-card">
-          <div class="project-image">
-            <img src="https://images.pexels.com/photos/3862130/pexels-photo-3862130.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Project 5">
-            <div class="project-overlay">
-              <a href="#" class="project-link">View Project</a>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-tags">
-              <span>Mobile App</span>
-              <span>AR/VR</span>
-            </div>
-            <h3>AR Navigation App</h3>
-            <p>An augmented reality navigation application that overlays directional guidance on real-world environments for intuitive navigation.</p>
-            <div class="project-tech">
-              <span>Swift</span>
-              <span>ARKit</span>
-              <span>CoreLocation</span>
-              <span>MapKit</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-item animate-fade-in animate-delay-1" data-categories="web,design">
-        <div class="project-card">
-          <div class="project-image">
-            <img src="https://images.pexels.com/photos/326503/pexels-photo-326503.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Project 6">
-            <div class="project-overlay">
-              <a href="#" class="project-link">View Project</a>
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-tags">
-              <span>Web Development</span>
-              <span>UI/UX Design</span>
-            </div>
-            <h3>Content Management System</h3>
-            <p>A custom CMS built for media companies with advanced publishing workflows, content scheduling, and analytics integration.</p>
-            <div class="project-tech">
-              <span>TypeScript</span>
-              <span>Next.js</span>
-              <span>GraphQL</span>
-              <span>Prisma</span>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </div>
   </div>
 </section>
@@ -279,7 +236,7 @@ This challenge not only necessitates a considerable amount of human workforce bu
         <img src="/assets/images/testimonial1.jpeg" class="testimonial-img" alt="testimonial1">
       </div>
       <div class="testimonial-content">
-        <p>I worked with Andriamarolahy R. for 1.5 years in a part-time capacity as a Junior Software Developer. During this time, he contributed to code implementation and revision in a methodologically complex innovation project, consistently demonstrating reliability and a solid grasp of best software engineering practices. His technical skills, particularly in Python (medical imaging algorithms, ML/AI, data visualization, data analysis, OOP), were at a mid-level when he joined, and he showed clear improvement over time. He was proactive in asking questions whenever clarification was needed, and he was always motivated and eager to learn. With his excellent work ethic and kind personality, he brought well-appreciated contributions to the project and team. I definitely recommend working with him.</p>
+        <p><i>"I worked with Andriamarolahy R. for 1.5 years in a part-time capacity as a Junior Software Developer. During this time, he contributed to code implementation and revision in a methodologically complex innovation project, consistently demonstrating reliability and a solid grasp of best software engineering practices. His technical skills, particularly in Python (medical imaging algorithms, ML/AI, data visualization, data analysis, OOP), were at a mid-level when he joined, and he showed clear improvement over time. He was proactive in asking questions whenever clarification was needed, and he was always motivated and eager to learn. With his excellent work ethic and kind personality, he brought well-appreciated contributions to the project and team. I definitely recommend working with him."</i></p>
         <h6>Fabian B. | PhD</h6>
       </div>
     </div>
