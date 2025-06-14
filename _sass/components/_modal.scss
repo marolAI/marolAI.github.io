@@ -1,0 +1,126 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20, 25, 40, 0.8);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.modal-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease;
+}
+
+.modal {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1200px;
+    height: auto; // Height will be determined by content
+    max-height: 90vh; // But it can't exceed 90% of the viewport height
+    overflow: hidden; // We handle scrolling inside
+    position: relative;
+    transform: scale(0.95) translateY(10px);
+    transition: transform 0.3s ease;
+}
+
+.modal-backdrop.active .modal {
+    transform: scale(1) translateY(0);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: white;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+    }
+}
+
+// **THE KEY FIX**: Using CSS Grid for the layout
+.modal-content {
+    display: grid;
+    grid-template-columns: 35% 1fr; // Left column 45%, right column takes the rest
+    max-height: 90vh;
+
+    // Stack to a single column layout on smaller screens
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.modal-image-container {
+    img {
+        width: 100%;
+        height: 100%;
+        // object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+        max-height: 250px; // Give the image a max height on mobile
+    }
+}
+
+.modal-details {
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; // Only this column scrolls if content is long
+}
+
+.modal-details h2 {
+    margin-bottom: var(--space-2);
+    font-size: 2rem;
+}
+
+.modal-details p {
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    max-width: 100%; // Ensure it fills its container
+}
+
+.modal-footer {
+    margin-top: auto; // Pushes the footer to the bottom
+    padding-top: var(--space-4);
+}
+
+.modal-footer .project-links {
+    margin-top: var(--space-3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-3);
+
+    .btn-demo {
+        @extend .btn, .btn-primary;
+    }
+}

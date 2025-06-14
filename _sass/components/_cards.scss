@@ -1,0 +1,111 @@
+.card {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 12px var(--color-shadow);
+    overflow: hidden;
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    border: 1px solid var(--color-border);
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px var(--color-shadow);
+    }
+}
+
+.interest-card {
+    @extend .card;
+    padding: var(--space-4);
+    text-align: center;
+
+    .interest-icon {
+        width: 64px;
+        height: 64px;
+        background-color: var(--color-primary-100);
+        border-radius: var(--radius-full);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto var(--space-3);
+
+        i {
+            font-size: 1.5rem;
+            color: var(--color-primary-500);
+        }
+    }
+
+    h4 {
+        margin-bottom: var(--space-1);
+    }
+
+    p {
+        color: var(--color-text-secondary);
+        font-size: 0.9rem;
+        margin-bottom: 0;
+    }
+}
+
+.certification-item {
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    padding: var(--space-3);
+    box-shadow: 0 4px 16px var(--color-shadow);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    border: 1px solid var(--color-border);
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px var(--color-shadow);
+    }
+}
+
+.certification-logo {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.certification-content {
+    h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .certification-issuer {
+        font-weight: var(--font-weight-medium);
+        color: var(--color-text-secondary);
+        margin-bottom: 0.25rem;
+    }
+
+    .certification-date {
+        font-size: 0.8rem;
+        color: var(--color-text-tertiary);
+        margin-bottom: var(--space-1);
+    }
+
+    p:last-child {
+        font-size: 0.9rem;
+        color: var(--color-text-secondary);
+        margin: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .certification-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}

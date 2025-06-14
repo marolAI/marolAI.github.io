@@ -1,41 +1,37 @@
 <header class="site-header">
-    <div class="container">
-      <div class="header-inner">
-        <div class="logo">
-          <a href="{{ '/about' | relative_url }}">
-            <span>AR</span>
-          </a>
-        </div>
-        
-        <nav class="main-nav">
-          <ul>
-            <li><a href="{{ '/about' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>About</a></li>
-            <li><a href="{{ '/projects' | relative_url }}" {% if page.url contains '/projects' %}class="active"{% endif %}>Projects</a></li>
-            <li><a href="{{ '/blog' | relative_url }}" {% if page.url contains '/blog' %}class="active"{% endif %}>Blog</a></li>
-            <li><a href="{{ '/contact' | relative_url }}" {% if page.url == '/contact/' %}class="active"{% endif %}>Contact</a></li>
-          </ul>
-        </nav>
-        
-        <div class="nav-controls">
-          <button id="theme-toggle" aria-label="Toggle dark/light mode">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-          </button>
-          <button id="mobile-menu-toggle" aria-label="Toggle mobile menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="#">
+          <span class="logo-initials">AR</span>
+          <span class="logo-text">{{ site.author }}</span>
+        </a>
       </div>
       
-      <div class="mobile-nav">
+      <nav class="main-nav">
         <ul>
-          <li><a href="{{ '/about' | relative_url }}">About</a></li>
-          <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
-          <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
-          <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+          <li><a href="#about" class="active">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+      </nav>
+      
+      <div class="nav-controls">
+        <button id="theme-toggle" aria-label="Toggle dark/light mode">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+        </button>
+        <button id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-  </header>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <ul>
+      <li><a href="#about" class="active">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>

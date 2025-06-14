@@ -1,0 +1,72 @@
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2> Let's Connect</h2>
+      <p>Have  a potential project in mind? Get in touch to discuss how I can help.</p>
+    </div>
+    
+    <div class="contact-card-container">
+      <div class="contact-card">
+        <!-- Main Call to Action: Email -->
+        <a href="mailto:{{ site.email }}" class="email-cta">
+          <div class="email-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="email-text">
+            <span>Send me an email</span>
+            <strong>{{ site.email }}</strong>
+          </div>
+          <div class="email-arrow">
+            →
+          </div>
+        </a>
+        
+        <!-- Divider -->
+        <div class="divider">
+          <span>OR</span>
+        </div>
+        
+        <!-- Social/Professional Links -->
+        <div class="contact-socials">
+          <p>Connect with me on other platforms</p>
+          <div class="social-links-contact">
+            {% for medium in site.data.media %}
+              {% if medium.label != "Email" %}
+              <a href="{{ medium.link }}" target="_blank" rel="noopener noreferrer" aria-label="{{ medium.label }}" class="social-btn">
+                <i class="{{ medium.icon }}"></i>
+                <span>{{ medium.label }}</span>
+              </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section bg-alt">
+  <div class="container">
+    <div class="section-title">
+      <h2>Frequently Asked Questions</h2>
+      <p>Answers to common questions about my services and workflow.</p>
+    </div>
+    
+    <div class="faq-container">
+      {% for faq in site.data.faq %}
+      <div class="faq-item animate-fade-in">
+        <div class="faq-question">
+          <h4>{{ faq.question }}</h4>
+          <button class="faq-toggle" aria-label="Toggle Answer">
+            <i class="fas fa-plus"></i>
+            <i class="fas fa-minus"></i>
+          </button>
+        </div>
+        <div class="faq-answer">
+          <p>{{ faq.answer }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

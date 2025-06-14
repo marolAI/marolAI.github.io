@@ -1,0 +1,357 @@
+.projects-section {
+    padding: var(--space-8) 0;
+}
+
+.project-card {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: 0 4px 12px var(--color-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 112, 243, 0.15);
+    }
+}
+
+/* 
+ * ===================================
+ * 1.Featured Project Styles
+ * ===================================
+ */
+
+.featured-card {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    align-items: center;
+    min-height: 300px;
+    background-color: var(--color-surface);
+    margin-bottom: 2em;
+
+    @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+    }
+
+    &:hover {
+        box-shadow: 0 12px 30px rgba(var(--color-primary-rgb), 0.2);
+        transform: translateY(-5px);
+    }
+}
+
+.featured-image-container {
+    width: 100%;
+    height: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        // object-fit: cover;
+        border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+
+        // Adjust border-radius for mobile view
+        @media (max-width: 992px) {
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+        }
+    }
+}
+
+.project-details {
+    padding: var(--space-2);
+    display: flex;
+    flex-direction: column;
+    height: 100%; // Make sure it tries to fill the parent height
+}
+
+.project-content {
+    flex-grow: 1; // Allows this area to expand, pushing the footer down
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--color-text-secondary);
+        max-width: none;
+    }
+
+    .cta-text {
+        margin-top: var(--space-1);
+        font-size: 0.9rem;
+        color: var(--color-text-tertiary);
+    }
+}
+
+.project-footer {
+    margin-top: auto; // Pushes the footer to the bottom
+    padding-top: var(--space-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+// Ensure tags look good on the new background
+.featured-card .project-tags span {
+    background-color: var(--color-bg-alt);
+    color: var(--color-text-tertiary);
+}
+
+.featured-card .project-tech span {
+    background-color: var(--color-primary-100);
+    color: var(--color-primary-600);
+}
+
+[data-theme="dark"] .featured-card {
+    .project-tags span {
+        background-color: var(--color-neutral-50); // Darker BG
+        color: var(--color-neutral-700);
+    }
+
+    .project-tech span {
+        background-color: var(--color-primary-100); // Using the dark theme's primary shades
+        color: var(--color-primary-500);
+    }
+}
+
+/* 
+ * ===================================
+ * 2. Secondary Projects Grid
+ * ===================================
+ */
+.projects-grid-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-bottom: var(--space-3);
+}
+
+.projects-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-1);
+
+    .filter-btn {
+        background: var(--color-bg-alt);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        padding: 0.5rem 1.25rem;
+        font-size: 0.9rem;
+        font-weight: var(--font-weight-medium);
+        color: var(--color-text-secondary);
+        cursor: pointer;
+        transition: all var(--transition-fast);
+
+        &:hover {
+            color: var(--color-primary-500);
+            border-color: var(--color-primary-200);
+        }
+
+        &.active {
+            background-color: var(--color-primary-500);
+            border-color: var(--color-primary-500);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 112, 243, 0.2);
+
+            &::before {
+                content: '\f00c';
+                font-family: 'Font Awesome 6 Free';
+                font-weight: 900;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-4);
+}
+
+.project-item {
+    display: flex;
+}
+
+.projects-grid .project-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .project-image {
+        aspect-ratio: 16 / 9;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .project-content {
+        padding: var(--space-3);
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+            font-size: 1.2rem;
+            color: var(--color-text-primary);
+        }
+
+        p {
+            flex-grow: 1;
+            font-size: 0.9rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .project-footer {
+        padding: var(--space-2) var(--space-3);
+        border-top: 1px solid var(--color-border);
+        background-color: var(--color-bg-alt);
+        margin-top: auto;
+    }
+}
+
+
+/* --- Shared styles for card content --- */
+.project-tags span {
+    font-size: 0.7rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-tertiary);
+    background-color: var(--color-bg-alt);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-full);
+}
+
+.project-tech span {
+    font-size: 0.7rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-primary-600);
+    background-color: var(--color-primary-100);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-full);
+}
+
+.project-links {
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: var(--font-weight-medium);
+        font-size: 0.9rem;
+        color: var(--color-text-secondary);
+
+        &:hover {
+            color: var(--color-primary-500);
+        }
+    }
+}
+
+[data-theme="dark"] .projects-grid .project-tech span {
+    background-color: var(--color-primary-100); // Dark blue bg
+    color: var(--color-primary-500); // Bright blue text
+    border: 1px solid var(--color-primary-200);
+}
+
+/* --- 3. Load More Styles --- */
+
+.project-item.hidden {
+    display: none;
+}
+
+.load-more-container {
+    text-align: center;
+    margin-top: var(--space-6);
+}
+
+#load-more-btn {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+}
+
+/* --- Read More Button Style --- */
+.read-more-btn {
+    background: none;
+    border: none;
+    color: var(--color-primary-500);
+    font-weight: var(--font-weight-medium);
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.5rem 0; // Give it a larger click area
+    // margin-left: auto; // Push it to the right
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+/* ---
+   NEW: Badge-Style Button Styles
+   --- */
+.btn-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: var(--font-weight-medium);
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+// Style for the GitHub button
+.github-badge {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+
+    &:hover {
+        background-color: #444;
+    }
+}
+
+// Style for the Live Demo button
+.demo-badge {
+    background-color: var(--color-primary-500);
+    color: white;
+    border: 1px solid var(--color-primary-600);
+
+    &:hover {
+        background-color: var(--color-primary-600);
+    }
+}
+
+// Override for dark theme to make GitHub button pop
+[data-theme="dark"] .github-badge {
+    background-color: var(--color-neutral-200);
+    color: var(--color-neutral-900);
+    border: 1px solid var(--color-neutral-300);
+
+    &:hover {
+        background-color: var(--color-neutral-300);
+    }
+}

@@ -1,19 +1,17 @@
--
-  animate: 
-  question: What types of projects do you typically work on?
-  answer: I specialize in data-driven projects that turn complex information into actionable insights. My work spans predictive modeling, data visualization, machine learning pipelines, and business intelligence solutions. Whether it's analyzing customer behavior, optimizing operations, or building end-to-end data platforms, I focus on creating tools that are not only technically sound but also accessible and impactful for decision-makers.
+### Quick Answers for Busy Folks
 
 -
-  animate: animate-delay-1
-  question: What is your typical process for new projects?
-  answer: My process is structured yet adaptable, and typically includes; 1) Discovery, Understanding business goals and data context. 2) Exploration, Analyzing data and selecting suitable ML techniques. 3) Design, Defining model approach and evaluation metrics. 4) Development, Building and validating machine learning models. 5) Testing, Optimizing through tuning and edge-case analysis. 6) Deployment, Integrating models into production workflows. 7) Monitoring, Tracking performance and refining as needed.
+  question: What kinds of problems do you like to solve?
+  answer: Basically, I turn complex info into clear actions using Python and AI, tackling challenges like predicting things or automating tasks. My goal is always to make data useful and valuable.
 
 -
-  animate: animate-delay-2
-  question: How do you handle project pricing?
-  answer: I offer both fixed-price quotes for well-defined projects and hourly rates for ongoing work or projects with evolving requirements. Every project is unique, so I provide custom quotes based on the scope, complexity, and timeline. I'm transparent about costs and provide detailed proposals before starting any work.
+  question: How do you usually build a project?
+  answer: I start by really understanding what problem we need to fix. Then, I get the data ready. Finally I build and test the model to make sure it works right.
 
-- 
-  animate: animate-delay-3
-  question: What is your typical timeline for completing projects?
-  answer: Timelines vary based on project complexity, but typically; Data audits or dashboards (1-2 weeks), Standard ML models or NLP pipelines (1-2 months), and larger, more complex projects (3+ months). I pride myself on delivering on time and provide regular updates throughout the development process.
+-
+  question: How do you make sure your work is trustworthy and helps?
+  answer: It starts with good, clean data. Then, I test everything a lot to be sure it's reliable. Most important, I explain what the results actually *mean* in simple terms so people can see exactly how it solves the problem and adds value.
+
+-
+  question: How do you keep learning and finding new ways to help?
+  answer: I'm always curious! I read up on new stuff, take courses, and especially love building new projects just to play with the latest tech. It helps me find the best tools to solve future problems.

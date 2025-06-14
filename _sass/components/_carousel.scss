@@ -1,0 +1,110 @@
+.interest-section {
+    height: 300px;
+    padding: var(--space-4) 0;
+    background-color: var(--color-bg-alt);
+    box-sizing: border-box;
+}
+
+.owl-carousel .interest {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 var(--space-2) var(--space-4);
+}
+
+.owl-carousel .owl-grab {
+    cursor: grab;
+}
+
+.owl-carousel .owl-grabbing {
+    cursor: grabbing;
+}
+
+
+.interest-text-content {
+    position: relative;
+    z-index: 2;
+    margin-top: -40px;
+    max-width: 60%;
+    padding: var(--space-4) var(--space-3) var(--space-3);
+    padding-top: 55px;
+    border: 1px solid transparent;
+    border-radius: var(--radius-lg);
+    box-shadow: none;
+    background-color: transparent;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.owl-carousel .interest:hover .interest-text-content {
+    border-color: var(--color-primary-500);
+}
+
+
+.interest .img-wrap {
+    position: relative;
+    z-index: 3;
+    margin-bottom: 0;
+
+    .interest-icon-big {
+        width: 80px;
+        height: 80px;
+        background-color: var(--color-primary-100);
+        border-radius: var(--radius-full);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        color: var(--color-primary-500);
+        font-size: 2.5rem;
+        box-shadow: 0 5px 15px var(--color-shadow);
+    }
+}
+
+[data-theme="dark"] .interest-icon-big {
+    background-color: var(--color-primary-900);
+    color: var(--color-primary-200);
+}
+
+.interest h3.name {
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.interest blockquote p {
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+.owl-carousel .owl-dots {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    // margin-top: var(--space-2);
+}
+
+.owl-carousel .owl-dots .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+
+    span {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: var(--radius-full);
+        background: var(--color-border);
+        transition: all var(--transition-fast);
+    }
+}
+
+.owl-carousel .owl-dots .owl-dot.active span,
+.owl-carousel .owl-dots .owl-dot:hover span {
+    background: var(--color-primary-500);
+    transform: scale(1.2);
+}

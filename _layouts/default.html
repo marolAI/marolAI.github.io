@@ -3,19 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  {% seo %}
+
+  <link rel="icon" href="{{ '/assets/images/favicon/favicon.ico' | relative_url }}" type="image/x-icon">
+
+
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/vendor/owl-carousel/owl.carousel.min.css' | relative_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
   {% include header.html %}
   
-  <main class="container">
+  <main>
     {{ content }}
   </main>
   
   {% include footer.html %}
   
+  <script src="{{ '/assets/vendor/owl-carousel/jquery-3.4.1.min.js' | relative_url }}"></script>
+  <script src="{{ '/assets/vendor/owl-carousel/owl.carousel.min.js' | relative_url }}"></script>
+
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
+  <!-- =================================== -->
+  <!-- MODAL MARKUP                        -->
+  <!-- =================================== -->
+  <div id="project-modal" class="modal-backdrop">
+    <div class="modal">
+      <button id="close-modal-btn" class="modal-close-btn" aria-label="Close project details">×</button>
+      <div class="modal-content">
+        <div class="modal-image-container">
+          <img id="modal-image" src="" alt="Project Image">
+        </div>
+        <div class="modal-details">
+          <div id="modal-tags" class="project-tags"></div>
+          <h2 id="modal-title"></h2>
+          <p id="modal-description"></p>
+          <p class="cta-text"><strong>Try the live demo and star the repo if you find it useful!</strong></p>
+          <div class="modal-footer">
+            <div id="modal-tech" class="project-tech"></div>
+            <div id="modal-links" class="project-links"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
