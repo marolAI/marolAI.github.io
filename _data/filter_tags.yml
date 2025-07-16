@@ -1,21 +1,21 @@
 -
-  filter: cv
-  tag: Computer Vision
--
-  filter: llm
-  tag: LLM
--
   filter: ai 
   tag: AI 
+-
+  filter: cv
+  tag: Computer Vision
 - 
   filter: nlp
   tag: NLP
 -
+  filter: ml 
+  tag: ML
+-
+  filter: llm
+  tag: LLM
+-
   filter: speech-to-text
   tag: Speech-to-Text
--
-  filter: cnn
-  tag: CNN
 -
   filter: automation
   tag: Automation

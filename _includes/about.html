@@ -22,31 +22,29 @@
 
 <section class="about-section">
   <div class="container">
-  
     <div class="about-content">
       <div class="about-image">
         <img src="/assets/images/about.png" alt="Professional headshot of Andriamarolahy R." class="animate-fade-in">
       </div>
       <div class="about-text animate-fade-in animate-delay-1">
-        <h3>Hello, I'm <span class="highlight">{{ site.author }}</span></h3>
-        <p class="lead">Driving Business Value with Data & AI.</p>
+        <!-- <h3>Hello, I'm <span class="highlight">{{ site.author }}</span></h3> -->
+        <h4 class="lead"><b>Building Reliable AI Solutions to Simplify Your Work.</b></h4>
 
-        <p>Solving business challenges using Python, Data, and Artificial Intelligence. Committed to continuous learning and delivering results.</p>
+        <p>Hello, I'm {{ site.author }} I believe technology's greatest purpose is to serve people. My passion is turning complex problems into simple, automated solutions using my skills in Python and AI. I'm not just here to deliver a project; I'm here to build a partnership based on clear communication and trust. Let's explore how I can help you build a 'ladder' for your goals.</p>
         
-        <!-- <p>My main focus is on <strong>Generative AI</strong>. I create agentic workflows and RAG systems that deliver smart, context-aware answers. I also have deep experience with <strong>computer vision</strong>, developing models for medical imaging and automating document analysis—reducing manual workload by <strong>80%</strong> in one project.</p> -->
-        <p>Explore my projects and let's discuss how I can help.</p>
+        <!-- <p>Explore my projects and let's discuss how I can help.</p> -->
         <div class="cta-group">
           <div class="cta-actions">
             <a href="#projects" class="btn btn-primary">
               <i class="fas fa-briefcase"></i>
-              <span>See My Work</span>
+              <span>Explore my projects</span>
             </a>
           </div>
         </div>
     
         <div class="about-footer">
           <div class="skills-group">
-            <h4 class="group-title">Skills</h4>
+            <h4 class="group-title">My Toolkit for Building Solutions</h4>
             <div class="skill-tags-container">
               {% for skill in site.data.skills %}
                 <span class="skill-tag">{{ skill }}</span>
@@ -54,7 +52,7 @@
             </div>
           </div>
           <div class="connect-group">
-            <h4 class="group-title">Connect with me</h4>
+            <h4 class="group-title">Let's Start a Conversation</h4>
             <div class="social-links">
               {% for medium in site.data.media %}
                 {% if medium.label != "Email" %}
@@ -73,8 +71,8 @@
 <section class="project-process bg-alt">
   <div class="container">
     <div class="section-title">
-      <h2>Testimonial</h2>
-      <p>What clients say...</p>
+      <h2>In Their Own Words</h2>
+      <p>I'm grateful for the relationships I've built and the trust I've earned along the way.</p>
     </div>
 
     <div class="testimonial">
@@ -84,7 +82,7 @@
       <div class="testimonial-content">
         <blockquote>
         <p><i>"I worked with Andriamarolahy R. for 1.5 years in a part-time capacity as a Junior Software Developer. During this time, he contributed to code implementation and revision in a methodologically complex innovation project, consistently demonstrating reliability and a solid grasp of best software engineering practices. His technical skills, particularly in Python (medical imaging algorithms, ML/AI, data visualization, data analysis, OOP), were at a mid-level when he joined, and he showed clear improvement over time. He was proactive in asking questions whenever clarification was needed, and he was always motivated and eager to learn. With his excellent work ethic and kind personality, he brought well-appreciated contributions to the project and team. I definitely recommend working with him."</i></p>
-        <h6>Fabian B. | PhD</h6>
+        <p><b>Fabian B. | PhD</b></p>
         </blockquote>
       </div>
     </div>

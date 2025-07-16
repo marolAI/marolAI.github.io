@@ -5,9 +5,10 @@ github_link: https://github.com/marolAI/Smart-Identity
 demo_link: https://smart-identity.streamlit.app
 tags: CV CNN AI Automation
 tech: Python Tensorflow Keras Streamlit 
-project-card-desc: "Efficiently classify ECOWAS ID cards from paper. Using Computer Vision (CNN), this project automates document sorting for faster, less manual processing."
 ---
 
-Handling large volumes of paper documents is a common pain point in many industries. Manually sorting and categorizing specific documents, like ECOWAS ID cards, takes significant human effort, costs a lot of time, and can be incredibly inefficient and frustrating.
-This project, the ECOWAS ID Card Classifier, was built to automate that challenge. It employs a Convolutional Neural Network (CNN) model, a type of Computer Vision AI, to accurately classify ECOWAS ID cards directly from scanned paper documents or images.
-By automating this task, the project aims to dramatically reduce manual workload, speed up processing, and eliminate the inefficiencies tied to paper-based handling.
+In many organizations, employees are stuck doing tedious, repetitive work like manually sorting scanned documents. This process is slow, prone to human error, and a major bottleneck that prevents people from focusing on more valuable, complex tasks.
+
+I developed an "automated digital clerk" to take over this repetitive task. Using a Convolutional Neural Network (CNN) trained on thousands of examples, I taught the system to instantly recognize and classify ECOWAS ID cards from a mixed batch of scanned documents with high accuracy.
+
+This simple automation tool has a dramatic effect on efficiency. It processes documents in seconds rather than minutes, eliminates sorting errors, and—most importantly—it frees up human employees from monotonous work. This allows them to apply their skills to customer service, problem-solving, and other areas where the human touch truly matters.

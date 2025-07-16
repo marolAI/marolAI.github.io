@@ -1,8 +1,8 @@
 <section class="projects-section" id="projects">
   <div class="container">
     <div class="section-title">
-      <h2>Projects in Action</h2>
-      <p>A portfolio showcasing my practical skills in data analysis, machine learning, and AI application.</p>
+      <h2>From Problem to Solution</h2>
+      <p>A collection of case studies showing how I use AI to build useful and reliable tools.</p>
     </div>
 
     <!-- 1. Featured Project Section -->
@@ -28,7 +28,7 @@
         </div>
         <h3>{{ featured_project.title }}</h3>
         <p>{{ featured_project.content | strip_html }}</p>
-        <p class="cta-text"><strong>Try the live demo and star the repo if you find it useful!</strong></p>
+        <p class="cta-text"><b>Feel free to explore the live demo. For a deeper look at my thought process and the technical details, you can find the fully-documented code on GitHub.</b></p>
       </div>
       <div class="project-footer">
         <div class="project-tech">
@@ -87,7 +87,7 @@
               {% endfor %}
             </div>
             <h3>{{ project.title }}</h3>
-            <p>{{ project.project-card-desc | strip_html }}</p> 
+            <p>{{ project.content | strip_html | truncatewords: 30}}</p> 
             <div class="project-links">
               <button class="read-more-btn js-modal-trigger">Read More →</button>
             </div>
@@ -122,7 +122,7 @@
               {% endfor %}
             </div>
             <h3>{{ project.title }}</h3>
-            <p>{{ project.project-card-desc | strip_html }}</p> 
+            <p>{{ project.content | strip_html | truncatewords: 30}}</p> 
             <div class="project-links">
               <button class="read-more-btn js-modal-trigger">Read More →</button>
             </div>
@@ -151,8 +151,8 @@
 <section class="certifications-section bg-alt">
   <div class="container">
     <div class="section-title">
-      <h2>Skills & Learning</h2>
-      <p>Building and proving my expertise through ongoing training to bring the best solutions.</p>
+      <h2>A Commitment to Growth</h2>
+      <p>I believe the best solutions come from a place of continuous learning and humility. Here are some of the ways I stay curious and sharpen my toolkit.</p>
     </div>
     
     <div class="certifications-grid">

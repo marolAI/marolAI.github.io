@@ -1,11 +1,14 @@
 ---
 title: "PODLITE: Summarize & Unlock Insights from Podcasts"
-image: /assets/images/projects/podlite.png
+image: /assets/images/projects/podlite.jpg
 github_link: https://github.com/marolAI/podcast_summarizer
 demo_link: https://podlite.streamlit.app/
 tags:  LLM Speech-to-Text AI NLP
 tech: Python Langchain Whisper Groq-API Streamlit
-project-card-desc: "Tired of long podcasts? PODLITE uses AI to instantly provide summaries, key highlights, and guest info from transcripts, making insights accessible."
 ---
 
-Welcome to the PODLITE project! Podcasts hold valuable insights, but getting to them quickly can be a challenge. This AI application helps solve that. PODLITE automatically processes episode transcripts using advanced speech-to-text and powerful language models to generate smart summaries, extract key highlights, and identify guests. It's a streamlined way to unlock understanding faster. Explore the details of how it was built and the technology behind it below!
+Podcasts are a treasure trove of knowledge, but a single episode can be an hour long. Professionals, students, and curious minds often don't have the time to listen to everything, causing valuable insights to remain locked away and inaccessible.
+
+ I built PODLITE to act as an intelligent "research assistant." I engineered a pipeline that uses advanced Speech-to-Text (Whisper) to transcribe the audio and powerful Large Language Models (LLMs) to read through the content. It then automatically distills the key ideas, extracts actionable highlights, and identifies who was speaking.
+
+ This tool transforms a time-consuming activity into an efficient learning experience. Users can grasp the core message of a 60-minute podcast in just 5 minutes, making knowledge more accessible and saving them valuable time. It turns passive listening into active, targeted understanding.
