@@ -11,4 +11,3 @@ Farmers face a constant, costly challenge: how to know the perfect moment to har
 To solve this, I built a 'digital assistant' prototype for the field. I developed and trained a Computer Vision model (using YOLOv8) to act as a fast, reliable 'second pair of eyes,' capable of identifying tomato ripeness directly from an image.
 
 The result is a simple tool that provides farmers with instant, data-driven feedback. This helps them increase their yield, reduce waste, and support more sustainable farming practices.
-

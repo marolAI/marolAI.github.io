@@ -239,7 +239,7 @@
     
     <!-- Left Column: Image -->
     <div class="featured-image-container">
-      <img src="/assets/images/projects/podlite.jpg" alt="PODLITE: Summarize & Unlock Insights from Podcasts preview">
+      <img src="/assets/images/projects/smart-identity.png" alt="ECOWAS ID Card Classifier preview">
     </div>
 
     <!-- Right Column: All Project Details -->
@@ -247,21 +247,21 @@
       <div class="project-content">
         <div class="project-tags">
           
-          <span>LLM</span>
+          <span>CV</span>
           
-          <span>Speech-to-Text</span>
+          <span>CNN</span>
           
           <span>AI</span>
           
-          <span>NLP</span>
+          <span>Automation</span>
           
         </div>
-        <h3>PODLITE: Summarize & Unlock Insights from Podcasts</h3>
-        <p>Podcasts are a treasure trove of knowledge, but a single episode can be an hour long. Professionals, students, and curious minds often don’t have the time to listen to everything, causing valuable insights to remain locked away and inaccessible.
+        <h3>ECOWAS ID Card Classifier</h3>
+        <p>In many organizations, employees are stuck doing tedious, repetitive work like manually sorting scanned documents. This process is slow, prone to human error, and a major bottleneck that prevents people from focusing on more valuable, complex tasks.
 
-I built PODLITE to act as an intelligent “research assistant.” I engineered a pipeline that uses advanced Speech-to-Text (Whisper) to transcribe the audio and powerful Large Language Models (LLMs) to read through the content. It then automatically distills the key ideas, extracts actionable highlights, and identifies who was speaking.
+I developed an “automated digital clerk” to take over this repetitive task. Using a Convolutional Neural Network (CNN) trained on thousands of examples, I taught the system to instantly recognize and classify ECOWAS ID cards from a mixed batch of scanned documents with high accuracy.
 
-This tool transforms a time-consuming activity into an efficient learning experience. Users can grasp the core message of a 60-minute podcast in just 5 minutes, making knowledge more accessible and saving them valuable time. It turns passive listening into active, targeted understanding.
+This simple automation tool has a dramatic effect on efficiency. It processes documents in seconds rather than minutes, eliminates sorting errors, and—most importantly—it frees up human employees from monotonous work. This allows them to apply their skills to customer service, problem-solving, and other areas where the human touch truly matters.
 </p>
         <p class="cta-text"><b>Feel free to explore the live demo. For a deeper look at my thought process and the technical details, you can find the fully-documented code on GitHub.</b></p>
       </div>
@@ -271,24 +271,22 @@ This tool transforms a time-consuming activity into an efficient learning experi
           
           <span>Python</span>
           
-          <span>Langchain</span>
+          <span>Tensorflow</span>
           
-          <span>Whisper</span>
-          
-          <span>Groq-API</span>
+          <span>Keras</span>
           
           <span>Streamlit</span>
           
         </div>
         <div class="project-links">
           
-            <a href="https://github.com/marolAI/podcast_summarizer" target="_blank" rel="noopener noreferrer" class="btn-badge github-badge">
+            <a href="https://github.com/marolAI/Smart-Identity" target="_blank" rel="noopener noreferrer" class="btn-badge github-badge">
               <i class="fab fa-github"></i>
               <span>GitHub</span>
             </a>
           
           
-            <a href="https://podlite.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn-badge demo-badge">
+            <a href="https://smart-identity.streamlit.app" target="_blank" rel="noopener noreferrer" class="btn-badge demo-badge">
               <i class="fas fa-rocket"></i>
               <span>Live Demo</span>
             </a>
@@ -322,6 +320,112 @@ This tool transforms a time-consuming activity into an efficient learning experi
     </div>
 
     <div class="projects-grid">
+      
+      <div class="project-item animate-fade-in" data-categories="cv,cnn,yolo,ai,automation">
+        <div class="project-card"
+            data-full-description="Farmers face a constant, costly challenge: how to know the perfect moment to harvest. Manual checks are slow, labor-intensive, and can lead to inconsistent quality and wasted crops.
+
+To solve this, I built a ‘digital assistant’ prototype for the field. I developed and trained a Computer Vision model (using YOLOv8) to act as a fast, reliable ‘second pair of eyes,’ capable of identifying tomato ripeness directly from an image.
+
+The result is a simple tool that provides farmers with instant, data-driven feedback. This helps them increase their yield, reduce waste, and support more sustainable farming practices.
+"
+            data-github-link="" 
+            data-demo-link="https://marolahy-tomatoripenessdetection.hf.space/?__theme=dark">
+
+          <div class="project-image-container js-modal-trigger">
+            <div class="project-image">
+              <img src="/assets/images/projects/tomato.webp" alt="Automated Tomato Ripeness Detector preview">
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-tags">
+              
+              <span>CV</span>
+              
+              <span>CNN</span>
+              
+              <span>YOLO</span>
+              
+              <span>AI</span>
+              
+              <span>Automation</span>
+              
+            </div>
+            <h3>Automated Tomato Ripeness Detector</h3>
+            <p>Farmers face a constant, costly challenge: how to know the perfect moment to harvest. Manual checks are slow, labor-intensive, and can lead to inconsistent quality and wasted crops. To solve...</p> 
+            <div class="project-links">
+              <button class="read-more-btn js-modal-trigger">Read More →</button>
+            </div>
+          </div>
+          <div class="project-footer">
+            <div class="project-tech">
+              
+              
+              <span>Python</span>
+              
+              <span>YOLOv8</span>
+              
+              <span>Gradio</span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="project-item animate-fade-in" data-categories="llm,speech-to-text,ai,nlp">
+        <div class="project-card"
+            data-full-description="Podcasts are a treasure trove of knowledge, but a single episode can be an hour long. Professionals, students, and curious minds often don’t have the time to listen to everything, causing valuable insights to remain locked away and inaccessible.
+
+I built PODLITE to act as an intelligent “research assistant.” I engineered a pipeline that uses advanced Speech-to-Text (Whisper) to transcribe the audio and powerful Large Language Models (LLMs) to read through the content. It then automatically distills the key ideas, extracts actionable highlights, and identifies who was speaking.
+
+This tool transforms a time-consuming activity into an efficient learning experience. Users can grasp the core message of a 60-minute podcast in just 5 minutes, making knowledge more accessible and saving them valuable time. It turns passive listening into active, targeted understanding.
+"
+            data-github-link="https://github.com/marolAI/podcast_summarizer" 
+            data-demo-link="https://podlite.streamlit.app/">
+
+          <div class="project-image-container js-modal-trigger">
+            <div class="project-image">
+              <img src="/assets/images/projects/podlite.jpg" alt="PODLITE: Summarize & Unlock Insights from Podcasts preview">
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-tags">
+              
+              <span>LLM</span>
+              
+              <span>Speech-to-Text</span>
+              
+              <span>AI</span>
+              
+              <span>NLP</span>
+              
+            </div>
+            <h3>PODLITE: Summarize & Unlock Insights from Podcasts</h3>
+            <p>Podcasts are a treasure trove of knowledge, but a single episode can be an hour long. Professionals, students, and curious minds often don’t have the time to listen to everything,...</p> 
+            <div class="project-links">
+              <button class="read-more-btn js-modal-trigger">Read More →</button>
+            </div>
+          </div>
+          <div class="project-footer">
+            <div class="project-tech">
+              
+              
+              <span>Python</span>
+              
+              <span>Langchain</span>
+              
+              <span>Whisper</span>
+              
+              <span>Groq-API</span>
+              
+              <span>Streamlit</span>
+              
+            </div>
+          </div>
+        </div>
+      </div>
       
       <div class="project-item animate-fade-in" data-categories="chatbot,rag,llm,agent,automation">
         <div class="project-card"
@@ -379,37 +483,35 @@ RAGI eliminates the guesswork and risk of AI hallucinations. It delivers accurat
         </div>
       </div>
       
-      <div class="project-item animate-fade-in" data-categories="cv,cnn,ai,automation">
-        <div class="project-card"
-            data-full-description="In many organizations, employees are stuck doing tedious, repetitive work like manually sorting scanned documents. This process is slow, prone to human error, and a major bottleneck that prevents people from focusing on more valuable, complex tasks.
+      
+      <div class="project-item animate-fade-in" data-categories="ai,cv,automation">
+        <div class="project-card" 
+            data-full-description="Manually transcribing table data from images and scans is a major bottleneck. This process is slow, tedious, and highly prone to costly human errors that corrupt data.
 
-I developed an “automated digital clerk” to take over this repetitive task. Using a Convolutional Neural Network (CNN) trained on thousands of examples, I taught the system to instantly recognize and classify ECOWAS ID cards from a mixed batch of scanned documents with high accuracy.
+I built a “Practical AI” web app using Streamlit and PaddleOCR. A user simply uploads an image, and the AI engine automatically detects, parses, and extracts the table data.
 
-This simple automation tool has a dramatic effect on efficiency. It processes documents in seconds rather than minutes, eliminates sorting errors, and—most importantly—it frees up human employees from monotonous work. This allows them to apply their skills to customer service, problem-solving, and other areas where the human touch truly matters.
-"
-            data-github-link="https://github.com/marolAI/Smart-Identity" 
-            data-demo-link="https://smart-identity.streamlit.app">
+This tool converts a multi-hour manual task into a 10-second process. It saves massive amounts of time, ensures data accuracy, and frees up professionals for high-value analytical work.
+"  
+            data-github-link="https://github.com/marolAI/Data-Tables-Extractor" 
+            data-demo-link="https://data-tables-extractor.streamlit.app/">
 
           <div class="project-image-container js-modal-trigger">
             <div class="project-image">
-              <img src="/assets/images/projects/smart-identity.png" alt="ECOWAS ID Card Classifier preview">
+              <img src="/assets/images/projects/data_tables_extractor.gif" alt="Data Tables Extractor preview">
             </div>
           </div>
-
           <div class="project-content">
             <div class="project-tags">
               
-              <span>CV</span>
-              
-              <span>CNN</span>
-              
               <span>AI</span>
+              
+              <span>CV</span>
               
               <span>Automation</span>
               
             </div>
-            <h3>ECOWAS ID Card Classifier</h3>
-            <p>In many organizations, employees are stuck doing tedious, repetitive work like manually sorting scanned documents. This process is slow, prone to human error, and a major bottleneck that prevents people...</p> 
+            <h3>Data Tables Extractor</h3>
+            <p>Manually transcribing table data from images and scans is a major bottleneck. This process is slow, tedious, and highly prone to costly human errors that corrupt data. I built a...</p> 
             <div class="project-links">
               <button class="read-more-btn js-modal-trigger">Read More →</button>
             </div>
@@ -420,9 +522,15 @@ This simple automation tool has a dramatic effect on efficiency. It processes do
               
               <span>Python</span>
               
-              <span>Tensorflow</span>
+              <span>OCR</span>
               
-              <span>Keras</span>
+              <span>"Computer</span>
+              
+              <span>Vision"</span>
+              
+              <span>"Image</span>
+              
+              <span>Processing"</span>
               
               <span>Streamlit</span>
               
@@ -431,60 +539,10 @@ This simple automation tool has a dramatic effect on efficiency. It processes do
         </div>
       </div>
       
-      <div class="project-item animate-fade-in" data-categories="cv,cnn,yolo,ai,automation">
-        <div class="project-card"
-            data-full-description="Farmers face a constant, costly challenge: how to know the perfect moment to harvest. Manual checks are slow, labor-intensive, and can lead to inconsistent quality and wasted crops.
-
-To solve this, I built a ‘digital assistant’ prototype for the field. I developed and trained a Computer Vision model (using YOLOv8) to act as a fast, reliable ‘second pair of eyes,’ capable of identifying tomato ripeness directly from an image.
-
-The result is a simple tool that provides farmers with instant, data-driven feedback. This helps them increase their yield, reduce waste, and support more sustainable farming practices.
-
-"
-            data-github-link="" 
-            data-demo-link="https://marolahy-tomatoripenessdetection.hf.space/?__theme=dark">
-
-          <div class="project-image-container js-modal-trigger">
-            <div class="project-image">
-              <img src="/assets/images/projects/tomato.webp" alt="Automated Tomato Ripeness Detector preview">
-            </div>
-          </div>
-
-          <div class="project-content">
-            <div class="project-tags">
-              
-              <span>CV</span>
-              
-              <span>CNN</span>
-              
-              <span>YOLO</span>
-              
-              <span>AI</span>
-              
-              <span>Automation</span>
-              
-            </div>
-            <h3>Automated Tomato Ripeness Detector</h3>
-            <p>Farmers face a constant, costly challenge: how to know the perfect moment to harvest. Manual checks are slow, labor-intensive, and can lead to inconsistent quality and wasted crops. To solve...</p> 
-            <div class="project-links">
-              <button class="read-more-btn js-modal-trigger">Read More →</button>
-            </div>
-          </div>
-          <div class="project-footer">
-            <div class="project-tech">
-              
-              
-              <span>Python</span>
-              
-              <span>YOLOv8</span>
-              
-              <span>Gradio</span>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      
+    </div>
+    
+    <div class="load-more-container">
+      <button id="load-more-btn" class="btn btn-secondary">Load More Projects</button>
     </div>
     
   </div>

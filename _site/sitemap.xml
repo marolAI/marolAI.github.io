@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/projects/podlite/</loc>
+<loc>http://localhost:4000/projects/20200312_smart-identity/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/projects/ragi/</loc>
+<loc>http://localhost:4000/projects/20250410_tomato_ripeness_detection/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/projects/smart-identity/</loc>
+<loc>http://localhost:4000/projects/20250430_podlite/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/projects/tomato_ripeness_detection/</loc>
+<loc>http://localhost:4000/projects/20250520_ragi/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/projects/20250721_data_tables_extractor/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/</loc>
