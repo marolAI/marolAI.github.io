@@ -67,7 +67,7 @@
     </div>
 
     <div class="projects-grid">
-      {% for project in site.projects limit: 7 offset: 1 %}
+      {% for project in site.projects limit: 3 offset: 1 %}
       <div class="project-item animate-fade-in" data-categories="{{ project.tags | join: ',' | downcase }}">
         <div class="project-card"
             data-full-description="{{ project.content | strip_html | escape }}"
@@ -103,7 +103,7 @@
         </div>
       </div>
       {% endfor %}
-      {% for project in site.projects offset: 8 %}
+      {% for project in site.projects offset: 4 %}
       <div class="project-item animate-fade-in" data-categories="{{ project.tags | join: ',' | downcase }}">
         <div class="project-card" 
             data-full-description="{{ project.content | strip_html | escape }}"  
@@ -139,7 +139,7 @@
       </div>
       {% endfor %}
     </div>
-    {% if site.projects.size > 8 %}
+    {% if site.projects.size > 4 %}
     <div class="load-more-container">
       <button id="load-more-btn" class="btn btn-secondary">Load More Projects</button>
     </div>
