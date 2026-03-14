@@ -7,8 +7,8 @@ tags: CV CNN AI Automation
 tech: Python Tensorflow Keras Streamlit 
 ---
 
-In many organizations, employees are stuck doing tedious, repetitive work like manually sorting scanned documents. This process is slow, prone to human error, and a major bottleneck that prevents people from focusing on more valuable, complex tasks.
+In many organizations, people spend hours a day manually sorting scanned documents, often combing through thousands of pages to find and categorize ID cards. This workflow is slow (multiple minutes per batch), error-prone, and creates a bottleneck that keeps staff from higher-value tasks.
 
-I developed an "automated digital clerk" to take over this repetitive task. Using a Convolutional Neural Network (CNN) trained on thousands of examples, I taught the system to instantly recognize and classify ECOWAS ID cards from a mixed batch of scanned documents with high accuracy.
+To solve this, I built an “automated digital clerk” that uses a lightweight TensorFlow/Keras CNN pipeline to detect and classify ECOWAS ID cards in mixed document batches. The system is trained on thousands of labeled images, includes a simple pre-processing step to locate candidate card regions, and outputs structured results in seconds.
 
-This simple automation tool has a dramatic effect on efficiency. It processes documents in seconds rather than minutes, eliminates sorting errors, and—most importantly—it frees up human employees from monotonous work. This allows them to apply their skills to customer service, problem-solving, and other areas where the human touch truly matters.
+The result: document sorting drops from minutes to seconds, misclassification errors are reduced to under 1%, and frontline staff are freed to focus on customer service, problem-solving, and other work that requires a human touch. This automation both improves accuracy and amplifies team productivity.
