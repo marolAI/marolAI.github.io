@@ -1,6 +1,6 @@
 .interest-section {
-    height: 300px;
-    padding: var(--space-4) 0;
+    height: 250px;
+    padding: var(--space-3) 0;
     background-color: var(--color-bg-alt);
     box-sizing: border-box;
 }
@@ -48,8 +48,8 @@
     margin-bottom: 0;
 
     .interest-icon-big {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         background-color: var(--color-primary-100);
         border-radius: var(--radius-full);
         display: flex;
@@ -57,7 +57,7 @@
         justify-content: center;
         margin: 0 auto;
         color: var(--color-primary-500);
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         box-shadow: 0 5px 15px var(--color-shadow);
     }
 }
@@ -68,18 +68,20 @@
 }
 
 .interest h3.name {
-    font-size: 1.1rem;
-    font-weight: var(--font-weight-bold);
+    font-size: 1rem;
+    font-weight: 600;
     color: var(--color-text-primary);
     margin-bottom: 0.25rem;
+    letter-spacing: 0.025em;
 }
 
 .interest blockquote p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: var(--color-text-secondary);
     line-height: 1.6;
     max-width: 100%;
     margin-bottom: 0;
+    font-weight: 400;
 }
 
 .owl-carousel .owl-dots {

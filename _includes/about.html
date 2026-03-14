@@ -25,43 +25,52 @@
     <div class="about-content">
       <div class="about-image">
         <img src="/assets/images/about.png" alt="Professional headshot of Andriamarolahy R." class="animate-fade-in">
+
+        <div class="about-details">
+          <p class="about-subtitle">AI Engineer & Automation Specialist</p>
+
+          <div class="about-footer">
+            <div class="connect-group">
+              <h4 class="group-title">Connect With Me</h4>
+              <div class="social-links">
+                {% for medium in site.data.media %}
+                  {% if medium.label != "Email" %}
+                  <a href="{{ medium.link }}" target="_blank" rel="noopener noreferrer" aria-label="{{medium.label }}">
+                    <i class="{{ medium.icon }}"></i>
+                  </a>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="about-text animate-fade-in animate-delay-1">
-        <!-- <h3>Hello, I'm <span class="highlight">{{ site.author }}</span></h3> -->
-        <h4 class="lead"><b>Building reliable AI tools that turn repetitive work into trusted workflows.</b></h4>
+        <h2 class="about-title">Hi, I'm Andriamarolahy R.</h2>
 
-        <p>I build tools that automate repetitive workflows so teams can focus on decisions and creativity, because productivity should never come at the cost of trust.</p>
+        <p class="about-description">
+          I specialize in developing intelligent automation solutions that transform complex workflows into efficient, reliable systems. With expertise in machine learning, computer vision, and data engineering, I help organizations unlock productivity by eliminating repetitive tasks and enabling data-driven decision-making.
+        </p>
 
-        <p>I do this by listening first, validating ideas with quick prototypes, and delivering production-ready systems with clear documentation and measurable impact.</p>
-        
-        <!-- <p>Explore my projects and let's discuss how I can help.</p> -->
+        <p class="about-description">
+          My approach combines technical precision with practical insight—building tools that not only work flawlessly but also deliver measurable business value. From prototype to production, I ensure every solution is scalable, maintainable, and aligned with your goals.
+        </p>
+
         <div class="cta-group">
           <div class="cta-actions">
             <a href="#projects" class="btn btn-primary btn-cta-main">
               <i class="fas fa-briefcase"></i>
-              <span>Explore my projects</span>
+              <span>View My Work</span>
             </a>
           </div>
         </div>
-    
-        <div class="about-footer">
+
+        <div class="skills-section">
           <div class="skills-group">
-            <h4 class="group-title">My Toolkit for Building Solutions</h4>
+            <h4 class="group-title">Core Technologies</h4>
             <div class="skill-tags-container">
               {% for skill in site.data.skills %}
                 <span class="skill-tag">{{ skill }}</span>
-              {% endfor %}
-            </div>
-          </div>
-          <div class="connect-group">
-            <h4 class="group-title">Let's Start a Conversation</h4>
-            <div class="social-links">
-              {% for medium in site.data.media %}
-                {% if medium.label != "Email" %}
-                <a href="{{ medium.link }}" target="_blank" rel="noopener noreferrer" aria-label="{{medium.label }}">
-                  <i class="{{ medium.icon }}"></i>
-                </a>
-                {% endif %}
               {% endfor %}
             </div>
           </div>
