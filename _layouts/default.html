@@ -28,12 +28,23 @@
   <script src="{{ '/assets/vendor/owl-carousel/jquery-3.4.1.min.js' | relative_url }}"></script>
   <script src="{{ '/assets/vendor/owl-carousel/owl.carousel.min.js' | relative_url }}"></script>
 
+  {% if site.google_analytics and site.google_analytics != '' %}
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+  {% endif %}
+
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 
   <!-- =================================== -->
   <!-- MODAL MARKUP                        -->
   <!-- =================================== -->
-  <div id="project-modal" class="modal-backdrop">
+  <div id="project-modal" class="modal-backdrop" aria-hidden="true">
     <div class="modal">
       <button id="close-modal-btn" class="modal-close-btn" aria-label="Close project details">×</button>
       <div class="modal-content">

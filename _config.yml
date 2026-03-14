@@ -28,3 +28,8 @@ exclude:
 
 # Custom variables
 author: Andriamarolahy R.
+
+# Analytics
+# Set this to your Google Analytics Measurement ID (e.g. G-XXXXXXX) to enable tracking.
+# Leave blank to disable.
+google_analytics: ""
