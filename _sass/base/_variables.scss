@@ -19,13 +19,14 @@
 
     /* Base colors for light theme */
     --color-bg: var(--color-neutral-50);
+    --color-bg-rgb: 255, 255, 255;
     --color-bg-alt: var(--color-neutral-100);
     --color-surface: var(--color-neutral-50); // For cards
     --color-text-primary: var(--color-neutral-900);
     --color-text-secondary: var(--color-neutral-700);
     --color-text-tertiary: var(--color-neutral-800);
     --color-border: var(--color-neutral-300);
-    --color-shadow: rgb(0 0 0 / 8%);
+    --color-shadow: rgba(0, 0, 0, 0.08);
 
     /* Typography, Spacing, etc. (no changes needed here) */
     --font-family-sans: 'Lexend', sans-serif;
@@ -73,8 +74,9 @@
 
     // Remap theme colors
     --color-bg: var(--color-neutral-50);
+    --color-bg-rgb: 17, 24, 39;
     --color-bg-alt: var(--color-neutral-100);
     --color-surface: var(--color-neutral-100);
     --color-border: var(--color-neutral-300);
-    --color-shadow: rgb(0 0 0 / 20%);
+    --color-shadow: rgba(0, 0, 0, 0.2);
 }

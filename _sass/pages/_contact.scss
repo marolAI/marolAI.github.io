@@ -30,7 +30,7 @@
 
     &:hover {
         transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgb(var(--color-primary-rgb) 0.15);
+        box-shadow: 0 8px 20px rgba(var(--color-primary-rgb), 0.15);
         border-color: var(--color-primary-200);
     }
 }
