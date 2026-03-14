@@ -61,6 +61,19 @@ section {
     grid-template-columns: repeat(3, 1fr);
 }
 
+/* Mobile Spacing Adjustments */
+@media (max-width: 576px) {
+    main {
+        padding-top: 60px;
+        /* Smaller header on mobile */
+    }
+
+    section {
+        padding: var(--space-4) 0;
+        /* Reduce vertical padding */
+    }
+}
+
 @media (max-width: 768px) {
 
     .grid-2,

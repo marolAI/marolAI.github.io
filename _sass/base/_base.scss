@@ -49,6 +49,12 @@ a:hover {
     transition: opacity var(--transition-normal), transform var(--transition-normal);
 }
 
+/* Focus Indicators for Accessibility */
+*:focus {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+}
+
 .animate-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0);
