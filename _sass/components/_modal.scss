@@ -68,15 +68,30 @@
 // **THE KEY FIX**: Using CSS Grid for the layout
 .modal-content {
     display: grid;
-    grid-template-columns: 35% 1fr; // Left column 45%, right column takes the rest
+    grid-template-columns: minmax(250px, 1fr) 1.25fr;
     max-height: 90vh;
+    gap: var(--space-4);
 
     // Stack to a single column layout on smaller screens
-    @media (width <=768px) {
+    @media (width <= 768px) {
         grid-template-columns: 1fr;
     }
 }
 
+.modal-image-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        max-height: 90vh;
+        border-radius: var(--radius-lg);
+    }
+}
 .modal-image-container {
     img {
         width: 100%;

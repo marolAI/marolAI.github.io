@@ -58,37 +58,28 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', animateOnScroll);
     window.addEventListener('scroll', animateOnScroll);
 
-    // Project filtering
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectItems = document.querySelectorAll('.project-item');
-
-    if (filterButtons.length > 0 && projectItems.length > 0) {
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-
-                // Add active class to clicked button
-                button.classList.add('active');
-
-                const filterValue = button.getAttribute('data-filter');
-
-                // Filter projects
-                projectItems.forEach(item => {
-                    if (filterValue === 'all') {
-                        item.style.display = 'block';
-                    } else {
-                        const itemCategories = item.getAttribute('data-categories').split(',');
-                        if (itemCategories.includes(filterValue)) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    }
-                });
-            });
-        });
-    }
+    // Initialize Owl Carousel for projects
+    $('.projects-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,
+        navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
 });
 
 /*
@@ -303,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 linksHTML += `<a href="${githubLink}" target="_blank" rel="noopener noreferrer" class="btn-badge github-badge"><i class="fab fa-github"></i> GitHub</a>`;
             }
             if (demoLink) {
-                linksHTML += `<a href="${demoLink}" target="_blank" rel="noopener noreferrer" class="btn-badge demo-badge"><i class="fas fa-rocket"></i> Live Demo</a>`;
+                linksHTML += `<a href="${demoLink}" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fas fa-rocket"></i> Live Demo</a>`;
             }
             modalLinks.innerHTML = linksHTML;
 

@@ -5,73 +5,17 @@
       <p>A collection of case studies showing how I use AI to build useful and reliable tools.</p>
     </div>
 
-    <!-- 1. Featured Project Section -->
-{% assign featured_project = site.projects | first %}
-<div class="featured-project">
-  <h3 class="featured-title">Featured Project</h3>
-  
-  <!-- The new featured-card uses a simple grid layout -->
-  <div class="project-card featured-card">
-    
-    <!-- Left Column: Image -->
-    <div class="featured-image-container">
-      <img src="{{ featured_project.image | relative_url }}" alt="{{ featured_project.title }} preview" loading="lazy">
+    <!-- Projects Carousel -->
+    <div class="projects-carousel-header">
+      <h3 class="carousel-title">All Projects</h3>
     </div>
 
-    <!-- Right Column: All Project Details -->
-    <div class="project-details">
-      <div class="project-content">
-        <div class="project-tags">
-          {% for tag in featured_project.tags %}
-          <span>{{ tag }}</span>
-          {% endfor %}
-        </div>
-        <h3>{{ featured_project.title }}</h3>
-        <p>{{ featured_project.content | strip_html }}</p>
-        <p class="cta-text"><b>Feel free to explore the live demo. For a deeper look at my thought process and the technical details, you can find the fully-documented code on GitHub.</b></p>
-      </div>
-      <div class="project-footer">
-        <div class="project-tech">
-          {% assign techs = featured_project.tech | split: " " %}
-          {% for tech in techs %}
-          <span>{{ tech }}</span>
-          {% endfor %}
-        </div>
-        <div class="project-links">
-          {% if featured_project.github_link %}
-            <a href="{{ featured_project.github_link }}" target="_blank" rel="noopener noreferrer" class="btn-badge github-badge">
-              <i class="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-          {% endif %}
-          {% if featured_project.demo_link %}
-            <a href="{{ featured_project.demo_link }}" target="_blank" rel="noopener noreferrer" class="btn-badge demo-badge">
-              <i class="fas fa-rocket"></i>
-              <span>Live Demo</span>
-            </a>
-          {% endif %}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    <!-- 2. Secondary Projects Grid -->
-    <div class="projects-grid-header">
-      <h3 class="secondary-title">More Projects</h3>
-      <div class="projects-filter animate-fade-in">
-        <button class="filter-btn active" data-filter="all">All</button>
-        {% for filter_tag in site.data.filter_tags %}
-        <button class="filter-btn" data-filter="{{ filter_tag.filter }}">{{ filter_tag.tag }}</button>
-        {% endfor %}
-      </div>
-    </div>
-
-    <div class="projects-grid">
-      {% for project in site.projects limit: 3 offset: 1 %}
+    <div class="owl-carousel owl-theme projects-carousel">
+      {% for project in site.projects %}
       <div class="project-item animate-fade-in" data-categories="{{ project.tags | join: ',' | downcase }}">
         <div class="project-card"
             data-full-description="{{ project.content | strip_html | escape }}"
-            data-github-link="{{ project.github_link }}" 
+            data-github-link="{{ project.github_link }}"
             data-demo-link="{{ project.demo_link }}">
 
           <div class="project-image-container js-modal-trigger">
@@ -87,50 +31,14 @@
               {% endfor %}
             </div>
             <h3>{{ project.title }}</h3>
-            <p>{{ project.content | strip_html | truncatewords: 30}}</p> 
+            <p>{{ project.content | strip_html | truncatewords: 30}}</p>
             <div class="project-links">
               <button class="read-more-btn js-modal-trigger">Read More →</button>
             </div>
           </div>
           <div class="project-footer">
             <div class="project-tech">
-              {% assign techs = project.tech | split: " " %}
-              {% for tech in techs %}
-              <span>{{ tech }}</span>
-              {% endfor %}
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-      {% for project in site.projects offset: 4 %}
-      <div class="project-item animate-fade-in" data-categories="{{ project.tags | join: ',' | downcase }}">
-        <div class="project-card" 
-            data-full-description="{{ project.content | strip_html | escape }}"  
-            data-github-link="{{ project.github_link }}" 
-            data-demo-link="{{ project.demo_link }}">
-
-          <div class="project-image-container js-modal-trigger">
-            <div class="project-image">
-              <img src="{{ project.image | relative_url }}" alt="{{ project.title }} preview" loading="lazy">
-            </div>
-          </div>
-          <div class="project-content">
-            <div class="project-tags">
-              {% for tag in project.tags %}
-              <span>{{ tag }}</span>
-              {% endfor %}
-            </div>
-            <h3>{{ project.title }}</h3>
-            <p>{{ project.content | strip_html | truncatewords: 30}}</p> 
-            <div class="project-links">
-              <button class="read-more-btn js-modal-trigger">Read More →</button>
-            </div>
-          </div>
-          <div class="project-footer">
-            <div class="project-tech">
-              {% assign techs = project.tech | split: " " %}
-              {% for tech in techs %}
+              {% for tech in project.tech %}
               <span>{{ tech }}</span>
               {% endfor %}
             </div>
@@ -139,12 +47,6 @@
       </div>
       {% endfor %}
     </div>
-    {% if site.projects.size > 4 %}
-    <div class="load-more-container">
-      <button id="load-more-btn" class="btn btn-secondary">Load More Projects</button>
-    </div>
-    {% endif %}
-  </div>
   </div>
 </section>
 
