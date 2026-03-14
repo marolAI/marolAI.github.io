@@ -6,3 +6,6 @@ _site/
 
 # System files
 .DS_Store
+
+# Node modules (npm dependencies)
+node_modules/
