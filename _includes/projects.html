@@ -15,7 +15,7 @@
     
     <!-- Left Column: Image -->
     <div class="featured-image-container">
-      <img src="{{ featured_project.image | relative_url }}" alt="{{ featured_project.title }} preview">
+      <img src="{{ featured_project.image | relative_url }}" alt="{{ featured_project.title }} preview" loading="lazy">
     </div>
 
     <!-- Right Column: All Project Details -->
@@ -76,7 +76,7 @@
 
           <div class="project-image-container js-modal-trigger">
             <div class="project-image">
-              <img src="{{ project.image | relative_url }}" alt="{{ project.title }} preview">
+              <img src="{{ project.image | relative_url }}" alt="{{ project.title }} preview" loading="lazy">
             </div>
           </div>
 
@@ -112,7 +112,7 @@
 
           <div class="project-image-container js-modal-trigger">
             <div class="project-image">
-              <img src="{{ project.image | relative_url }}" alt="{{ project.title }} preview">
+              <img src="{{ project.image | relative_url }}" alt="{{ project.title }} preview" loading="lazy">
             </div>
           </div>
           <div class="project-content">

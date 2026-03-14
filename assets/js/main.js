@@ -28,16 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenuToggle.addEventListener('click', () => {
         mobileMenuToggle.classList.toggle('active');
         mobileNav.classList.toggle('active');
-
-        if (mobileMenuToggle.classList.contains('active')) {
-            mobileMenuToggle.querySelector('span:nth-child(1)').style.transform = 'rotate(45deg) translate(5px, 5px)';
-            mobileMenuToggle.querySelector('span:nth-child(2)').style.opacity = '0';
-            mobileMenuToggle.querySelector('span:nth-child(3)').style.transform = 'rotate(-45deg) translate(8px, -8px)';
-        } else {
-            mobileMenuToggle.querySelector('span:nth-child(1)').style.transform = 'rotate(0deg)';
-            mobileMenuToggle.querySelector('span:nth-child(2)').style.opacity = '1';
-            mobileMenuToggle.querySelector('span:nth-child(3)').style.transform = 'rotate(0deg)';
-        }
     });
 
     // Close mobile menu when clicking a link
@@ -46,9 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             mobileMenuToggle.classList.remove('active');
             mobileNav.classList.remove('active');
-            mobileMenuToggle.querySelector('span:nth-child(1)').style.transform = 'rotate(0deg)';
-            mobileMenuToggle.querySelector('span:nth-child(2)').style.opacity = '1';
-            mobileMenuToggle.querySelector('span:nth-child(3)').style.transform = 'rotate(0deg)';
         });
     });
 
@@ -347,9 +334,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const modalTech = document.getElementById('modal-tech');
     const modalLinks = document.getElementById('modal-links');
 
+    let lastFocusedElement;
+
     modalTriggers.forEach(trigger => {
         trigger.addEventListener('click', function (e) {
             e.preventDefault();
+            lastFocusedElement = this;
             const card = this.closest('.project-card');
 
             // 1. Extract data from the card's data attributes
@@ -381,13 +371,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // 4. Show the modal
             modal.classList.add('active');
+            modal.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            closeModalBtn.focus();
         });
     });
 
     function closeModal() {
         modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+        if (lastFocusedElement) {
+            lastFocusedElement.focus();
+        }
     }
 
     closeModalBtn.addEventListener('click', closeModal);

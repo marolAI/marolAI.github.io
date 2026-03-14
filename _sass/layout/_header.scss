@@ -168,19 +168,16 @@
         top: 20px;
     }
 
-    &.active span:nth-child(1),
-    &.active span:nth-child(4) {
-        top: 10px;
-        width: 0%;
-        left: 50%;
+    &.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
     }
 
     &.active span:nth-child(2) {
-        transform: rotate(45deg);
+        opacity: 0;
     }
 
     &.active span:nth-child(3) {
-        transform: rotate(-45deg);
+        transform: rotate(-45deg) translate(8px, -8px);
     }
 }
 
