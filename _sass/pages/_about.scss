@@ -110,7 +110,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .about-content {
         grid-template-columns: 1fr;
         text-align: center;
@@ -142,7 +142,7 @@
 }
 
 // Responsive adjustments
-@media (max-width: 768px) {
+@media (width <= 768px) {
     .cta-actions {
         justify-content: center; // Center the items on mobile
     }

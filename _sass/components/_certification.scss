@@ -62,14 +62,14 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 1024px) {
+@media (width <= 1024px) {
     .certifications-grid {
         grid-template-columns: 1fr;
         gap: var(--space-3);
     }
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
     .certification-item {
         flex-direction: column;
         align-items: center;

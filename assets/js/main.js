@@ -123,6 +123,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 $(function () {
     var owlPlugin = function () {
+        function counter(event) {
+            $('.owl-total').text(event.item.count);
+        }
         if ($('.owl-3-slider').length > 0) {
             var owl3 = $('.owl-3-slider').owlCarousel({
                 loop: true,
@@ -162,37 +165,6 @@ $(function () {
             e.preventDefault();
             owl3.trigger('prev.owl.carousel');
         })
-        if ($('.owl-4-slider').length > 0) {
-            var owl4 = $('.owl-4-slider').owlCarousel({
-                loop: true,
-                autoHeight: true,
-                margin: 10,
-                autoplay: true,
-                smartSpeed: 700,
-                items: 4,
-                nav: false,
-                dots: true,
-                navText: ['<span class="icon-keyboard_backspace"></span>', '<span class="icon-keyboard_backspace"></span>'],
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 2
-                    },
-                    800: {
-                        items: 2
-                    },
-                    1000: {
-                        items: 3
-                    },
-                    1100: {
-                        items: 4
-                    }
-                }
-            });
-        }
-
 
         if ($('.owl-single-text').length > 0) {
             var owlText = $('.owl-single-text').owlCarousel({
@@ -222,10 +194,6 @@ $(function () {
                 navText: ['<span class="icon-keyboard_backspace"></span>', '<span class="icon-keyboard_backspace"></span>'],
                 onInitialized: counter
             });
-
-            function counter(event) {
-                $('.owl-total').text(event.item.count);
-            }
 
             $('.js-custom-owl-next').click(function (e) {
                 e.preventDefault();
@@ -257,36 +225,6 @@ $(function () {
 
     }
     owlPlugin();
-
-    var owlSingleSlider = function () {
-        if ($('.single-slider').length) {
-            $('.single-slider').owlCarousel({
-                center: false,
-                items: 1,
-                loop: true,
-                stagePadding: 0,
-                margin: 0,
-                smartSpeed: 1500,
-                autoplay: true,
-                autoHeight: true,
-                autoplayHoverPause: true,
-                dots: true,
-                nav: true,
-                navText: ['<span class="icon-keyboard_backspace"></span>', '<span class="icon-keyboard_backspace"></span>'],
-
-                responsive: {
-                    400: {
-                        stagePadding: 0,
-                        margin: 0,
-                    },
-                    600: {
-                        stagePadding: 0,
-                        margin: 0,
-                    }
-                }
-            });
-        }
-    }
 
 
 })
@@ -424,7 +362,7 @@ document.addEventListener('DOMContentLoaded', function () {
         threshold: 0
     };
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries, _observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const id = entry.target.getAttribute('id');

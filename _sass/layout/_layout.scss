@@ -8,8 +8,10 @@
 
 main {
     padding-top: 80px;
+
     /* Header height */
     min-height: calc(100vh - 80px - 88px);
+
     /* 100vh - header - footer */
 }
 
@@ -62,20 +64,21 @@ section {
 }
 
 /* Mobile Spacing Adjustments */
-@media (max-width: 576px) {
+@media (width <= 576px) {
     main {
         padding-top: 60px;
+
         /* Smaller header on mobile */
     }
 
     section {
         padding: var(--space-4) 0;
+
         /* Reduce vertical padding */
     }
 }
 
-@media (max-width: 768px) {
-
+@media (width <= 768px) {
     .grid-2,
     .grid-3 {
         grid-template-columns: 1fr;

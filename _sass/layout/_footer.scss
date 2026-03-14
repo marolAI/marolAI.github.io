@@ -44,7 +44,7 @@
     }
 }
 
-@media (max-width: 576px) {
+@media (width <= 576px) {
     .footer-inner {
         flex-direction: column;
         text-align: center;

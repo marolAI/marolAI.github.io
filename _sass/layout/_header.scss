@@ -3,9 +3,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(var(--color-bg), 0.8);
+    background-color: rgb(var(--color-bg) 0.8);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--color-border);
     z-index: 100;
     transition: background-color var(--transition-normal), border-color var(--transition-normal);
@@ -44,13 +43,13 @@
 }
 
 .logo-text {
-    @media (max-width: 576px) {
+    @media (width <= 576px) {
         display: none;
     }
 }
 
 .main-nav {
-    @media (max-width: 768px) {
+    @media (width <= 768px) {
         display: none;
     }
 
@@ -156,7 +155,7 @@
     }
 
     span:nth-child(1) {
-        top: 0px;
+        top: 0;
     }
 
     span:nth-child(2),
@@ -214,7 +213,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
     #mobile-menu-toggle {
         display: block;
     }
