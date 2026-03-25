@@ -1,18 +1,56 @@
-<footer class="site-footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div class="footer-left">
-          <p>&copy; 2025 <a href="{{ site.author }}" target="_blank" rel="noopener noreferrer">{{ site.author }}</a>. All rights reserved.</p>
-        </div>
-        <div class="footer-right">
-          <div class="social-links">
-            {% for medium in site.data.media %}
-            <a href="{{ medium.link }}" target="_blank" rel="noopener noreferrer" aria-label="{{medium.label }}">
-              <i class="{{ medium.icon }}"></i>
-            </a>
-            {% endfor %}
+<footer class="site-footer" id="contact">
+  <!-- The light pencil divider -->
+  <div class="pencil-stroke-divider"></div>
+
+  <div class="container">
+    <div class="footer-main">
+      
+      <!-- Column 1: Identity & Socials -->
+      <div class="footer-col footer-identity">
+        <a href="#" class="footer-logo">
+          <span class="name-top">Andriamarolahy</span>
+          <span class="name-bottom">R.</span>
+        </a>
+
+        <div class="footer-social-wrapper">
+          <div class="brush-container">
+            <span class="brush-stroke"></span>
+            <div class="social-links-brush">
+              {% for medium in site.data.media %}
+                {% if medium.label != "Email" %}
+                  <a href="{{ medium.link }}" target="_blank" rel="noopener noreferrer" aria-label="{{ medium.label }}">
+                    <i class="{{ medium.icon }}"></i>
+                  </a>
+                {% endif %}
+              {% endfor %}
+            </div>
           </div>
         </div>
       </div>
+
+      <!-- Column 2: The "Let's Connect" CTA -->
+      <div class="footer-col footer-cta">
+        <h3 class="cta-heading">Let's Connect</h3>
+        <p class="cta-subtext">Have a project in mind? Reach out at</p>
+        <a href="mailto:{{ site.email }}" class="cta-email-link">
+          {{ site.email }}
+          <span class="cta-brush"></span>
+        </a>
+      </div>
+
+      <!-- Column 3: Navigation -->
+      <nav class="footer-col footer-nav">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </footer>
+
+    <!-- Bottom: Copyright -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 <span class="sig">Andriamarolahy R.</span> All rights reserved.</p>
+    </div>
+  </div>
+</footer>

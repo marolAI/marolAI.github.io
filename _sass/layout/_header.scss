@@ -1,69 +1,83 @@
+// Variables (Ensure these are in your global file)
+// $font-accent: 'Permanent Marker', cursive;
+// $font-main: 'Inter', sans-serif;
+
 .site-header {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 10px;
     left: 0;
     width: 100%;
-    background-color: rgba(var(--color-bg-rgb), 0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--color-border);
+    background-color: transparent; // Clean, no background box
+    backdrop-filter: none; // Remove blur
+    border-bottom: none; // Remove the line
     z-index: 100;
-    transition: background-color var(--transition-normal), border-color var(--transition-normal);
+    padding: 20px 0;
 
     &.scrolled {
-        box-shadow: 0 2px 10px var(--color-shadow);
+        box-shadow: none;
+        background-color: transparent;
     }
 }
 
 .header-inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; // Logo left, Nav right
     align-items: center;
-    height: 80px;
+    min-height: 80px;
 }
 
 .logo a {
     display: flex;
-    align-items: center;
-    gap: var(--space-1);
-    font-size: 1.1rem;
-    font-weight: var(--font-weight-bold);
-    color: var(--color-text-primary);
-}
+    flex-direction: column;
+    font-family: var(--font-accent);
+    color: #000;
+    text-decoration: none;
+    line-height: 0.9;
 
-.logo-initials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    background-color: var(--color-primary-500);
-    color: white;
-    border-radius: var(--radius-sm);
-    font-size: 1rem;
-}
+    .name-top {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+    }
 
-.logo-text {
+    .name-bottom {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        margin-left: 40%;
+    }
+
     @media (width <=576px) {
-        display: none;
+
+        .name-top,
+        .name-bottom {
+            font-size: 1.6rem;
+        }
     }
 }
 
 .main-nav {
+    margin-left: auto; // Pushes nav to the right
+    padding-right: 20px;
+
     @media (width <=768px) {
-        display: none;
+        display: none; // Hides main nav on mobile
     }
 
     ul {
         display: flex;
         list-style: none;
-        gap: var(--space-3);
+        gap: 40px;
     }
 
     a {
-        font-weight: var(--font-weight-medium);
-        color: var(--color-text-secondary);
-        padding: var(--space-1) 0;
+        font-family: var(--font-main);
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #666;
+        text-decoration: none;
         position: relative;
+        padding-bottom: 5px;
 
         &::after {
             content: '';
@@ -72,149 +86,96 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: var(--color-primary-500);
-            transition: width var(--transition-fast);
+            background-color: #0070f3;
+            transition: width 0.3s ease;
         }
 
         &:hover,
         &.active {
-            color: var(--color-text-primary);
-        }
+            color: #000;
 
-        &.active::after {
-            width: 100%;
+            &::after {
+                width: 100%;
+            }
         }
     }
 }
 
+// CLEANED UP CONTROLS
 .nav-controls {
     display: flex;
     align-items: center;
-    gap: var(--space-1);
-}
-
-#theme-toggle {
-    background: none;
-    border: none;
-    color: var(--color-text-secondary);
-    font-size: 1.1rem;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    border-radius: var(--radius-full);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color var(--transition-fast), color var(--transition-fast);
-
-    &:hover {
-        background-color: var(--color-bg-alt);
-        color: var(--color-text-primary);
-    }
-
-    .fa-sun {
-        display: none;
-    }
-
-    .fa-moon {
-        display: block;
-    }
-}
-
-[data-theme="dark"] #theme-toggle {
-    .fa-sun {
-        display: block;
-    }
-
-    .fa-moon {
-        display: none;
-    }
 }
 
 #mobile-menu-toggle {
     display: none;
     background: none;
     border: none;
-    width: 30px;
-    height: 24px;
-    position: relative;
+    width: 25px;
+    height: 20px;
     cursor: pointer;
-    z-index: 101;
+
+    @media (width <=768px) {
+        display: block; // Show only on mobile
+    }
 
     span {
         display: block;
-        position: absolute;
         height: 2px;
         width: 100%;
-        background: var(--color-text-primary);
-        border-radius: 2px;
-        opacity: 1;
-        left: 0;
-        transform: rotate(0deg);
-        transition: 0.25s ease-in-out;
+        background: #000;
+        margin-bottom: 5px;
+        transition: 0.3s;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
-    span:nth-child(1) {
-        top: 0;
-    }
+    &.active {
+        span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
 
-    span:nth-child(2),
-    span:nth-child(3) {
-        top: 10px;
-    }
+        span:nth-child(2) {
+            opacity: 0;
+        }
 
-    span:nth-child(4) {
-        top: 20px;
-    }
-
-    &.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    &.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    &.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(8px, -8px);
+        span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
     }
 }
 
+// MOBILE OVERLAY
 .mobile-nav {
     display: none;
     position: fixed;
-    top: 80px;
+    top: 0;
     left: 0;
     width: 100%;
-    height: calc(100vh - 80px);
-    background-color: var(--color-bg);
-    padding: var(--space-4);
-    z-index: 99;
-    transform: translateY(-100%);
-    transition: transform var(--transition-normal);
+    height: 100vh;
+    background: #fff;
+    z-index: 90;
+    padding: 120px 40px;
 
     &.active {
-        transform: translateY(0);
         display: block;
     }
 
     ul {
         list-style: none;
-    }
-
-    li {
-        margin-bottom: var(--space-3);
+        text-align: center;
     }
 
     a {
-        font-size: 1.5rem;
-        font-weight: var(--font-weight-medium);
-        color: var(--color-text-primary);
-    }
-}
-
-@media (width <=768px) {
-    #mobile-menu-toggle {
         display: block;
+        font-size: 2rem;
+        font-family: var(--font-main);
+        text-transform: uppercase;
+        font-weight: 800;
+        color: #000;
+        margin-bottom: 30px;
+        text-decoration: none;
     }
 }

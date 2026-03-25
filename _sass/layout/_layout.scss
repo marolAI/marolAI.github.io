@@ -28,6 +28,8 @@ section {
         display: inline-block;
         padding-bottom: var(--space-1);
         margin-bottom: var(--space-2);
+        font-family: var(--font-accent);
+        font-size: 1.5rem;
 
         &::after {
             content: '';
@@ -64,7 +66,7 @@ section {
 }
 
 /* Mobile Spacing Adjustments */
-@media (width <= 576px) {
+@media (width <=576px) {
     main {
         padding-top: 60px;
 
@@ -78,7 +80,8 @@ section {
     }
 }
 
-@media (width <= 768px) {
+@media (width <=768px) {
+
     .grid-2,
     .grid-3 {
         grid-template-columns: 1fr;

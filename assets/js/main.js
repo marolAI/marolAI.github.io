@@ -1,45 +1,34 @@
-// Theme Toggle Functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('theme-toggle');
-    const htmlElement = document.documentElement;
+/**
+ * ANDRIAMAROLAHY R. - Portfolio Main Script
+ */
 
-    // Check for saved theme preference or use preferred color scheme
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        htmlElement.setAttribute('data-theme', savedTheme);
-    } else {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        htmlElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+document.addEventListener('DOMContentLoaded', () => {
+
+    /* =========================================
+     *  1. MOBILE MENU TOGGLE
+     * ========================================= */
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    if (mobileMenuToggle && mobileNav) {
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        const mobileNavLinks = mobileNav.querySelectorAll('a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                mobileNav.classList.remove('active');
+            });
+        });
     }
 
-    // Theme toggle click handler
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = htmlElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-
-        htmlElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-    });
-
-    // Mobile Menu Toggle
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const mobileNav = document.querySelector('.mobile-nav');
-
-    mobileMenuToggle.addEventListener('click', () => {
-        mobileMenuToggle.classList.toggle('active');
-        mobileNav.classList.toggle('active');
-    });
-
-    // Close mobile menu when clicking a link
-    const mobileNavLinks = document.querySelectorAll('.mobile-nav a');
-    mobileNavLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenuToggle.classList.remove('active');
-            mobileNav.classList.remove('active');
-        });
-    });
-
-    // Scroll animations
+    /* =========================================
+     *  2. SCROLL ANIMATIONS (Fade-in)
+     * ========================================= */
     const animateElements = document.querySelectorAll('.animate-fade-in');
 
     const animateOnScroll = () => {
@@ -54,342 +43,110 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Initial check for elements in view
     window.addEventListener('load', animateOnScroll);
     window.addEventListener('scroll', animateOnScroll);
 
-    // Initialize Owl Carousel for projects
-    $('.projects-carousel').owlCarousel({
-        loop: true,
-        margin: 20,
-        nav: true,
-        navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
-        dots: true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 2
-            },
-            1000: {
-                items: 3
-            }
+
+    /* =========================================
+     *  6. MODAL POPUP LOGIC FOR PROJECTS
+     * ========================================= */
+    document.addEventListener('click', function (e) {
+        // 1. Find if the clicked element (or its parent) is a modal trigger
+        const trigger = e.target.closest('.js-modal-trigger');
+        if (!trigger) return; // Exit if we didn't click a trigger
+
+        e.preventDefault();
+        console.log('Modal Trigger Clicked:', trigger); // Debugging line
+
+        const modal = document.getElementById('project-modal');
+        // Look for the parent row that contains all the project data
+        const row = trigger.closest('.project-row');
+
+        if (!modal || !row) return;
+
+        // 2. Extract data from the row's data attributes
+        const imageSrc = row.querySelector('.project-img').src;
+        const tagsHTML = row.querySelector('.project-tags').innerHTML;
+        const title = row.querySelector('.project-title').textContent;
+        const description = row.dataset.fullDescription;
+        const githubLink = row.dataset.githubLink;
+        const demoLink = row.dataset.demoLink;
+
+        // 3. Populate Modal
+        document.getElementById('modal-image').src = imageSrc;
+        document.getElementById('modal-tags').innerHTML = tagsHTML;
+        document.getElementById('modal-title').textContent = title;
+        document.getElementById('modal-description').textContent = description;
+
+        // 4. Build Professional Modal Links
+        let linksHTML = '';
+        if (githubLink) {
+            linksHTML += `<a href="${githubLink}" target="_blank" class="btn-badge github-badge"><i class="fab fa-github"></i> GitHub</a>`;
         }
-    });
-});
-
-/*
- * =========================================
- *  FAQ ACCORDION LOGIC
- * =========================================
- */
-document.addEventListener('DOMContentLoaded', function () {
-    const faqItems = document.querySelectorAll('.faq-item');
-    if (faqItems.length === 0) return;
-
-    faqItems.forEach(item => {
-        const question = item.querySelector('.faq-question');
-
-        question.addEventListener('click', () => {
-            const currentlyActive = document.querySelector('.faq-item.active');
-
-            // If there's an active item and it's not the one we just clicked, close it.
-            if (currentlyActive && currentlyActive !== item) {
-                currentlyActive.classList.remove('active');
-                currentlyActive.querySelector('.faq-answer').classList.remove('active');
-                currentlyActive.querySelector('.faq-toggle').classList.remove('active');
-            }
-
-            // Now, toggle the one we clicked.
-            item.classList.toggle('active');
-            item.querySelector('.faq-answer').classList.toggle('active');
-            item.querySelector('.faq-toggle').classList.toggle('active');
-        });
-    });
-});
-
-$(function () {
-    var owlPlugin = function () {
-        function counter(event) {
-            $('.owl-total').text(event.item.count);
+        if (demoLink) {
+            linksHTML += `<a href="${demoLink}" target="_blank" class="btn btn-primary"><i class="fas fa-rocket"></i> Live Demo</a>`;
         }
-        if ($('.owl-3-slider').length > 0) {
-            var owl3 = $('.owl-3-slider').owlCarousel({
-                loop: true,
-                autoHeight: true,
-                margin: 20,
-                autoplay: true,
-                smartSpeed: 700,
-                items: 1,
-                stagePadding: 0,
-                nav: true,
-                dots: true,
-                navText: ['<span class="icon-keyboard_backspace"></span>', '<span class="icon-keyboard_backspace"></span>'],
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 1
-                    },
-                    800: {
-                        items: 2
-                    },
-                    1000: {
-                        items: 2
-                    },
-                    1100: {
-                        items: 3
-                    }
-                }
-            });
-        }
-        $('.js-custom-next-v2').click(function (e) {
-            e.preventDefault();
-            owl3.trigger('next.owl.carousel');
-        })
-        $('.js-custom-prev-v2').click(function (e) {
-            e.preventDefault();
-            owl3.trigger('prev.owl.carousel');
-        })
+        document.getElementById('modal-links').innerHTML = linksHTML;
 
-        if ($('.owl-single-text').length > 0) {
-            var owlText = $('.owl-single-text').owlCarousel({
-                loop: true,
-                autoHeight: true,
-                margin: 0,
-                mouseDrag: false,
-                touchDrag: false,
-                autoplay: true,
-                smartSpeed: 1200,
-                items: 1,
-                nav: false,
-                navText: ['<span class="icon-keyboard_backspace"></span>', '<span class="icon-keyboard_backspace"></span>']
-            });
-        }
-        if ($('.owl-single').length > 0) {
-            var owl = $('.owl-single').owlCarousel({
-                loop: true,
-                autoHeight: true,
-                margin: 0,
-                autoplay: true,
-                smartSpeed: 800,
-                mouseDrag: false,
-                touchDrag: false,
-                items: 1,
-                nav: false,
-                navText: ['<span class="icon-keyboard_backspace"></span>', '<span class="icon-keyboard_backspace"></span>'],
-                onInitialized: counter
-            });
-
-            $('.js-custom-owl-next').click(function (e) {
-                e.preventDefault();
-                owl.trigger('next.owl.carousel');
-                owlText.trigger('next.owl.carousel');
-            })
-            $('.js-custom-owl-prev').click(function (e) {
-                e.preventDefault();
-                owl.trigger('prev.owl.carousel');
-                owlText.trigger('prev.owl.carousel');
-            })
-
-            $('.owl-dots .owl-dot').each(function (i) {
-                $(this).attr('data-index', i - 3);
-            });
-
-            owl.on('changed.owl.carousel', function (event) {
-
-                var i = event.item.index;
-                if (i === 1) {
-                    i = event.item.count;
-                } else {
-                    i = i - 1;
-                }
-                $('.owl-current').text(i);
-                $('.owl-total').text(event.item.count);
-            })
-        }
-
-    }
-    owlPlugin();
-
-
-})
-
-/*
- * =========================================
- *  LOAD MORE PROJECTS LOGIC
- * =========================================
- */
-document.addEventListener('DOMContentLoaded', function () {
-    const loadMoreBtn = document.getElementById('load-more-btn');
-    if (!loadMoreBtn) return; // Exit if the button doesn't exist
-
-    loadMoreBtn.addEventListener('click', function () {
-        const hiddenItems = document.querySelectorAll('.project-item.hidden');
-
-        hiddenItems.forEach(item => {
-            // Remove the 'hidden' class to make them visible
-            item.classList.remove('hidden');
-        });
-
-        // Hide the "Load More" button after it's been clicked
-        loadMoreBtn.style.display = 'none';
-    });
-});
-
-/*
-* =========================================
-* MODAL POPUP LOGIC FOR PROJECTS
-* =========================================
-*/
-document.addEventListener('DOMContentLoaded', function () {
-    const modal = document.getElementById('project-modal');
-    if (!modal) return;
-
-    // Use our new, specific class to find triggers
-    const modalTriggers = document.querySelectorAll('.js-modal-trigger');
-    const closeModalBtn = document.getElementById('close-modal-btn');
-
-    // Placeholders inside the modal
-    const modalImage = document.getElementById('modal-image');
-    const modalTags = document.getElementById('modal-tags');
-    const modalTitle = document.getElementById('modal-title');
-    const modalDescription = document.getElementById('modal-description');
-    const modalTech = document.getElementById('modal-tech');
-    const modalLinks = document.getElementById('modal-links');
-
-    let lastFocusedElement;
-
-    modalTriggers.forEach(trigger => {
-        trigger.addEventListener('click', function (e) {
-            e.preventDefault();
-            lastFocusedElement = this;
-            const card = this.closest('.project-card');
-
-            // 1. Extract data from the card's data attributes
-            const imageSrc = card.querySelector('.project-image img').src;
-            const tagsHTML = card.querySelector('.project-tags').innerHTML;
-            const title = card.querySelector('h3').textContent;
-            const description = card.dataset.fullDescription;
-            const techHTML = card.querySelector('.project-tech').innerHTML;
-            const githubLink = card.dataset.githubLink;
-            const demoLink = card.dataset.demoLink;
-
-            // 2. Populate the modal
-            modalImage.src = imageSrc;
-            modalImage.alt = title + " preview";
-            modalTags.innerHTML = tagsHTML;
-            modalTitle.textContent = title;
-            modalDescription.textContent = description;
-            modalTech.innerHTML = techHTML;
-
-            // 3. Rebuild the links in the modal footer with the new badge styles
-            let linksHTML = '';
-            if (githubLink) {
-                linksHTML += `<a href="${githubLink}" target="_blank" rel="noopener noreferrer" class="btn-badge github-badge"><i class="fab fa-github"></i> GitHub</a>`;
-            }
-            if (demoLink) {
-                linksHTML += `<a href="${demoLink}" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="fas fa-rocket"></i> Live Demo</a>`;
-            }
-            modalLinks.innerHTML = linksHTML;
-
-            // 4. Show the modal
-            modal.classList.add('active');
-            modal.setAttribute('aria-hidden', 'false');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            closeModalBtn.focus();
-        });
+        // 5. Open Modal
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Stop background scrolling
     });
 
-    function closeModal() {
-        modal.classList.remove('active');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-        if (lastFocusedElement) {
-            lastFocusedElement.focus();
-        }
-    }
+    /* =========================================
+     *  MODAL CLOSE LOGIC
+     * ========================================= */
+    document.addEventListener('click', (e) => {
+        const isCloseBtn = e.target.closest('#close-modal-btn');
+        const isBackdrop = e.target.id === 'project-modal';
 
-    closeModalBtn.addEventListener('click', closeModal);
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
+        if (isCloseBtn || isBackdrop) {
+            const modal = document.getElementById('project-modal');
+            modal.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
         }
     });
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('active')) {
-            closeModal();
-        }
-    });
-});
-
-/*
- * =========================================
- *  NAVIGATION ACTIVE STATE ON SCROLL (SCROLLSPY)
- * =========================================
- */
-document.addEventListener('DOMContentLoaded', function () {
+    /* =========================================
+     *  7. SCROLLSPY & SMOOTH SCROLL
+     * ========================================= */
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.main-nav a, .mobile-nav a');
 
-    if (sections.length === 0 || navLinks.length === 0) return;
+    if (sections.length > 0 && navLinks.length > 0) {
+        const observerOptions = {
+            root: null,
+            rootMargin: '-100px 0px -50% 0px',
+            threshold: 0
+        };
 
-    // This function removes the .active class from all navigation links
-    const removeActiveClasses = () => {
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-        });
-    };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navLinks.forEach(link => link.classList.remove('active'));
+                    document.querySelectorAll(`a[href="#${id}"]`).forEach(link => link.classList.add('active'));
+                }
+            });
+        }, observerOptions);
 
-    // Options for the Intersection Observer
-    const observerOptions = {
-        root: null, // observes intersections relative to the viewport
-        rootMargin: '-100px 0px -50% 0px', // Adjusts the "trigger area". Triggers when a section is between 100px from the top and the vertical center of the screen.
-        threshold: 0
-    };
+        sections.forEach(section => observer.observe(section));
+    }
 
-    const observer = new IntersectionObserver((entries, _observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const id = entry.target.getAttribute('id');
-                removeActiveClasses();
-
-                // Add .active to the corresponding nav link(s)
-                document.querySelectorAll(`a[href="#${id}"]`).forEach(link => {
-                    link.classList.add('active');
-                });
-            }
-        });
-    }, observerOptions);
-
-    // Tell the observer to watch each section
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-
-    // Also handle smooth scrolling for nav clicks
+    // Smooth Scrolling for Nav Links
     navLinks.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const headerOffset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-                // Close mobile nav if it's open
-                const mobileNav = document.getElementById('mobile-nav');
-                const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-                if (mobileNav && mobileNav.classList.contains('active')) {
-                    mobileNav.classList.remove('active');
-                    mobileMenuToggle.classList.remove('active');
-                }
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
             }
         });
     });

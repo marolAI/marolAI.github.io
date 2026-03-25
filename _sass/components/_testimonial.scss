@@ -1,44 +1,157 @@
-/* Testimonial */
-.testimonial {
-    display: flex;
-    gap: var(--space-3);
-    background-color: var(--color-bg);
-    border-radius: var(--radius-lg);
-    padding: var(--space-3);
-    box-shadow: 0 4px 16px var(--color-shadow);
-    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+// Shared variables
+$organic-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+$bg-color-soft: #f8f8f8;
+$color-blue: #0070f3;
+$brush-gray: #f2f2f2;
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+
+    h2 {
+        font-family: var(--font-accent);
+        font-size: 2rem;
+        text-transform: uppercase;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+
+        // THE MARKER UNDERLINE FIX
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 10%;
+            width: 80%;
+            height: 8px; // Thicker like a marker
+            background: rgba($color-blue, 0.8);
+            z-index: -1;
+            // Irregular "marker" shape
+            border-radius: 20% 80% 30% 70% / 60% 30% 70% 40%;
+            transform: rotate(-1deg);
+        }
+    }
 }
 
-.testimonial:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 24px var(--color-shadow);
+.testimonial-stage {
+    position: relative;
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 80px 40px;
+    z-index: 1;
+
+    // THE LARGE INK WASH BACKGROUND
+    .testimonial-blob-bg {
+        position: absolute;
+        inset: 0;
+        background: $bg-color-soft;
+        z-index: -2;
+        /* Irregular shape that looks natural even when tall */
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        transform: rotate(-1deg);
+        // Soft fade at the edges for an "ink on paper" feel
+        mask-image: radial-gradient(circle, black 60%, transparent 100%);
+    }
+
+    .quote-mark {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        font-family: var(--font-accent); // Rock Salt
+        font-size: 6rem;
+        color: rgba(0, 0, 0, 0.04);
+        z-index: -1;
+    }
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 60px;
+    align-items: center;
+
+    @media (max-width: 850px) {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+    }
+}
+
+/* --- 3D POP-OUT AVATAR LOGIC (Matches Hero) --- */
+.avatar-stage {
+    position: relative;
+    width: 160px;
+    height: 180px; // Stage is taller than the blob
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto;
+}
+
+.avatar-blob {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75%; // The gray part
+    background: #eaeaea;
+    border-radius: $organic-radius;
+    z-index: 1;
+}
+
+.avatar-mask {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75%; // Same as blob height
+    border-radius: $organic-radius;
+    overflow: hidden; // Clips the square bottom of the photo
+    z-index: 2;
 }
 
 .testimonial-img {
-    border-radius: var(--radius-full);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110%; // Slightly wider for presence
+    height: 133.3%; // Calculation: 100 / 75 = 1.333 (Matches scaling)
+    object-fit: contain;
+    object-position: bottom center;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
 }
 
-.testimonial-icon {
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    background-color: var(--color-primary-100);
-    border-radius: var(--radius-full);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-primary-500);
-    font-size: var(--font-size-xl);
-}
+/* --- TEXT REFINEMENT --- */
+.testimonial-text-content {
+    .quote-body {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #444;
+        font-style: italic; // Editorial look
+        margin-bottom: 25px;
+        position: relative;
+    }
 
-.testimonial-content h4 {
-    margin-bottom: var(--space-1);
-    font-size: var(--font-size-md);
-}
+    .quote-cite {
+        display: flex;
+        align-items: center;
+        gap: 15px;
 
-.testimonial-content p {
-    font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
-    margin: 0;
-    max-width: none;
+        @media (max-width: 850px) {
+            justify-content: center;
+        }
+
+        .author-name {
+            font-family: var(--font-accent); // Rock Salt
+            font-size: 1.2rem;
+            color: #000;
+        }
+
+        .author-title {
+            font-family: var(--font-main);
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    }
 }
