@@ -7,51 +7,34 @@
 
     <div class="project-list">
       {% for project in site.projects %}
-      <div class="project-row animate-fade-in">
-  
-  <!-- Media Column: Now with a Masking Container -->
-  <div class="project-media">
-    <div class="media-stage js-modal-trigger">
-      <!-- 1. Gray Shape Background -->
-      <div class="blob-bg"></div>
-      
-      <!-- 2. The Mask (This clips the square corners) -->
-      <div class="project-image-mask">
-        <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-img">
-      </div>
+<div class="project-row animate-fade-in" 
+     data-full-description="{{ project.content | strip_html | escape }}"
+     data-github-link="{{ project.github_link }}"
+     data-demo-link="{{ project.demo_link }}">
+     
+     <!-- The rest of your row content (Media + Info) -->
+      <div class="project-media">
+        <div class="media-stage js-modal-trigger">
+            <div class="blob-bg"></div>
+            <div class="project-image-mask">
+                <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-img">
+            </div>
+        </div>
     </div>
-  </div>
 
-  <!-- Info Column -->
-  <div class="project-info">
-    <div class="project-tags">
-      {% for tag in project.tags %}<span>{{ tag }}</span>{% endfor %}
+    <div class="project-info">
+        <div class="project-tags">
+            {% for tag in project.tags %}<span>{{ tag }}</span>{% endfor %}
+        </div>
+        <h3 class="project-title">{{ project.title }}</h3>
+        <p class="project-summary">{{ project.content | strip_html | truncatewords: 25 }}</p>
+        <div class="project-actions">
+            <a href="#" class="read-more-btn js-modal-trigger">Read More →</a>
+            <!-- Icons here -->
+        </div>
     </div>
-    
-    <h3 class="project-title">{{ project.title }}</h3>
-    <p class="project-summary">{{ project.content | strip_html | truncatewords: 30 }}</p>
-
-    <!-- THE UPDATED ACTION BAR -->
-    <div class="project-actions">
-      <a href="#" class="read-more-btn js-modal-trigger">Read More →</a>
-      
-      <div class="external-links">
-        {% if project.github_link %}
-          <a href="{{ project.github_link }}" target="_blank" class="pro-icon-link" aria-label="GitHub">
-            <i class="fab fa-github"></i>
-          </a>
-        {% endif %}
-        {% if project.demo_link %}
-          <a href="{{ project.demo_link }}" target="_blank" class="pro-icon-link pro-icon-link--alt" aria-label="Live Demo">
-            <i class="fas fa-rocket"></i>
-          </a>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-  
 </div>
-      {% endfor %}
+{% endfor %}
     </div>
   </div>
 </section>

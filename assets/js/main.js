@@ -51,46 +51,43 @@ document.addEventListener('DOMContentLoaded', () => {
      *  6. MODAL POPUP LOGIC FOR PROJECTS
      * ========================================= */
     document.addEventListener('click', function (e) {
-        // 1. Find if the clicked element (or its parent) is a modal trigger
         const trigger = e.target.closest('.js-modal-trigger');
-        if (!trigger) return; // Exit if we didn't click a trigger
+        if (!trigger) return;
 
         e.preventDefault();
-        console.log('Modal Trigger Clicked:', trigger); // Debugging line
-
         const modal = document.getElementById('project-modal');
-        // Look for the parent row that contains all the project data
         const row = trigger.closest('.project-row');
-
         if (!modal || !row) return;
 
-        // 2. Extract data from the row's data attributes
+        // 1. Extract Data
         const imageSrc = row.querySelector('.project-img').src;
-        const tagsHTML = row.querySelector('.project-tags').innerHTML;
         const title = row.querySelector('.project-title').textContent;
-        const description = row.dataset.fullDescription;
-        const githubLink = row.dataset.githubLink;
-        const demoLink = row.dataset.demoLink;
+        const description = row.getAttribute('data-full-description'); // Fix: Get from attribute
+        const githubLink = row.getAttribute('data-github-link');
+        const demoLink = row.getAttribute('data-demo-link');
 
-        // 3. Populate Modal
+        // Get tags (clone the innerHTML so we keep the spans)
+        const tagsHTML = row.querySelector('.project-tags').innerHTML;
+
+        // 2. Populate text/image
         document.getElementById('modal-image').src = imageSrc;
-        document.getElementById('modal-tags').innerHTML = tagsHTML;
         document.getElementById('modal-title').textContent = title;
-        document.getElementById('modal-description').textContent = description;
+        document.getElementById('modal-description').innerHTML = description;
+        document.getElementById('modal-tags').innerHTML = tagsHTML;
 
-        // 4. Build Professional Modal Links
+        // 3. Build CTAs Dynamically
         let linksHTML = '';
-        if (githubLink) {
-            linksHTML += `<a href="${githubLink}" target="_blank" class="btn-badge github-badge"><i class="fab fa-github"></i> GitHub</a>`;
+        if (githubLink && githubLink !== "") {
+            linksHTML += `<a href="${githubLink}" target="_blank" class="pro-icon-link"><i class="fab fa-github"></i> <span>GitHub</span></a>`;
         }
-        if (demoLink) {
-            linksHTML += `<a href="${demoLink}" target="_blank" class="btn btn-primary"><i class="fas fa-rocket"></i> Live Demo</a>`;
+        if (demoLink && demoLink !== "") {
+            linksHTML += `<a href="${demoLink}" target="_blank" class="pro-icon-link pro-icon-link--alt"><i class="fas fa-rocket"></i> <span>Live Demo</span></a>`;
         }
         document.getElementById('modal-links').innerHTML = linksHTML;
 
-        // 5. Open Modal
+        // 4. Open
         modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Stop background scrolling
+        document.body.style.overflow = 'hidden';
     });
 
     /* =========================================
@@ -151,3 +148,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
