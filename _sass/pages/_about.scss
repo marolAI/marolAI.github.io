@@ -1,12 +1,12 @@
 :root {
-    --blob-height: 82%; // How much of the image is "inside" the gray
-    --img-scale: 1.219; // Calculation: 100 / 82 = 1.219 (Adjust this if you change height)
-    --organic-radius: 64% 36% 42% 58% / 44% 42% 58% 56%;
+    --blob-height: 82%;
+    --organic-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     --color-shape: #E9E9E9;
 }
 
+
 .hero {
-    padding: 0px 20px 120px;
+    padding: 120px 20px 120px;
 
     &__container {
         max-width: 1000px;
@@ -45,64 +45,56 @@
     width: 100%;
     max-width: 400px;
     aspect-ratio: 1 / 1.2;
-    margin: 0 0 0 auto;
+    margin-left: auto;
 }
 
 .blob-bg {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    inset-inline: 0;
     height: var(--blob-height);
-    background-color: var(--color-shape);
+    background: var(--color-shape);
     border-radius: var(--organic-radius);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08);
     z-index: 1;
-    // Shadow applied here to ground the shape
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* IMAGE LAYERS */
+
+.layer {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .layer--torso {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: var(--blob-height); // Shorter container
-    border-radius: var(--organic-radius);
-    overflow: hidden; // Clips the square corners of the shirt
     z-index: 2;
-
-    .torso-img {
-        height: calc(100% * var(--img-scale)); // Forces image to be 100% of stage height
-        width: 100%;
-        object-fit: contain;
-        object-position: bottom center;
-        display: block;
-        position: absolute;
-        bottom: 0;
-    }
+    height: var(--blob-height);
+    overflow: hidden;
+    border-radius: var(--organic-radius);
 }
 
 .layer--head {
     position: absolute;
-    inset: 0; // Full 100% height of the stage
+    height: var(--blob-height);
+    border-radius: var(--organic-radius);
+    overflow: hidden;
+    inset: 0;
     z-index: 3;
     pointer-events: none;
+    transform: translateY(-1px);
 
-
-    clip-path: inset(0 0 30% 0);
     filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15));
-
-    .head-img {
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
-        object-position: bottom center;
-        display: block;
-    }
 }
 
-// Reset baseline gaps for all images
 .portrait-img {
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom center;
+    display: block;
 }
 
 .brush-container {

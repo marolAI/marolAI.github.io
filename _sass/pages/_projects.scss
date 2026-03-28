@@ -12,96 +12,6 @@
 
 /* 
  * ===================================
- * 1.Featured Project Styles
- * ===================================
- */
-
-.featured-card {
-    display: grid;
-    grid-template-columns: 30% 1fr;
-    align-items: center;
-    min-height: 300px;
-    background-color: var(--color-surface);
-    margin-bottom: 2em;
-
-    @media (width <=992px) {
-        grid-template-columns: 1fr;
-    }
-
-    &:hover {
-        box-shadow: 0 12px 30px rgba(var(--color-primary-rgb), 0.2);
-        transform: translateY(-5px);
-    }
-}
-
-.featured-image-container {
-    width: 100%;
-    height: 100%;
-
-    img {
-        width: 100%;
-        height: 100%;
-
-        // object-fit: cover;
-        border-radius: var(--radius-lg) 0 0 var(--radius-lg);
-
-        // Adjust border-radius for mobile view
-        @media (width <=992px) {
-            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-        }
-    }
-}
-
-.project-details {
-    padding: var(--space-2);
-    display: flex;
-    flex-direction: column;
-    height: 100%; // Make sure it tries to fill the parent height
-}
-
-.project-content {
-    flex-grow: 1; // Allows this area to expand, pushing the footer down
-
-    h3 {
-        font-size: 1.5rem;
-    }
-
-    p {
-        font-size: 1rem;
-        line-height: 1.7;
-        color: var(--color-text-secondary);
-        max-width: none;
-    }
-
-    .cta-text {
-        margin-top: var(--space-1);
-        font-size: 0.9rem;
-        color: var(--color-text-tertiary);
-    }
-}
-
-.project-footer {
-    margin-top: auto; // Pushes the footer to the bottom
-    padding-top: var(--space-1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-// Ensure tags look good on the new background
-.featured-card .project-tags span {
-    background-color: var(--color-bg-alt);
-    color: var(--color-text-tertiary);
-}
-
-.featured-card .project-tech span {
-    background-color: var(--color-primary-100);
-    color: var(--color-primary-600);
-}
-
-
-/* 
- * ===================================
  * 2. Secondary Projects Grid
  * ===================================
  */
@@ -193,16 +103,14 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
     }
 }
 
-/* --- THE IMAGE MASKING (Like About Photo) --- */
+/* --- THE IMAGE MASKING --- */
 .media-stage {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
+/* Background blob */
 .blob-bg {
     position: absolute;
     inset: 0;
@@ -211,21 +119,38 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
     z-index: 1;
 }
 
+
 .project-image-mask {
-    position: relative;
+    position: absolute;
+    inset: 0;
     z-index: 2;
+    border-radius: $organic-shape;
+
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+}
+
+/* Inner clipping container */
+
+.project-image-mask::before {
+    content: "";
+    position: absolute;
     width: 90%;
     height: 85%;
-    border-radius: $organic-shape; // THIS clips the square image
-    overflow: hidden; // Critical
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: $organic-shape;
+    overflow: hidden;
+}
 
-    .project-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; // Ensures screenshot fills the organic shape
-        transition: transform 0.5s ease;
-    }
+/* Image */
+
+.project-img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    border-radius: $organic-shape;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
 }
 
 .media-stage:hover .project-img {
@@ -343,16 +268,5 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
 
     &:hover {
         background-color: var(--color-primary-600);
-    }
-}
-
-// Override for dark theme to make GitHub button pop
-[data-theme="dark"] .github-badge {
-    background-color: var(--color-neutral-200);
-    color: var(--color-neutral-900);
-    border: 1px solid var(--color-neutral-300);
-
-    &:hover {
-        background-color: var(--color-neutral-300);
     }
 }

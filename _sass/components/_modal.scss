@@ -82,51 +82,119 @@ $organic-shape: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
 }
 
+// .modal-image-container {
+//     position: relative;
+//     height: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     padding: 20px; // Space for the "pop" effect
+
+//     // The Organic Blob Background (Matches the "About" blob)
+//     &::before {
+//         content: '';
+//         position: absolute;
+//         width: 100%;
+//         height: 85%;
+//         background-color: #f4f4f4; // Light gray like your about blob
+//         border-radius: $organic-shape;
+//         z-index: 1;
+//     }
+
+//     img {
+//         position: relative;
+//         z-index: 2;
+//         width: 100%;
+//         height: auto;
+//         max-height: 60vh;
+
+//         /* 
+//            THE CRITICAL FIX: object-fit cover + border-radius 
+//            This forces the square screenshot to take the organic shape
+//         */
+//         object-fit: cover;
+//         border-radius: $organic-shape;
+
+//         // Depth effects
+//         box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+//         filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+//     }
+
+//     @media (width <=768px) {
+//         height: 300px;
+
+//         &::before {
+//             height: 90%;
+//         }
+//     }
+// }
+/* --- MODAL IMAGE --- */
+
 .modal-image-container {
     position: relative;
     height: 100%;
+    padding: 20px;
+}
+
+/* Blob background */
+
+.modal-image-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px; // Space for the "pop" effect
+    align-items: flex-end;
 
-    // The Organic Blob Background (Matches the "About" blob)
-    &::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 85%;
-        background-color: #f4f4f4; // Light gray like your about blob
-        border-radius: $organic-shape;
-        z-index: 1;
-    }
+    z-index: 1;
+}
 
-    img {
-        position: relative;
-        z-index: 2;
-        width: 100%;
-        height: auto;
-        max-height: 60vh;
+/* Inner blob shape */
 
-        /* 
-           THE CRITICAL FIX: object-fit cover + border-radius 
-           This forces the square screenshot to take the organic shape
-        */
-        object-fit: cover;
-        border-radius: $organic-shape;
+.modal-image-container::after {
+    content: "";
+    width: 100%;
+    height: 85%;
+    background: #f4f4f4;
+    border-radius: $organic-shape;
+}
 
-        // Depth effects
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
-    }
+/* Image layer */
 
-    @media (width <=768px) {
+.modal-image-container img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    border-radius: $organic-shape;
+
+    max-height: 60vh;
+
+    z-index: 2;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+/* Responsive */
+
+@media (width <=768px) {
+
+    .modal-image-container {
         height: 300px;
-
-        &::before {
-            height: 90%;
-        }
     }
+
+    .modal-image-container::after {
+        height: 90%;
+    }
+
+}
+
+.modal-image-container:hover img {
+    transform: scale(1.05);
 }
 
 .modal-details {
