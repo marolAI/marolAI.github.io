@@ -53,20 +53,11 @@ $organic-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
         mask-image: radial-gradient(circle, black 60%, transparent 100%);
     }
 
-    .quote-mark {
-        position: absolute;
-        top: 40px;
-        left: 40px;
-        font-family: var(--font-accent); // Rock Salt
-        font-size: 6rem;
-        color: rgba(var(--color-black-rgb), 0.04);
-        z-index: -1;
-    }
 }
 
 .testimonial-grid {
     display: grid;
-    grid-template-columns: 180px 1fr;
+    grid-template-columns: minmax(180px, 240px) 1fr;
     gap: 60px;
     align-items: center;
 
@@ -77,57 +68,73 @@ $organic-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
 }
 
-/* --- 3D POP-OUT AVATAR LOGIC (Matches Hero) --- */
+/* --- TESTIMONIAL IMAGE (Matches Project Image Behavior) --- */
 .avatar-stage {
     position: relative;
-    width: 160px;
-    height: 180px; // Stage is taller than the blob
-    display: flex;
-    align-items: flex-end;
+    width: 220px;
+    max-width: 100%;
+    aspect-ratio: 1 / 1.2;
     margin: 0 auto;
 }
 
 .avatar-blob {
     position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 75%; // The gray part
-    background: var(--color-surface-wash);
+    inset: 0;
+    background: var(--color-surface-subtle);
     border-radius: $organic-radius;
     z-index: 1;
 }
 
-.avatar-mask {
+.avatar-image-mask {
     position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 75%; // Same as blob height
+    inset: 0;
     border-radius: $organic-radius;
-    overflow: hidden; // Clips the square bottom of the photo
+    overflow: hidden;
     z-index: 2;
 }
 
 .testimonial-img {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 110%; // Slightly wider for presence
-    height: 133.3%; // Calculation: 100 / 75 = 1.333 (Matches scaling)
-    object-fit: contain;
-    object-position: bottom center;
-    filter: drop-shadow(0 10px 15px rgba(var(--color-black-rgb), 0.10));
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: $organic-radius;
+    box-shadow: 0 15px 35px rgba(var(--color-black-rgb), 0.10);
+    transition: transform 0.5s ease;
+}
+
+.avatar-stage:hover .testimonial-img {
+    transform: scale(1.05);
 }
 
 /* --- TEXT REFINEMENT --- */
 .testimonial-text-content {
+    position: relative;
+
+    .quote-mark {
+        position: absolute;
+        top: -22px;
+        left: -10px;
+        font-family: var(--font-accent);
+        font-size: clamp(4.5rem, 8vw, 6rem);
+        line-height: 1;
+        color: rgba(var(--color-primary-rgb), 0.28);
+        z-index: 0;
+        pointer-events: none;
+    }
+
     .quote-body {
+        position: relative;
+        z-index: 1;
         font-size: 1.1rem;
-        line-height: 1.8;
+        line-height: 1.7;
         color: var(--color-text-muted-strong);
         font-style: italic; // Editorial look
         margin-bottom: 25px;
-        position: relative;
+        max-width: 68ch;
+        max-height: 300px;
+        overflow-y: auto;
+        padding-right: 8px;
+        scrollbar-width: thin;
     }
 
     .quote-cite {
@@ -152,6 +159,27 @@ $organic-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
             color: var(--color-text-disabled);
             text-transform: uppercase;
             letter-spacing: 2px;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .avatar-stage {
+        width: 190px;
+    }
+
+    .testimonial-text-content {
+        .quote-mark {
+            top: -18px;
+            left: 8px;
+            font-size: clamp(3.8rem, 14vw, 5rem);
+        }
+
+        .quote-body {
+            font-size: 1rem;
+            line-height: 1.65;
+            max-height: 240px;
+            margin-inline: auto;
         }
     }
 }
