@@ -2,7 +2,7 @@
 
 .site-footer {
     padding: 120px 0 60px;
-    background-color: #fff;
+    background-color: var(--color-white);
     position: relative;
     overflow: hidden;
 
@@ -43,7 +43,7 @@
         font-family: var(--font-signature);
         font-weight: 400;
         font-style: normal;
-        color: #000;
+        color: var(--color-ink);
         line-height: 0.75;
         text-decoration: none;
 
@@ -75,10 +75,10 @@
             gap: 18px;
 
             a {
-                color: #888;
+                color: var(--color-text-faint);
 
                 &:hover {
-                    color: #000;
+                    color: var(--color-ink);
                 }
             }
         }
@@ -97,7 +97,7 @@
         font-size: 1.7rem;
         text-transform: uppercase;
         margin-bottom: 15px;
-        color: #000;
+        color: var(--color-ink);
         position: relative;
     }
 
@@ -105,7 +105,7 @@
         font-size: 0.85rem;
         text-transform: uppercase;
         letter-spacing: 1.5px;
-        color: #999;
+        color: var(--color-text-quiet);
         margin-bottom: 10px;
     }
 
@@ -113,7 +113,7 @@
         position: relative;
         font-family: var(--font-accent);
         font-size: 1.1rem;
-        color: #333;
+        color: var(--color-ink-soft);
         text-decoration: none;
         padding: 10px 20px;
         z-index: 1;
@@ -161,11 +161,11 @@
         font-weight: 800;
         text-transform: uppercase;
         letter-spacing: 1.5px;
-        color: #777;
+        color: var(--color-text-subtle);
         transition: color 0.3s ease;
 
         &:hover {
-            color: #000;
+            color: var(--color-ink);
         }
     }
 }
@@ -175,7 +175,7 @@
     width: 100%;
     margin-top: 60px;
     padding-top: 40px;
-    border-top: 1px dashed #eee;
+    border-top: 1px dashed var(--color-border-soft);
 
     /* Force absolute horizontal centering within the container */
     display: flex;
@@ -185,7 +185,7 @@
     p {
         margin: 0 auto; // Backup centering
         font-size: 0.75rem;
-        color: #999;
+        color: var(--color-text-quiet);
         text-transform: uppercase;
         letter-spacing: 2px;
         display: inline-block;
@@ -193,7 +193,7 @@
 
     .sig {
         font-family: var(--font-signature); // Rock Salt
-        color: #555;
+        color: var(--color-text-muted-strong);
         text-transform: none;
         margin: 0 8px;
     }

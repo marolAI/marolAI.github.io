@@ -101,20 +101,40 @@ document.addEventListener('DOMContentLoaded', () => {
      * ========================================= */
     const animateElements = document.querySelectorAll('.animate-fade-in');
 
-    const animateOnScroll = () => {
-        animateElements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-
-            if (elementTop < windowHeight * 0.9) {
-                element.style.opacity = '1';
-                element.style.transform = 'translateY(0)';
-            }
-        });
+    const revealElement = (element) => {
+        element.classList.add('is-visible');
     };
 
-    window.addEventListener('load', animateOnScroll);
-    window.addEventListener('scroll', animateOnScroll);
+    if (animateElements.length > 0) {
+        if ('IntersectionObserver' in window) {
+            const fadeInObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    revealElement(entry.target);
+                    observer.unobserve(entry.target);
+                });
+            }, {
+                root: null,
+                threshold: 0.15
+            });
+
+            animateElements.forEach((element) => fadeInObserver.observe(element));
+        } else {
+            const animateOnScroll = () => {
+                animateElements.forEach((element) => {
+                    const elementTop = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+
+                    if (elementTop < windowHeight * 0.9) {
+                        revealElement(element);
+                    }
+                });
+            };
+
+            window.addEventListener('load', animateOnScroll);
+            window.addEventListener('scroll', animateOnScroll);
+        }
+    }
 
 
     /* =========================================

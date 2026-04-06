@@ -43,7 +43,7 @@ a:hover {
 }
 
 /* Animation on Scroll */
-.animate-on-scroll {
+.animate-fade-in {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity var(--transition-normal), transform var(--transition-normal);
@@ -55,7 +55,7 @@ a:hover {
     outline-offset: 2px;
 }
 
-.animate-on-scroll.is-visible {
+.animate-fade-in.is-visible {
     opacity: 1;
     transform: translateY(0);
 }

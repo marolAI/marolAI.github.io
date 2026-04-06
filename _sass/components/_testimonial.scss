@@ -127,7 +127,7 @@ $brush-gray: #f2f2f2;
     .quote-body {
         font-size: 1.1rem;
         line-height: 1.8;
-        color: #444;
+        color: var(--color-text-muted-strong);
         font-style: italic; // Editorial look
         margin-bottom: 25px;
         position: relative;
@@ -145,7 +145,7 @@ $brush-gray: #f2f2f2;
         .author-name {
             font-family: var(--font-accent); // Rock Salt
             font-size: 1.2rem;
-            color: #000;
+            color: var(--color-ink);
         }
 
         .author-title {
