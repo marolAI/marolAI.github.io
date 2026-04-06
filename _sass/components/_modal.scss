@@ -33,7 +33,8 @@ $organic-shape: 60% 40% 30% 70% / 60% 30% 70% 40%;
     max-width: 1200px;
     height: auto; // Height will be determined by content
     max-height: 90vh; // But it can't exceed 90% of the viewport height
-    overflow: hidden; // We handle scrolling inside
+    overflow: hidden auto;
+    -webkit-overflow-scrolling: touch;
     position: relative;
     transform: scale(0.95) translateY(10px);
     transition: transform 0.3s ease;
@@ -223,12 +224,15 @@ $organic-shape: 60% 40% 30% 70% / 60% 30% 70% 40%;
 
 #modal-links {
     display: flex;
-    flex-wrap: wrap; // Allows stacking on small screens
+    flex-wrap: nowrap;
     gap: 15px; // Spacing between buttons
     margin-top: 30px;
     padding-top: 25px;
+    padding-bottom: 6px;
     border-top: 1px solid rgba(var(--color-black-rgb), 0.05); // Subtle divider
     width: 100%;
+    overflow: auto hidden;
+    -webkit-overflow-scrolling: touch;
 
     // The shared button style
     .pro-icon-link {
@@ -247,6 +251,7 @@ $organic-shape: 60% 40% 30% 70% / 60% 30% 70% 40%;
         white-space: nowrap; // CRITICAL: Stops text from wrapping/overlapping
         transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         min-width: 140px; // Ensures a substantial feel
+        flex: 0 0 auto;
 
         i {
             font-size: 1.1rem;

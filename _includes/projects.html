@@ -30,7 +30,18 @@
         <p class="project-summary">{{ project.content | strip_html | truncatewords: 25 }}</p>
         <div class="project-actions">
             <a href="#" class="read-more-btn js-modal-trigger">Read More →</a>
-            <!-- Icons here -->
+            <div class="external-links">
+              {% if project.github_link and project.github_link != "" %}
+                <a href="{{ project.github_link }}" target="_blank" rel="noopener noreferrer" class="pro-icon-link" aria-label="GitHub for {{ project.title }}">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+              {% endif %}
+              {% if project.demo_link and project.demo_link != "" %}
+                <a href="{{ project.demo_link }}" target="_blank" rel="noopener noreferrer" class="pro-icon-link pro-icon-link--alt" aria-label="Live demo for {{ project.title }}">
+                  <i class="fas fa-rocket" aria-hidden="true"></i>
+                </a>
+              {% endif %}
+            </div>
         </div>
     </div>
 </div>

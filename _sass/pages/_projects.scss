@@ -164,6 +164,10 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
     align-items: center;
     width: 100%;
     margin-top: 30px;
+
+    @media (max-width: 576px) {
+        gap: 12px;
+    }
 }
 
 .read-more-btn {
