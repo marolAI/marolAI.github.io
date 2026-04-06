@@ -3,6 +3,33 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    const isSafeExternalUrl = (value) => {
+        if (!value) return false;
+
+        try {
+            const parsedUrl = new URL(value, window.location.origin);
+            return parsedUrl.protocol === 'http:' || parsedUrl.protocol === 'https:';
+        } catch {
+            return false;
+        }
+    };
+
+    const createExternalLink = (href, className, iconClass, label) => {
+        const link = document.createElement('a');
+        link.href = href;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.className = className;
+
+        const icon = document.createElement('i');
+        icon.className = iconClass;
+
+        const span = document.createElement('span');
+        span.textContent = label;
+
+        link.append(icon, document.createTextNode(' '), span);
+        return link;
+    };
 
     /* =========================================
      *  1. MOBILE MENU TOGGLE
@@ -72,18 +99,30 @@ document.addEventListener('DOMContentLoaded', () => {
         // 2. Populate text/image
         document.getElementById('modal-image').src = imageSrc;
         document.getElementById('modal-title').textContent = title;
-        document.getElementById('modal-description').innerHTML = description;
+        document.getElementById('modal-description').textContent = description;
         document.getElementById('modal-tags').innerHTML = tagsHTML;
 
         // 3. Build CTAs Dynamically
-        let linksHTML = '';
-        if (githubLink && githubLink !== "") {
-            linksHTML += `<a href="${githubLink}" target="_blank" class="pro-icon-link"><i class="fab fa-github"></i> <span>GitHub</span></a>`;
+        const modalLinks = document.getElementById('modal-links');
+        modalLinks.textContent = '';
+
+        if (isSafeExternalUrl(githubLink)) {
+            modalLinks.appendChild(createExternalLink(
+                githubLink,
+                'pro-icon-link',
+                'fab fa-github',
+                'GitHub'
+            ));
         }
-        if (demoLink && demoLink !== "") {
-            linksHTML += `<a href="${demoLink}" target="_blank" class="pro-icon-link pro-icon-link--alt"><i class="fas fa-rocket"></i> <span>Live Demo</span></a>`;
+
+        if (isSafeExternalUrl(demoLink)) {
+            modalLinks.appendChild(createExternalLink(
+                demoLink,
+                'pro-icon-link pro-icon-link--alt',
+                'fas fa-rocket',
+                'Live Demo'
+            ));
         }
-        document.getElementById('modal-links').innerHTML = linksHTML;
 
         // 4. Open
         modal.classList.add('active');
@@ -148,4 +187,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
