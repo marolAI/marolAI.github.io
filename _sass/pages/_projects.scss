@@ -73,8 +73,8 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #aaa;
-            background: #f9f9f9;
+            color: var(--color-text-disabled);
+            background: var(--color-surface-lift);
             padding: 4px 10px;
             border-radius: 4px;
         }
@@ -149,7 +149,7 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
     height: 100%; 
     object-fit: cover;
     border-radius: $organic-shape;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 15px 35px rgba(var(--color-black-rgb), 0.10);
     transition: transform 0.5s ease;
 }
 
@@ -192,7 +192,7 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
     }
 
     &:hover::before {
-        background: #0070f3;
+        background: var(--color-primary-500);
         opacity: 0.15;
     }
 }
@@ -219,13 +219,13 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
 
     &:hover {
         transform: translateY(-4px);
-        color: #0070f3;
-        border-color: #0070f3;
-        box-shadow: 0 8px 20px rgba(0, 112, 243, 0.10);
+        color: var(--color-primary-500);
+        border-color: var(--color-primary-500);
+        box-shadow: 0 8px 20px rgba(var(--color-primary-rgb), 0.10);
     }
 
     &--alt {
-        background: #fdfdfd;
+        background: var(--color-surface-ghost);
     }
 }
 
@@ -245,18 +245,18 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
 
     &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
+        box-shadow: 0 4px 10px rgba(var(--color-black-rgb), 0.10);
     }
 }
 
 // Style for the GitHub button
 .github-badge {
-    background-color: #333;
-    color: #fff;
-    border: 1px solid #444;
+    background-color: var(--color-surface-dark);
+    color: var(--color-white);
+    border: 1px solid var(--color-border-strong);
 
     &:hover {
-        background-color: #444;
+        background-color: var(--color-border-strong);
     }
 }
 

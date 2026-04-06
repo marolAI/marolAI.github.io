@@ -1,8 +1,5 @@
 // Shared variables
 $organic-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-$bg-color-soft: #f8f8f8;
-$color-blue: #0070f3;
-$brush-gray: #f2f2f2;
 
 .section-title {
     text-align: center;
@@ -24,7 +21,7 @@ $brush-gray: #f2f2f2;
             left: 10%;
             width: 80%;
             height: 8px; // Thicker like a marker
-            background: rgba($color-blue, 0.8);
+            background: rgba(var(--color-primary-rgb), 0.8);
             z-index: -1;
 
             // Irregular "marker" shape
@@ -45,7 +42,7 @@ $brush-gray: #f2f2f2;
     .testimonial-blob-bg {
         position: absolute;
         inset: 0;
-        background: $bg-color-soft;
+        background: var(--color-neutral-100);
         z-index: -2;
 
         /* Irregular shape that looks natural even when tall */
@@ -62,7 +59,7 @@ $brush-gray: #f2f2f2;
         left: 40px;
         font-family: var(--font-accent); // Rock Salt
         font-size: 6rem;
-        color: rgba(0, 0, 0, 0.04);
+        color: rgba(var(--color-black-rgb), 0.04);
         z-index: -1;
     }
 }
@@ -95,7 +92,7 @@ $brush-gray: #f2f2f2;
     bottom: 0;
     width: 100%;
     height: 75%; // The gray part
-    background: #eaeaea;
+    background: var(--color-surface-wash);
     border-radius: $organic-radius;
     z-index: 1;
 }
@@ -119,7 +116,7 @@ $brush-gray: #f2f2f2;
     height: 133.3%; // Calculation: 100 / 75 = 1.333 (Matches scaling)
     object-fit: contain;
     object-position: bottom center;
-    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.10));
+    filter: drop-shadow(0 10px 15px rgba(var(--color-black-rgb), 0.10));
 }
 
 /* --- TEXT REFINEMENT --- */
@@ -152,7 +149,7 @@ $brush-gray: #f2f2f2;
             font-family: var(--font-main);
             font-size: 0.75rem;
             font-weight: 800;
-            color: #aaa;
+            color: var(--color-text-disabled);
             text-transform: uppercase;
             letter-spacing: 2px;
         }

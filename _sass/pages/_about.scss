@@ -1,7 +1,7 @@
 :root {
     --blob-height: 82%;
     --organic-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    --color-shape: #E9E9E9;
+    --color-shape: var(--color-surface-muted);
 }
 
 
@@ -55,7 +55,7 @@
     height: var(--blob-height);
     background: var(--color-shape);
     border-radius: var(--organic-radius);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 20px 30px rgba(var(--color-black-rgb), 0.08);
     z-index: 1;
 }
 
@@ -85,7 +85,7 @@
     z-index: 3;
     pointer-events: none;
     transform: translateY(-1px);
-    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15));
+    filter: drop-shadow(0 15px 30px rgba(var(--color-black-rgb), 0.15));
 }
 
 .portrait-img {
@@ -125,7 +125,7 @@
             left: -5px;
             width: 105%;
             height: 95%;
-            background: rgba(230, 230, 230, 0.50); // Slightly darker/different layer
+            background: rgba(var(--color-black-rgb), 0.10); // Slightly darker/different layer
             border-radius: 150px 30px 120px 40px / 40px 30px 60px 35px;
             z-index: -1;
             transform: rotate(1deg);
@@ -161,7 +161,7 @@
 
 .btn--primary {
     background: var(--color-primary-500);
-    color: #fff;
+    color: var(--color-white);
     padding: 15px 30px;
     text-transform: uppercase;
     text-decoration: none;
