@@ -3,6 +3,8 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+    let lastFocusedElement = null;
+
     const isSafeExternalUrl = (value) => {
         if (!value) return false;
 
@@ -31,6 +33,48 @@ document.addEventListener('DOMContentLoaded', () => {
         return link;
     };
 
+    const setMobileMenuState = (menuButton, menu, isOpen) => {
+        menuButton.classList.toggle('active', isOpen);
+        menu.classList.toggle('active', isOpen);
+        menuButton.setAttribute('aria-expanded', String(isOpen));
+    };
+
+    const getFocusableElements = (container) => {
+        const selector = [
+            'a[href]',
+            'button:not([disabled])',
+            'textarea:not([disabled])',
+            'input:not([disabled])',
+            'select:not([disabled])',
+            '[tabindex]:not([tabindex="-1"])'
+        ].join(', ');
+
+        return Array.from(container.querySelectorAll(selector))
+            .filter((element) => !element.hasAttribute('disabled') && !element.getAttribute('aria-hidden'));
+    };
+
+    const openModal = (modal) => {
+        lastFocusedElement = document.activeElement;
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+
+        const closeButton = modal.querySelector('#close-modal-btn');
+        if (closeButton) {
+            closeButton.focus();
+        }
+    };
+
+    const closeModal = (modal) => {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+
+        if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+            lastFocusedElement.focus();
+        }
+    };
+
     /* =========================================
      *  1. MOBILE MENU TOGGLE
      * ========================================= */
@@ -39,16 +83,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mobileMenuToggle && mobileNav) {
         mobileMenuToggle.addEventListener('click', () => {
-            mobileMenuToggle.classList.toggle('active');
-            mobileNav.classList.toggle('active');
+            const isOpen = !mobileNav.classList.contains('active');
+            setMobileMenuState(mobileMenuToggle, mobileNav, isOpen);
         });
 
         // Close mobile menu when clicking a link
         const mobileNavLinks = mobileNav.querySelectorAll('a');
         mobileNavLinks.forEach(link => {
             link.addEventListener('click', () => {
-                mobileMenuToggle.classList.remove('active');
-                mobileNav.classList.remove('active');
+                setMobileMenuState(mobileMenuToggle, mobileNav, false);
             });
         });
     }
@@ -125,8 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // 4. Open
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        openModal(modal);
     });
 
     /* =========================================
@@ -138,8 +180,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (isCloseBtn || isBackdrop) {
             const modal = document.getElementById('project-modal');
-            modal.classList.remove('active');
-            document.body.style.overflow = ''; // Restore scrolling
+            if (!modal) return;
+            closeModal(modal);
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        const modal = document.getElementById('project-modal');
+        if (!modal || !modal.classList.contains('active')) return;
+
+        if (e.key === 'Escape') {
+            e.preventDefault();
+            closeModal(modal);
+            return;
+        }
+
+        if (e.key !== 'Tab') return;
+
+        const focusableElements = getFocusableElements(modal);
+        if (focusableElements.length === 0) return;
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+
+        if (e.shiftKey && document.activeElement === firstElement) {
+            e.preventDefault();
+            lastElement.focus();
+        } else if (!e.shiftKey && document.activeElement === lastElement) {
+            e.preventDefault();
+            firstElement.focus();
         }
     });
     /* =========================================
