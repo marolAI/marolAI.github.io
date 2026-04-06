@@ -38,17 +38,18 @@
 
     .name-top {
         font-size: 2.4rem;
+
         // text-transform: uppercase;
     }
 
     .name-bottom {
         font-size: 2.4rem;
+
         // text-transform: uppercase;
         margin-left: 40%;
     }
 
     @media (width <=576px) {
-
         .name-top,
         .name-bottom {
             font-size: 1.6rem;

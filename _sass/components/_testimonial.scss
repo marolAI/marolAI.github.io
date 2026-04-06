@@ -26,6 +26,7 @@ $brush-gray: #f2f2f2;
             height: 8px; // Thicker like a marker
             background: rgba($color-blue, 0.8);
             z-index: -1;
+
             // Irregular "marker" shape
             border-radius: 20% 80% 30% 70% / 60% 30% 70% 40%;
             transform: rotate(-1deg);
@@ -46,9 +47,11 @@ $brush-gray: #f2f2f2;
         inset: 0;
         background: $bg-color-soft;
         z-index: -2;
+
         /* Irregular shape that looks natural even when tall */
         border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
         transform: rotate(-1deg);
+
         // Soft fade at the edges for an "ink on paper" feel
         mask-image: radial-gradient(circle, black 60%, transparent 100%);
     }
@@ -116,7 +119,7 @@ $brush-gray: #f2f2f2;
     height: 133.3%; // Calculation: 100 / 75 = 1.333 (Matches scaling)
     object-fit: contain;
     object-position: bottom center;
-    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.1));
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.10));
 }
 
 /* --- TEXT REFINEMENT --- */

@@ -149,7 +149,7 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
     height: 100%; 
     object-fit: cover;
     border-radius: $organic-shape;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
     transition: transform 0.5s ease;
 }
 
@@ -221,7 +221,7 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
         transform: translateY(-4px);
         color: #0070f3;
         border-color: #0070f3;
-        box-shadow: 0 8px 20px rgba(0, 112, 243, 0.1);
+        box-shadow: 0 8px 20px rgba(0, 112, 243, 0.10);
     }
 
     &--alt {
@@ -245,7 +245,7 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
 
     &:hover {
         transform: translateY(-2px);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
     }
 }
 

@@ -6,7 +6,7 @@
 
 
 .hero {
-    padding: 120px 20px 120px;
+    padding: 120px 20px;
 
     &__container {
         max-width: 1000px;
@@ -85,7 +85,6 @@
     z-index: 3;
     pointer-events: none;
     transform: translateY(-1px);
-
     filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15));
 }
 
@@ -126,7 +125,7 @@
             left: -5px;
             width: 105%;
             height: 95%;
-            background: rgba(230, 230, 230, 0.5); // Slightly darker/different layer
+            background: rgba(230, 230, 230, 0.50); // Slightly darker/different layer
             border-radius: 150px 30px 120px 40px / 40px 30px 60px 35px;
             z-index: -1;
             transform: rotate(1deg);
