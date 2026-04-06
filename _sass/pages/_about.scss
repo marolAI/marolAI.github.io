@@ -35,8 +35,11 @@
 
 .hero__headline {
     font-family: var(--font-accent);
-    font-size: 1.7rem;
-    line-height: 1.1;
+    font-size: var(--heading-2);
+    line-height: var(--line-tight);
+    font-weight: var(--font-weight-black);
+    letter-spacing: var(--tracking-tight);
+    text-transform: uppercase;
     margin-bottom: 2rem;
 }
 

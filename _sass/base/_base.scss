@@ -13,8 +13,8 @@ html {
 }
 
 body {
-    font-family: var(--font-family-sans);
-    line-height: 1.6;
+    font-family: var(--font-main);
+    line-height: var(--line-body);
     color: var(--color-text-primary);
     background-color: var(--color-bg);
     transition: background-color var(--transition-normal), color var(--transition-normal);

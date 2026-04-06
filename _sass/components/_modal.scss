@@ -199,9 +199,10 @@ $organic-shape: 60% 40% 30% 70% / 60% 30% 70% 40%;
         margin-bottom: 15px;
 
         span {
-            font-size: 0.75rem;
+            font-size: var(--text-xs);
             font-weight: 800;
             text-transform: uppercase;
+            letter-spacing: var(--tracking-wide);
             background: var(--color-surface-soft);
             padding: 4px 12px;
             border-radius: 4px;
@@ -210,13 +211,18 @@ $organic-shape: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
 
     h2 {
-        font-family: var(--font-accent); // Rock Salt
+        font-family: var(--font-accent);
         margin-bottom: 25px;
-        font-size: 2rem;
+        font-size: var(--heading-3);
+        font-weight: var(--font-weight-black);
+        text-transform: uppercase;
+        line-height: var(--line-tight);
+        letter-spacing: var(--tracking-tight);
     }
 
     #modal-description {
-        line-height: 1.8;
+        font-size: var(--text-base);
+        line-height: var(--line-relaxed);
         color: var(--color-text-muted-strong);
         margin-bottom: 30px;
     }
@@ -247,7 +253,7 @@ $organic-shape: 60% 40% 30% 70% / 60% 30% 70% 40%;
         color: var(--color-text-muted-strong);
         text-decoration: none;
         font-weight: 700;
-        font-size: 0.9rem;
+        font-size: var(--text-sm);
         white-space: nowrap; // CRITICAL: Stops text from wrapping/overlapping
         transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         min-width: 140px; // Ensures a substantial feel

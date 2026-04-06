@@ -4,39 +4,44 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-family-sans);
+    font-family: var(--font-display);
     font-weight: var(--font-weight-bold);
-    line-height: 1.3;
+    line-height: var(--line-tight);
+    letter-spacing: var(--tracking-tight);
     margin-bottom: var(--space-2);
     color: var(--color-text-primary);
 }
 
 h1 {
-    font-size: clamp(2rem, 5vw, 2.75rem);
+    font-size: var(--heading-1);
 }
 
 h2 {
-    font-size: clamp(1.75rem, 4vw, 2.25rem);
+    font-size: var(--heading-2);
 }
 
 h3 {
-    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    font-size: var(--heading-3);
 }
 
 h4 {
-    font-size: 1.125rem;
+    font-size: var(--heading-4);
 }
 
 p {
     margin-bottom: var(--space-2);
     max-width: 65ch; // Improves readability
+    font-size: var(--text-base);
+    line-height: var(--line-body);
+    letter-spacing: var(--tracking-normal);
 }
 
 .lead {
-    font-size: 1.25rem;
+    font-size: var(--text-xl);
     font-weight: var(--font-weight-normal);
     color: var(--color-text-secondary);
     max-width: 60ch;
+    line-height: var(--line-relaxed);
 }
 
 .highlight {

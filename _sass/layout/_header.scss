@@ -73,10 +73,10 @@
 
     a {
         font-family: var(--font-main);
-        font-size: 0.85rem;
+        font-size: var(--text-sm);
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 1.5px;
+        letter-spacing: var(--tracking-wide);
         color: var(--color-text-muted);
         text-decoration: none;
         position: relative;

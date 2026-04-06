@@ -109,17 +109,18 @@
 
     .cta-heading {
         font-family: var(--font-accent);
-        font-size: 1.7rem;
+        font-size: clamp(1.5rem, 3vw, 1.9rem);
         text-transform: uppercase;
         margin-bottom: 15px;
         color: var(--color-ink);
         position: relative;
+        line-height: var(--line-tight);
     }
 
     .cta-subtext {
-        font-size: 0.85rem;
+        font-size: var(--text-sm);
         text-transform: uppercase;
-        letter-spacing: 1.5px;
+        letter-spacing: var(--tracking-wide);
         color: var(--color-text-quiet);
         margin-bottom: 10px;
     }
@@ -175,10 +176,10 @@
 
     a {
         font-family: var(--font-main);
-        font-size: 0.85rem;
+        font-size: var(--text-sm);
         font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: 1.5px;
+        letter-spacing: var(--tracking-wide);
         color: var(--color-text-subtle);
         transition: color 0.3s ease;
 
@@ -202,10 +203,10 @@
 
     p {
         margin: 0 auto; // Backup centering
-        font-size: 0.75rem;
+        font-size: var(--text-xs);
         color: var(--color-text-quiet);
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: var(--tracking-wide);
         display: inline-block;
     }
 

@@ -69,10 +69,10 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
         margin-bottom: 20px;
 
         span {
-            font-size: 0.7rem;
+            font-size: var(--text-xs);
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: var(--tracking-wide);
             color: var(--color-text-disabled);
             background: var(--color-surface-lift);
             padding: 4px 10px;
@@ -82,16 +82,18 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
 
     .project-title {
         font-family: var(--font-accent);
-        font-size: 1.7rem;
+        font-size: var(--heading-3);
+        font-weight: var(--font-weight-black);
         text-transform: uppercase;
         margin-bottom: 20px;
-        line-height: 1.1;
+        line-height: var(--line-tight);
+        letter-spacing: var(--tracking-tight);
         color: var(--color-ink);
     }
 
     .project-summary {
-        font-size: 1.1rem;
-        line-height: 1.8;
+        font-size: var(--text-lg);
+        line-height: var(--line-relaxed);
         color: var(--color-text-muted-strong);
         margin-bottom: 35px;
     }
@@ -179,7 +181,7 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
     text-transform: uppercase;
     color: var(--color-ink);
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: var(--text-base);
     min-height: 44px;
     padding: 10px 20px;
     line-height: 1;

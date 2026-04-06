@@ -29,7 +29,11 @@ section {
         padding-bottom: var(--space-1);
         margin-bottom: var(--space-2);
         font-family: var(--font-accent);
-        font-size: 1.5rem;
+        font-size: var(--heading-2);
+        font-weight: var(--font-weight-black);
+        line-height: var(--line-tight);
+        letter-spacing: var(--tracking-tight);
+        text-transform: uppercase;
 
         &::after {
             content: '';
@@ -48,7 +52,8 @@ section {
         color: var(--color-text-secondary);
         max-width: 600px;
         margin: 0 auto;
-        font-size: 1.1rem;
+        font-size: var(--text-lg);
+        line-height: var(--line-relaxed);
     }
 }
 
