@@ -100,7 +100,9 @@
     position: relative;
     display: inline-flex;
     align-items: center;
-    padding: 15px 40px; // Generous padding so the stroke breathes
+    justify-content: center;
+    min-height: 56px;
+    padding: 12px 28px; // Keep spacing consistent with read-more brush behavior
     margin-top: 10px;
     z-index: 1;
 
@@ -112,24 +114,14 @@
         height: 100%;
         background: var(--color-surface-subtle); // The "paint" color
         z-index: -1;
-
-        // This creates a "Hand-Drawn" irregular footprint
         border-radius: 120px 15px 100px 15px / 30px 45px 35px 60px;
         transform: rotate(-1.5deg);
+        transition: background 0.3s ease, opacity 0.3s ease;
+    }
 
-        // Add a second layer for a "double-stroke" thickness effect
-        &::before {
-            content: '';
-            position: absolute;
-            top: 2px;
-            left: -5px;
-            width: 105%;
-            height: 95%;
-            background: rgba(var(--color-black-rgb), 0.10); // Slightly darker/different layer
-            border-radius: 150px 30px 120px 40px / 40px 30px 60px 35px;
-            z-index: -1;
-            transform: rotate(1deg);
-        }
+    &:hover .brush-stroke {
+        background: var(--color-primary-500);
+        opacity: 0.15;
     }
 
     .social-links-brush {
