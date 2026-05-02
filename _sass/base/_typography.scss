@@ -1,9 +1,4 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     font-weight: var(--font-weight-bold);
     line-height: var(--line-tight);
@@ -12,25 +7,14 @@ h6 {
     color: var(--color-text-primary);
 }
 
-h1 {
-    font-size: var(--heading-1);
-}
-
-h2 {
-    font-size: var(--heading-2);
-}
-
-h3 {
-    font-size: var(--heading-3);
-}
-
-h4 {
-    font-size: var(--heading-4);
-}
+h1 { font-size: var(--heading-1); }
+h2 { font-size: var(--heading-2); }
+h3 { font-size: var(--heading-3); }
+h4 { font-size: var(--heading-4); }
 
 p {
     margin-bottom: var(--space-2);
-    max-width: 65ch; // Improves readability
+    max-width: 65ch;
     font-size: var(--text-base);
     line-height: var(--line-body);
     letter-spacing: var(--tracking-normal);
@@ -38,12 +22,12 @@ p {
 
 .lead {
     font-size: var(--text-xl);
-    font-weight: var(--font-weight-normal);
+    font-weight: 300;
     color: var(--color-text-secondary);
     max-width: 60ch;
     line-height: var(--line-relaxed);
 }
 
 .highlight {
-    color: var(--color-primary-500);
+    color: var(--color-accent);
 }

@@ -1,34 +1,34 @@
 <section class="projects-section" id="projects">
   <div class="container">
-    <div class="section-title">
+    <div class="section-title animate-fade-in">
+      <span class="section-label">Selected Work</span>
       <h2>From Problem to Solution</h2>
       <p>A deep dive into the AI systems and automation tools I've built from the ground up.</p>
     </div>
 
     <div class="project-list">
       {% for project in site.projects %}
-<div class="project-row animate-fade-in" 
-     data-full-description="{{ project.content | strip_html | escape }}"
-     data-github-link="{{ project.github_link }}"
-     data-demo-link="{{ project.demo_link }}">
-     
-     <!-- The rest of your row content (Media + Info) -->
-      <div class="project-media">
-        <div class="media-stage js-modal-trigger">
+      <div class="project-row animate-fade-in"
+           data-full-description="{{ project.content | strip_html | escape }}"
+           data-github-link="{{ project.github_link }}"
+           data-demo-link="{{ project.demo_link }}">
+        
+        <div class="project-media">
+          <div class="media-stage js-modal-trigger">
             <div class="blob-bg"></div>
             <div class="project-image-mask">
-                <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-img" loading="lazy">
+              <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-img" loading="lazy">
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="project-info">
-        <div class="project-tags">
+        <div class="project-info">
+          <div class="project-tags">
             {% for tag in project.tags %}<span>{{ tag }}</span>{% endfor %}
-        </div>
-        <h3 class="project-title">{{ project.title }}</h3>
-        <p class="project-summary">{{ project.content | strip_html | truncatewords: 25 }}</p>
-        <div class="project-actions">
+          </div>
+          <h3 class="project-title">{{ project.title }}</h3>
+          <p class="project-summary">{{ project.content | strip_html | truncatewords: 25 }}</p>
+          <div class="project-actions">
             <a href="#" class="read-more-btn js-modal-trigger">Read More →</a>
             <div class="external-links">
               {% if project.github_link and project.github_link != "" %}
@@ -42,47 +42,43 @@
                 </a>
               {% endif %}
             </div>
+          </div>
         </div>
-    </div>
-</div>
-{% endfor %}
+      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
 
 <section class="project-process bg-alt">
   <div class="container">
-    <div class="section-title">
+    <div class="section-title animate-fade-in">
+      <span class="section-label">Testimonial</span>
       <h2>In Their Own Words</h2>
       <p>I'm grateful for the relationships I've built and the trust I've earned along the way.</p>
     </div>
-    <div class="testimonial-stage">
-  <!-- 1. Large "Ink Wash" Background -->
-  <div class="testimonial-blob-bg"></div>
-  
-  <div class="testimonial-grid">
-    <!-- 2. The 3D Pop-out Avatar -->
-    <div class="testimonial-avatar-area">
-        <div class="avatar-stage">
+    <div class="testimonial-stage animate-fade-in">
+      <div class="testimonial-blob-bg"></div>
+      <div class="testimonial-grid">
+        <div class="testimonial-avatar-area">
+          <div class="avatar-stage">
             <div class="avatar-blob"></div>
             <div class="avatar-image-mask">
-                <img src="{{ '/assets/images/testimonial1.jpeg' | relative_url }}" class="testimonial-img" alt="Fabian B.">
+              <img src="{{ '/assets/images/testimonial1.jpeg' | relative_url }}" class="testimonial-img" alt="Fabian B.">
             </div>
+          </div>
         </div>
+        <div class="testimonial-text-content">
+          <span class="quote-mark">"</span>
+          <blockquote class="quote-body">
+            "I worked with Andriamarolahy R. for 1.5 years in a part-time capacity as a Junior Software Developer. During this time, he contributed to code implementation and revision in a methodologically complex innovation project, consistently demonstrating reliability and a solid grasp of best software engineering practices. His technical skills, particularly in Python (medical imaging algorithms, ML/AI, data visualization, data analysis, OOP), were at a mid-level when he joined, and he showed clear improvement over time. He was proactive in asking questions whenever clarification was needed, and he was always motivated and eager to learn. With his excellent work ethic and kind personality, he brought well-appreciated contributions to the project and team. I definitely recommend working with him."
+          </blockquote>
+          <cite class="quote-cite">
+            <span class="author-name">Fabian B.</span>
+            <span class="author-title">/ PHD</span>
+          </cite>
+        </div>
+      </div>
     </div>
-    
-    <!-- 3. The Content -->
-    <div class="testimonial-text-content">
-      <span class="quote-mark">“</span>
-      <blockquote class="quote-body">
-        "I worked with Andriamarolahy R. for 1.5 years in a part-time capacity as a Junior Software Developer. During this time, he contributed to code implementation and revision in a methodologically complex innovation project, consistently demonstrating reliability and a solid grasp of best software engineering practices. His technical skills, particularly in Python (medical imaging algorithms, ML/AI, data visualization, data analysis, OOP), were at a mid-level when he joined, and he showed clear improvement over time. He was proactive in asking questions whenever clarification was needed, and he was always motivated and eager to learn. With his excellent work ethic and kind personality, he brought well-appreciated contributions to the project and team. I definitely recommend working with him."
-      </blockquote>
-      <cite class="quote-cite">
-        <span class="author-name">Fabian B.</span>
-        <span class="author-title">/ PHD</span>
-      </cite>
-    </div>
-  </div>
-</div>
   </div>
 </section>

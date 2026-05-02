@@ -9,7 +9,7 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
-    scroll-padding-top: 100px;
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -17,9 +17,21 @@ body {
     line-height: var(--line-body);
     color: var(--color-text-primary);
     background-color: var(--color-bg);
-    transition: background-color var(--transition-normal), color var(--transition-normal);
+    transition: background-color 0.4s ease, color 0.4s ease;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* Subtle grain texture on background */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.4;
 }
 
 img {
@@ -29,7 +41,7 @@ img {
 }
 
 a {
-    color: var(--color-primary-500);
+    color: var(--color-accent);
     text-decoration: none;
     transition: color var(--transition-fast);
 }
@@ -42,20 +54,35 @@ a:hover {
     background-color: var(--color-bg-alt);
 }
 
-/* Animation on Scroll */
+/* Scroll-reveal animations */
 .animate-fade-in {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity var(--transition-normal), transform var(--transition-normal);
+    transform: translateY(28px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Focus Indicators for Accessibility */
-*:focus {
-    outline: 2px solid var(--color-primary-500);
-    outline-offset: 2px;
-}
+.animate-fade-in.delay-1 { transition-delay: 0.1s; }
+.animate-fade-in.delay-2 { transition-delay: 0.2s; }
+.animate-fade-in.delay-3 { transition-delay: 0.3s; }
 
 .animate-fade-in.is-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Focus indicators */
+*:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+}
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+::selection {
+    background: var(--color-accent-dim);
+    color: var(--color-ink);
 }

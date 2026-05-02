@@ -1,28 +1,19 @@
-<header class="site-header">
-  <div class="container">
-    <div class="header-inner">
-      <div class="logo">
-        <a href="{{ site.baseurl }}/">
-          <span class="name-top">Andriamarolahy</span>
-          <span class="name-bottom">R.</span>
-        </a>
-      </div>
-      
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#about" class="active">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      
-      <!-- Only the mobile toggle remains here -->
-      <div class="nav-controls">
-        <button id="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <a href="{{ site.baseurl }}/">
+        <span class="name-top">Andriamarolahy</span>
+        <span class="name-bottom">R.</span>
+      </a>
     </div>
+    
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#about" class="active">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact" class="nav-cta">Let's talk</a></li>
+      </ul>
+    </nav>
   </div>
 
   <div class="mobile-nav" id="mobile-nav">
@@ -31,5 +22,9 @@
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <div class="mobile-contact">
+      <p>Get in touch</p>
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+    </div>
   </div>
 </header>

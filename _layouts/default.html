@@ -8,13 +8,11 @@
 
   <link rel="icon" href="{{ '/assets/images/favicon/favicon.ico' | relative_url }}" type="image/x-icon">
 
-
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300;1,9..40,400&family=Arizonia&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 </head>
 <body>
   {% include header.html %}
@@ -26,7 +24,6 @@
   {% include footer.html %}
   
   {% if site.google_analytics and site.google_analytics != '' %}
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -38,9 +35,7 @@
 
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 
-  <!-- =================================== -->
-  <!-- MODAL MARKUP                        -->
-  <!-- =================================== -->
+  <!-- PROJECT MODAL -->
   <div id="project-modal" class="modal-backdrop" aria-hidden="true">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-description">
       <button id="close-modal-btn" class="modal-close-btn" aria-label="Close project details">×</button>

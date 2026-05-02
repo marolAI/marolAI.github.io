@@ -1,157 +1,186 @@
-/* Colors */
+/* ============================================
+   DESIGN TOKENS — Andriamarolahy R. Portfolio
+   ============================================ */
 :root {
-    // Primary (Blue)
-    --color-primary-100: #e6f0ff;
-    --color-primary-200: #cce1ff;
-    --color-primary-500: #0070f3;
-    --color-primary-600: #005bc4;
-    --color-primary-700: #0056b3;
-    --color-primary-900: #002d61;
-    --color-primary-rgb: 0, 112, 243; // RGB version for box-shadows
-    --color-primary-700-rgb: 0, 86, 179;
-    --color-shape: #E9E9E9;
+    /* — Brand Colors — */
+    --color-ink:           #0d0d0d;
+    --color-ink-strong:    #111;
+    --color-ink-soft:      #2a2a2a;
 
-    // NEW: Refined Neutral (Gray) Palette - Light Mode
-    --color-neutral-50: #fff;
-    --color-neutral-100: #f8f9fa; // Lightest Gray
-    --color-neutral-200: #f1f3f5;
-    --color-neutral-300: #dee2e6; // Border color
-    --color-neutral-700: #495057; // Secondary text
-    --color-neutral-800: #343a40;
-    --color-neutral-900: #212529; // Primary text
+    /* — Accent: Deep Electric Indigo — */
+    --color-accent:        #4f46e5;
+    --color-accent-light:  #818cf8;
+    --color-accent-dim:    rgba(79, 70, 229, 0.12);
+    --color-accent-rgb:    79, 70, 229;
 
-    /* Base colors for light theme */
-    --color-bg: var(--color-neutral-50);
-    --color-bg-rgb: 255, 255, 255;
-    --color-bg-alt: var(--color-neutral-100);
-    --color-surface: var(--color-neutral-50); // For cards
-    --color-text-primary: var(--color-neutral-900);
-    --color-text-secondary: var(--color-neutral-700);
-    --color-text-tertiary: var(--color-neutral-800);
-    --color-border: var(--color-neutral-300);
-    --color-shadow: rgba(var(--color-black-rgb), 0.08);
+    /* — Surfaces — */
+    --color-bg:            #fafaf8;
+    --color-bg-alt:        #f3f3ef;
+    --color-surface:       #ffffff;
+    --color-surface-soft:  #f7f7f4;
+    --color-surface-muted: #eeede9;
+    --color-shape:         #e8e8e4;
 
-    /* Typography, Spacing, etc. */
-    --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-family-serif: 'Source Serif Pro', Georgia, serif;
-    --font-main: var(--font-family-sans);
-    --font-display: var(--font-family-sans);
-    --font-accent: "Nanum Pen Script", cursive; // 'Permanent Marker', cursive;
+    /* — Text — */
+    --color-text-primary:   #0d0d0d;
+    --color-text-secondary: #555550;
+    --color-text-muted:     #888882;
+    --color-text-faint:     #aaaaaa;
+    --color-text-disabled:  #bbbbbb;
+    --color-text-muted-strong: #444440;
+
+    /* — Borders — */
+    --color-border:        #e2e2de;
+    --color-border-soft:   #ebebeb;
+    --color-border-strong: #333;
+
+    /* — Utilities — */
+    --color-white:         #fff;
+    --color-white-rgb:     255, 255, 255;
+    --color-black-rgb:     0, 0, 0;
+    --color-overlay-rgb:   10, 10, 16;
+    --color-primary-500:   var(--color-accent);
+    --color-primary-600:   #4338ca;
+    --color-primary-700:   #3730a3;
+    --color-primary-rgb:   var(--color-accent-rgb);
+    --color-primary-700-rgb: 55, 48, 163;
+    --color-primary-100:   #eef2ff;
+    --color-primary-200:   #e0e7ff;
+    --color-primary-900:   #1e1b4b;
+    --color-neutral-50:    #fafaf8;
+    --color-neutral-100:   #f3f3ef;
+    --color-neutral-200:   #e8e8e4;
+    --color-neutral-300:   #d4d4d0;
+    --color-neutral-700:   #737370;
+    --color-neutral-800:   #3a3a38;
+    --color-neutral-900:   #0d0d0d;
+    --color-bg-rgb:        250, 250, 248;
+    --color-text-quiet:    #999;
+    --color-text-subtle:   #777;
+    --color-surface-brush: #f0f0ec;
+    --color-surface-lift:  #f5f5f2;
+    --color-surface-ghost: #fdfdfc;
+    --color-surface-wash:  #ebebeb;
+    --color-surface-dim:   #d8d8d4;
+    --color-surface-dark:  #1a1a1a;
+    --color-surface-subtle: #ededea;
+    --color-ink-strong:    #111;
+
+    /* — Typography — */
+    --font-main:      'DM Sans', system-ui, sans-serif;
+    --font-display:   'DM Sans', system-ui, sans-serif;
+    --font-accent:    "Nanum Pen Script", cursive;
     --font-signature: "Arizonia", cursive;
+    --font-mono:      'JetBrains Mono', 'Fira Code', monospace;
+    --font-family-sans: 'DM Sans', system-ui, sans-serif;
+    --font-family-serif: Georgia, serif;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
-    --font-weight-bold: 700;
-    --font-weight-black: 800;
-    --text-xs: 0.75rem;
-    --text-sm: 0.875rem;
+    --font-weight-bold:   700;
+    --font-weight-black:  800;
+
+    /* — Type Scale — */
+    --text-xs:   0.75rem;
+    --text-sm:   0.875rem;
     --text-base: 1rem;
-    --text-lg: 1.125rem;
-    --text-xl: 1.25rem;
-    --heading-1: clamp(2.2rem, 5vw, 3.2rem);
-    --heading-2: clamp(1.8rem, 3.8vw, 2.4rem);
-    --heading-3: clamp(1.35rem, 2.6vw, 1.8rem);
+    --text-lg:   1.125rem;
+    --text-xl:   1.25rem;
+    --heading-1: clamp(2.8rem, 6vw, 4.2rem);
+    --heading-2: clamp(2rem, 4vw, 2.8rem);
+    --heading-3: clamp(1.4rem, 2.6vw, 1.9rem);
     --heading-4: clamp(1.1rem, 2vw, 1.3rem);
-    --line-tight: 1.2;
-    --line-body: 1.7;
-    --line-relaxed: 1.8;
-    --tracking-tight: -0.01em;
-    --tracking-normal: 0;
-    --tracking-wide: 0.08em;
-    --space-1: 0.5rem;
-    --space-2: 1rem;
-    --space-3: 1.5rem;
-    --space-4: 2rem;
-    --space-6: 3rem;
-    --space-8: 4rem;
+    --line-tight:   1.15;
+    --line-body:    1.75;
+    --line-relaxed: 1.85;
+    --tracking-tight:  -0.02em;
+    --tracking-normal:  0;
+    --tracking-wide:    0.08em;
+    --tracking-wider:   0.12em;
+
+    /* — Spacing — */
+    --space-1:  0.5rem;
+    --space-2:  1rem;
+    --space-3:  1.5rem;
+    --space-4:  2rem;
+    --space-6:  3rem;
+    --space-8:  4rem;
     --space-12: 6rem;
-    --radius-sm: 4px;
-    --radius-md: 8px;
-    --radius-lg: 16px;
+
+    /* — Radii — */
+    --radius-sm:   4px;
+    --radius-md:   8px;
+    --radius-lg:   16px;
+    --radius-xl:   24px;
     --radius-full: 9999px;
-    --transition-fast: 200ms ease;
-    --transition-normal: 300ms ease;
-    --color-ink: #000;
-    --color-ink-strong: #111;
-    --color-ink-soft: #333;
-    --color-text-muted-strong: #555;
-    --color-text-muted: #666;
-    --color-text-subtle: #777;
-    --color-text-faint: #888;
-    --color-text-quiet: #999;
-    --color-surface-soft: #f4f4f4;
-    --color-surface-subtle: #f2f2f2;
-    --color-surface-muted: #e9e9e9;
-    --color-surface-brush: #f6f6f6;
-    --color-surface-lift: #f9f9f9;
-    --color-surface-ghost: #fdfdfd;
-    --color-surface-wash: #eaeaea;
-    --color-surface-dim: #d0d0d0;
-    --color-surface-dark: #333;
-    --color-border-soft: #eee;
-    --color-border-strong: #444;
-    --color-text-disabled: #aaa;
-    --color-white: #fff;
-    --color-white-rgb: 255, 255, 255;
-    --color-black-rgb: 0, 0, 0;
-    --color-overlay-rgb: 20, 25, 40;
-    --container-width: 1200px;
-    --container-padding: var(--space-2);
-    --section-spacing: var(--space-12)
+
+    /* — Transitions — */
+    --transition-fast:   180ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow:   500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* — Layout — */
+    --container-width:   1200px;
+    --container-padding: clamp(1rem, 4vw, 2rem);
+    --section-spacing:   var(--space-12);
+    --organic-radius:    60% 40% 30% 70% / 60% 30% 70% 40%;
+    --color-shape:       var(--color-surface-muted);
 }
 
-/* 
- * ===================================
- * NEW: The Refined Dark Theme
- * ===================================
- */
+/* Dark theme — Premium dark slate */
 [data-theme="dark"] {
-    // Primary Blue Accents (no change)
-    --color-primary-100: #1a2c4e;
-    --color-primary-200: #1f3763;
-    --color-primary-500: #3391ff;
-    --color-primary-600: #5ca4ff;
-    --color-primary-700: #80bbff;
-    --color-primary-rgb: 51, 145, 255;
-    --color-primary-700-rgb: 128, 187, 255;
+    --color-accent:        #818cf8;
+    --color-accent-light:  #a5b4fc;
+    --color-accent-dim:    rgba(129, 140, 248, 0.15);
+    --color-accent-rgb:    129, 140, 248;
 
-    // NEW: Premium Dark Blue/Gray Palette
-    --color-neutral-50: #111827; // Darkest (background)
-    --color-neutral-100: #1F2937; // Mid-dark (cards, alt backgrounds)
-    --color-neutral-200: #374151;
-    --color-neutral-300: #4B5563; // Border color
-    --color-neutral-700: #9CA3AF; // Secondary text
-    --color-neutral-800: #D1D5DB;
-    --color-neutral-900: #F9FAFB; // Primary text (off-white)
+    --color-bg:            #0f0f11;
+    --color-bg-alt:        #161618;
+    --color-surface:       #1a1a1d;
+    --color-surface-soft:  #1f1f22;
+    --color-surface-muted: #252528;
+    --color-shape:         #2a2a2e;
 
-    // Remap theme colors
-    --color-bg: var(--color-neutral-50);
-    --color-bg-rgb: 17, 24, 39;
-    --color-bg-alt: var(--color-neutral-100);
-    --color-surface: var(--color-neutral-100);
-    --color-border: var(--color-neutral-300);
-    --color-shadow: rgba(var(--color-black-rgb), 0.20);
-    --color-ink: var(--color-neutral-900);
-    --color-ink-strong: var(--color-neutral-900);
-    --color-ink-soft: var(--color-neutral-800);
-    --color-text-muted-strong: var(--color-neutral-800);
-    --color-text-muted: var(--color-neutral-700);
-    --color-text-subtle: var(--color-neutral-700);
-    --color-text-faint: var(--color-neutral-700);
-    --color-text-quiet: var(--color-neutral-700);
-    --color-surface-soft: #2f3947;
-    --color-surface-subtle: #2a3443;
-    --color-surface-muted: #232d3a;
-    --color-surface-brush: #2b3544;
-    --color-surface-lift: #27313f;
-    --color-surface-ghost: #2c3645;
-    --color-surface-wash: #2f3948;
-    --color-surface-dim: #3a4557;
-    --color-surface-dark: #1c2634;
-    --color-border-soft: var(--color-neutral-300);
-    --color-border-strong: var(--color-neutral-200);
-    --color-text-disabled: var(--color-neutral-700);
-    --color-white: #fff;
-    --color-white-rgb: 255, 255, 255;
-    --color-black-rgb: 0, 0, 0;
-    --color-overlay-rgb: 10, 14, 24;
+    --color-ink:            #f4f4f0;
+    --color-ink-strong:     #fafafa;
+    --color-ink-soft:       #e0e0dc;
+    --color-text-primary:   #f4f4f0;
+    --color-text-secondary: #9999a0;
+    --color-text-muted:     #666670;
+    --color-text-faint:     #555560;
+    --color-text-muted-strong: #b0b0b8;
+    --color-text-quiet:     #505058;
+    --color-text-subtle:    #606068;
+    --color-text-disabled:  #484850;
+
+    --color-border:        #2a2a2e;
+    --color-border-soft:   #222226;
+    --color-border-strong: #d0d0d8;
+
+    --color-white:         #fff;
+    --color-overlay-rgb:   5, 5, 8;
+    --color-black-rgb:     0, 0, 0;
+    --color-bg-rgb:        15, 15, 17;
+
+    --color-surface-subtle: #1d1d20;
+    --color-surface-brush:  #1e1e21;
+    --color-surface-lift:   #1c1c1f;
+    --color-surface-ghost:  #191919;
+    --color-surface-wash:   #222225;
+    --color-surface-dim:    #303035;
+    --color-surface-dark:   #0a0a0c;
+
+    --color-primary-500:   var(--color-accent);
+    --color-primary-600:   #a5b4fc;
+    --color-primary-700:   #c7d2fe;
+    --color-primary-rgb:   var(--color-accent-rgb);
+    --color-primary-700-rgb: 199, 210, 254;
+    --color-primary-100:   #1e1b4b;
+    --color-primary-200:   #312e81;
+    --color-neutral-50:    #0f0f11;
+    --color-neutral-100:   #161618;
+    --color-neutral-200:   #2a2a2e;
+    --color-neutral-300:   #404048;
+    --color-neutral-700:   #9999a0;
+    --color-neutral-800:   #d0d0d8;
+    --color-neutral-900:   #f4f4f0;
 }

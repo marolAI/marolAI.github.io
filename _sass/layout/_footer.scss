@@ -1,219 +1,233 @@
-/* --- The "Big Footer" Editorial Design --- */
-
+/* =============================================
+   FOOTER
+   ============================================= */
 .site-footer {
-    padding: 120px 0 60px;
-    background-color: var(--color-white);
+    padding: 80px 0 48px;
+    background: var(--color-ink);
+    color: rgba(255,255,255,0.65);
     position: relative;
     overflow: hidden;
 
-    .pencil-stroke-divider {
+    /* Subtle top gradient */
+    &::before {
+        content: '';
         position: absolute;
         top: 0;
-        left: 5%;
-        width: 90%;
+        left: 0;
+        right: 0;
         height: 1px;
-        background-color: rgba(var(--color-black-rgb), 0.04);
-        transform: rotate(-0.1deg);
+        background: linear-gradient(
+            to right,
+            transparent,
+            rgba(var(--color-accent-rgb), 0.5) 40%,
+            rgba(var(--color-accent-rgb), 0.5) 60%,
+            transparent
+        );
     }
+
+    /* Ambient glow */
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 200px;
+        background: radial-gradient(ellipse at top, rgba(var(--color-accent-rgb), 0.06), transparent 70%);
+        pointer-events: none;
+    }
+
+    .pencil-stroke-divider { display: none; }
 }
 
 .footer-main {
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr;
-    gap: 40px;
+    grid-template-columns: 1fr 1.2fr 0.8fr;
+    gap: 48px;
     align-items: flex-start;
-    margin-bottom: 100px;
+    margin-bottom: 72px;
 
-    @media (max-width: 992px) {
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    @media (max-width: 576px) {
         grid-template-columns: 1fr;
+        gap: 36px;
         text-align: center;
-        gap: 60px;
     }
 }
 
-// COLUMN 1: IDENTITY
+/* COLUMN 1: IDENTITY */
 .footer-identity {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
 
     .footer-logo {
         display: flex;
         flex-direction: column;
         font-family: var(--font-signature);
         font-weight: 400;
-        font-style: normal;
-        color: var(--color-ink);
-        line-height: 0.75;
+        color: rgba(255,255,255,0.9);
+        line-height: 0.78;
         text-decoration: none;
+        transition: opacity var(--transition-fast);
 
-        .name-top {
-            font-size: 2.2rem;
+        &:hover { opacity: 0.7; }
 
-            // text-transform: uppercase;
-        }
-
+        .name-top  { font-size: 1.9rem; }
         .name-bottom {
-            font-size: 2.2rem;
-
-            // text-transform: uppercase;
-            margin-left: 30%;
+            font-size: 1.9rem;
+            margin-left: 28%;
         }
+    }
+
+    .footer-tagline {
+        font-size: var(--text-sm);
+        color: rgba(255,255,255,0.4);
+        line-height: 1.6;
+        max-width: 28ch;
     }
 
     .footer-social-wrapper .brush-container {
         position: relative;
         display: inline-flex;
         align-items: center;
-        justify-content: center;
-        min-height: 52px;
-        padding: 10px 20px;
+        min-height: 46px;
+        padding: 8px 18px;
         margin-left: -5px;
 
+        @media (max-width: 576px) { margin: 0 auto; }
+
         .brush-stroke {
-            background: var(--color-surface-brush);
-            border-radius: 120px 15px 100px 15px / 30px 45px 35px 60px;
             position: absolute;
             inset: 0;
+            background: rgba(255,255,255,0.06);
             z-index: -1;
+            border-radius: 120px 15px 100px 15px / 30px 45px 35px 60px;
             transform: rotate(-1.5deg);
-            transition: background 0.3s ease, opacity 0.3s ease;
+            transition: background 0.3s ease;
         }
 
-        &:hover .brush-stroke {
-            background: var(--color-primary-500);
-            opacity: 0.15;
-        }
+        &:hover .brush-stroke { background: rgba(var(--color-accent-rgb), 0.2); }
 
         .social-links-brush {
             display: flex;
-            gap: 18px;
+            gap: 16px;
 
             a {
-                color: var(--color-text-faint);
+                color: rgba(255,255,255,0.5);
+                font-size: 1.05rem;
+                transition: color var(--transition-fast), transform var(--transition-fast);
 
                 &:hover {
-                    color: var(--color-ink);
+                    color: var(--color-accent-light);
+                    transform: translateY(-2px);
                 }
             }
         }
     }
 }
 
-// COLUMN 2: THE "LET'S CONNECT" CTA
+/* COLUMN 2: CTA */
 .footer-cta {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+
+    @media (max-width: 576px) { align-items: center; }
 
     .cta-heading {
         font-family: var(--font-accent);
-        font-size: clamp(1.5rem, 3vw, 1.9rem);
+        font-size: clamp(1.4rem, 2.5vw, 1.7rem);
         text-transform: uppercase;
-        margin-bottom: 15px;
-        color: var(--color-ink);
-        position: relative;
+        color: rgba(255,255,255,0.9);
+        margin-bottom: 10px;
         line-height: var(--line-tight);
     }
 
     .cta-subtext {
-        font-size: var(--text-sm);
+        font-size: var(--text-xs);
         text-transform: uppercase;
         letter-spacing: var(--tracking-wide);
-        color: var(--color-text-quiet);
-        margin-bottom: 10px;
+        color: rgba(255,255,255,0.35);
+        margin-bottom: 16px;
     }
 
     .cta-email-link {
         position: relative;
         font-family: var(--font-accent);
-        font-size: 1.1rem;
-        color: var(--color-ink-soft);
+        font-size: 1.05rem;
+        color: rgba(255,255,255,0.8);
         text-decoration: none;
-        padding: 10px 20px;
+        padding: 10px 22px;
         z-index: 1;
         transition: color 0.3s ease;
+        display: inline-block;
 
         .cta-brush {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--color-surface-muted);
+            inset: 0;
+            background: rgba(255,255,255,0.08);
             z-index: -1;
             border-radius: 120px 15px 100px 15px / 30px 45px 35px 60px;
             transform: rotate(-1.5deg);
-            transition: background 0.3s ease, opacity 0.3s ease;
+            transition: background 0.3s ease;
         }
 
         &:hover {
-            color: var(--color-ink-soft);
-
-            .cta-brush {
-                background: var(--color-primary-500);
-                opacity: 0.15;
-            }
+            color: rgba(255,255,255,1);
+            .cta-brush { background: rgba(var(--color-accent-rgb), 0.3); }
         }
     }
 }
 
-// 1. VERTICAL RIGHTMOST NAVIGATION
+/* COLUMN 3: NAV */
 .footer-nav {
-    ul {
-        display: flex;
-        flex-direction: column; // Stack vertically
-        gap: 15px; // Vertical spacing between links
-        list-style: none;
-        text-align: right; // Align text to the right edge
+    @media (max-width: 900px) { display: none; }
 
-        @media (max-width: 768px) {
-            text-align: center;
-            margin-top: 20px;
-        }
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        text-align: right;
     }
 
     a {
-        font-family: var(--font-main);
         font-size: var(--text-sm);
-        font-weight: 800;
+        font-weight: 500;
         text-transform: uppercase;
         letter-spacing: var(--tracking-wide);
-        color: var(--color-text-subtle);
-        transition: color 0.3s ease;
+        color: rgba(255,255,255,0.4);
+        transition: color var(--transition-fast);
 
-        &:hover {
-            color: var(--color-ink);
-        }
+        &:hover { color: rgba(255,255,255,0.9); }
     }
 }
 
-// 2. PERFECTLY CENTERED COPYRIGHT
+/* Footer bottom */
 .footer-bottom {
-    width: 100%;
-    margin-top: 60px;
-    padding-top: 40px;
-    border-top: 1px dashed var(--color-border-soft);
-
-    /* Force absolute horizontal centering within the container */
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.07);
     display: flex;
     justify-content: center;
-    text-align: center;
 
     p {
-        margin: 0 auto; // Backup centering
         font-size: var(--text-xs);
-        color: var(--color-text-quiet);
+        color: rgba(255,255,255,0.28);
         text-transform: uppercase;
-        letter-spacing: var(--tracking-wide);
-        display: inline-block;
+        letter-spacing: var(--tracking-wider);
+        margin: 0;
     }
 
     .sig {
-        font-family: var(--font-signature); // Rock Salt
-        color: var(--color-text-muted-strong);
+        font-family: var(--font-signature);
         text-transform: none;
-        margin: 0 8px;
+        color: rgba(255,255,255,0.5);
+        margin: 0 6px;
     }
 }
