@@ -4,185 +4,185 @@
    ============================================ */
 :root {
     /* — Brand Colors — */
-    --color-ink:           #111111;
-    --color-ink-strong:    #0a0a0a;
-    --color-ink-soft:      #2a2a2a;
+    --color-ink: #111111;
+    --color-ink-strong: #0a0a0a;
+    --color-ink-soft: #2a2a2a;
 
     /* — Accent: Deep Navy — */
-    --color-accent:        #1e3a5f;
-    --color-accent-light:  #2d5a8e;
-    --color-accent-dim:    rgba(30, 58, 95, 0.10);
-    --color-accent-rgb:    30, 58, 95;
+    --color-accent: #1e3a5f;
+    --color-accent-light: #2d5a8e;
+    --color-accent-dim: rgba(30, 58, 95, 0.10);
+    --color-accent-rgb: 30, 58, 95;
 
     /* — Surfaces — */
-    --color-bg:            #fafafa;
-    --color-bg-alt:        #f2f2f2;
-    --color-surface:       #ffffff;
-    --color-surface-soft:  #f7f7f7;
+    --color-bg: #fafafa;
+    --color-bg-alt: #f2f2f2;
+    --color-surface: #ffffff;
+    --color-surface-soft: #f7f7f7;
     --color-surface-muted: #ebebeb;
-    --color-shape:         #e0e0e0;
+    --color-shape: #e0e0e0;
 
     /* — Text — */
-    --color-text-primary:   #111111;
+    --color-text-primary: #111111;
     --color-text-secondary: #555555;
-    --color-text-muted:     #888888;
-    --color-text-faint:     #aaaaaa;
-    --color-text-disabled:  #bbbbbb;
+    --color-text-muted: #888888;
+    --color-text-faint: #aaaaaa;
+    --color-text-disabled: #bbbbbb;
     --color-text-muted-strong: #333333;
 
     /* — Borders — */
-    --color-border:        #e0e0e0;
-    --color-border-soft:   #ebebeb;
+    --color-border: #e0e0e0;
+    --color-border-soft: #ebebeb;
     --color-border-strong: #222222;
 
     /* — Utilities — */
-    --color-white:         #fff;
-    --color-white-rgb:     255, 255, 255;
-    --color-black-rgb:     0, 0, 0;
-    --color-overlay-rgb:   10, 10, 10;
-    --color-primary-500:   var(--color-accent);
-    --color-primary-600:   #152d4a;
-    --color-primary-700:   #0f2139;
-    --color-primary-rgb:   var(--color-accent-rgb);
+    --color-white: #fff;
+    --color-white-rgb: 255, 255, 255;
+    --color-black-rgb: 0, 0, 0;
+    --color-overlay-rgb: 10, 10, 10;
+    --color-primary-500: var(--color-accent);
+    --color-primary-600: #152d4a;
+    --color-primary-700: #0f2139;
+    --color-primary-rgb: var(--color-accent-rgb);
     --color-primary-700-rgb: 15, 33, 57;
-    --color-primary-100:   #e8eef6;
-    --color-primary-200:   #d1dde9;
-    --color-primary-900:   #0a1628;
-    --color-neutral-50:    #fafafa;
-    --color-neutral-100:   #f2f2f2;
-    --color-neutral-200:   #e0e0e0;
-    --color-neutral-300:   #cccccc;
-    --color-neutral-700:   #666666;
-    --color-neutral-800:   #333333;
-    --color-neutral-900:   #111111;
-    --color-bg-rgb:        250, 250, 250;
-    --color-text-quiet:    #999;
-    --color-text-subtle:   #777;
+    --color-primary-100: #e8eef6;
+    --color-primary-200: #d1dde9;
+    --color-primary-900: #0a1628;
+    --color-neutral-50: #fafafa;
+    --color-neutral-100: #f2f2f2;
+    --color-neutral-200: #e0e0e0;
+    --color-neutral-300: #cccccc;
+    --color-neutral-700: #666666;
+    --color-neutral-800: #333333;
+    --color-neutral-900: #111111;
+    --color-bg-rgb: 250, 250, 250;
+    --color-text-quiet: #999;
+    --color-text-subtle: #777;
     --color-surface-brush: #f0f0f0;
-    --color-surface-lift:  #f5f5f5;
+    --color-surface-lift: #f5f5f5;
     --color-surface-ghost: #fdfdfd;
-    --color-surface-wash:  #e8e8e8;
-    --color-surface-dim:   #d5d5d5;
-    --color-surface-dark:  #1a1a1a;
+    --color-surface-wash: #e8e8e8;
+    --color-surface-dim: #d5d5d5;
+    --color-surface-dark: #1a1a1a;
     --color-surface-subtle: #ededed;
-    --color-ink-strong:    #0a0a0a;
+    --color-ink-strong: #0a0a0a;
 
     /* — Typography — */
-    --font-main:      'DM Sans', system-ui, sans-serif;
-    --font-display:   'Space Grotesk', system-ui, sans-serif;
-    --font-heading:   'Space Grotesk', system-ui, sans-serif;
-    --font-accent:    "Nanum Pen Script", cursive;
+    --font-main: 'DM Sans', system-ui, sans-serif;
+    --font-display: 'Space Grotesk', system-ui, sans-serif;
+    --font-heading: 'Space Grotesk', system-ui, sans-serif;
+    --font-accent: "Nanum Pen Script", cursive;
     --font-signature: "Arizonia", cursive;
-    --font-mono:      'JetBrains Mono', 'Fira Code', monospace;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
     --font-family-sans: 'DM Sans', system-ui, sans-serif;
     --font-family-serif: Georgia, serif;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
-    --font-weight-bold:   700;
-    --font-weight-black:  800;
+    --font-weight-bold: 700;
+    --font-weight-black: 800;
 
     /* — Type Scale — */
-    --text-xs:   0.75rem;
-    --text-sm:   0.875rem;
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
     --text-base: 1rem;
-    --text-lg:   1.125rem;
-    --text-xl:   1.25rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
     --heading-1: clamp(2.8rem, 6vw, 4.2rem);
     --heading-2: clamp(2rem, 4vw, 2.8rem);
     --heading-3: clamp(1.4rem, 2.6vw, 1.9rem);
     --heading-4: clamp(1.1rem, 2vw, 1.3rem);
-    --line-tight:   1.15;
-    --line-body:    1.75;
+    --line-tight: 1.15;
+    --line-body: 1.75;
     --line-relaxed: 1.85;
-    --tracking-tight:  -0.02em;
-    --tracking-normal:  0;
-    --tracking-wide:    0.08em;
-    --tracking-wider:   0.12em;
+    --tracking-tight: -0.02em;
+    --tracking-normal: 0;
+    --tracking-wide: 0.08em;
+    --tracking-wider: 0.12em;
 
     /* — Spacing — */
-    --space-1:  0.5rem;
-    --space-2:  1rem;
-    --space-3:  1.5rem;
-    --space-4:  2rem;
-    --space-6:  3rem;
-    --space-8:  4rem;
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --space-6: 3rem;
+    --space-8: 4rem;
     --space-12: 6rem;
 
     /* — Radii — */
-    --radius-sm:   4px;
-    --radius-md:   8px;
-    --radius-lg:   16px;
-    --radius-xl:   24px;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
     --radius-full: 9999px;
 
     /* — Transitions — */
-    --transition-fast:   180ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: 180ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow:   500ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
     /* — Layout — */
-    --container-width:   1200px;
+    --container-width: 1200px;
     --container-padding: clamp(1rem, 4vw, 2rem);
-    --section-spacing:   var(--space-12);
-    --organic-radius:    60% 40% 30% 70% / 60% 30% 70% 40%;
-    --color-shape:       var(--color-surface-muted);
+    --section-spacing: var(--space-12);
+    --organic-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    --color-shape: var(--color-surface-muted);
 }
 
 /* Dark theme — Charcoal & Navy */
 [data-theme="dark"] {
-    --color-accent:        #5b8abf;
-    --color-accent-light:  #7da8d4;
-    --color-accent-dim:    rgba(91, 138, 191, 0.15);
-    --color-accent-rgb:    91, 138, 191;
+    --color-accent: #5b8abf;
+    --color-accent-light: #7da8d4;
+    --color-accent-dim: rgba(91, 138, 191, 0.15);
+    --color-accent-rgb: 91, 138, 191;
 
-    --color-bg:            #0a0a0a;
-    --color-bg-alt:        #111111;
-    --color-surface:       #141414;
-    --color-surface-soft:  #1a1a1a;
+    --color-bg: #0a0a0a;
+    --color-bg-alt: #111111;
+    --color-surface: #141414;
+    --color-surface-soft: #1a1a1a;
     --color-surface-muted: #222222;
-    --color-shape:         #2a2a2a;
+    --color-shape: #2a2a2a;
 
-    --color-ink:            #ededed;
-    --color-ink-strong:     #ffffff;
-    --color-ink-soft:       #d0d0d0;
-    --color-text-primary:   #ededed;
+    --color-ink: #ededed;
+    --color-ink-strong: #ffffff;
+    --color-ink-soft: #d0d0d0;
+    --color-text-primary: #ededed;
     --color-text-secondary: #999999;
-    --color-text-muted:     #666666;
-    --color-text-faint:     #555555;
+    --color-text-muted: #666666;
+    --color-text-faint: #555555;
     --color-text-muted-strong: #cccccc;
-    --color-text-quiet:     #444444;
-    --color-text-subtle:    #555555;
-    --color-text-disabled:  #404040;
+    --color-text-quiet: #444444;
+    --color-text-subtle: #555555;
+    --color-text-disabled: #404040;
 
-    --color-border:        #2a2a2a;
-    --color-border-soft:   #1e1e1e;
+    --color-border: #2a2a2a;
+    --color-border-soft: #1e1e1e;
     --color-border-strong: #e0e0e0;
 
-    --color-white:         #fff;
-    --color-overlay-rgb:   5, 5, 5;
-    --color-black-rgb:     0, 0, 0;
-    --color-bg-rgb:        10, 10, 10;
+    --color-white: #fff;
+    --color-overlay-rgb: 5, 5, 5;
+    --color-black-rgb: 0, 0, 0;
+    --color-bg-rgb: 10, 10, 10;
 
     --color-surface-subtle: #181818;
-    --color-surface-brush:  #161616;
-    --color-surface-lift:   #1c1c1c;
-    --color-surface-ghost:  #121212;
-    --color-surface-wash:   #1e1e1e;
-    --color-surface-dim:    #333333;
-    --color-surface-dark:   #080808;
+    --color-surface-brush: #161616;
+    --color-surface-lift: #1c1c1c;
+    --color-surface-ghost: #121212;
+    --color-surface-wash: #1e1e1e;
+    --color-surface-dim: #333333;
+    --color-surface-dark: #080808;
 
-    --color-primary-500:   var(--color-accent);
-    --color-primary-600:   #7da8d4;
-    --color-primary-700:   #a0c4e6;
-    --color-primary-rgb:   var(--color-accent-rgb);
+    --color-primary-500: var(--color-accent);
+    --color-primary-600: #7da8d4;
+    --color-primary-700: #a0c4e6;
+    --color-primary-rgb: var(--color-accent-rgb);
     --color-primary-700-rgb: 160, 196, 230;
-    --color-primary-100:   #0f2139;
-    --color-primary-200:   #1a3352;
-    --color-neutral-50:    #0a0a0a;
-    --color-neutral-100:   #111111;
-    --color-neutral-200:   #2a2a2a;
-    --color-neutral-300:   #404040;
-    --color-neutral-700:   #999999;
-    --color-neutral-800:   #cccccc;
-    --color-neutral-900:   #ededed;
+    --color-primary-100: #0f2139;
+    --color-primary-200: #1a3352;
+    --color-neutral-50: #0a0a0a;
+    --color-neutral-100: #111111;
+    --color-neutral-200: #2a2a2a;
+    --color-neutral-300: #404040;
+    --color-neutral-700: #999999;
+    --color-neutral-800: #cccccc;
+    --color-neutral-900: #ededed;
 }

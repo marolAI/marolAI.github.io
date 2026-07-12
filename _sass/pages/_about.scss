@@ -22,11 +22,9 @@
         height: 60vw;
         max-width: 800px;
         max-height: 800px;
-        background: radial-gradient(
-            ellipse at center,
-            rgba(var(--color-accent-rgb), 0.07) 0%,
-            transparent 70%
-        );
+        background: radial-gradient(ellipse at center,
+                rgba(var(--color-accent-rgb), 0.07) 0%,
+                transparent 70%);
         pointer-events: none;
         z-index: 0;
     }
@@ -39,11 +37,9 @@
         width: 40vw;
         height: 40vw;
         max-width: 500px;
-        background: radial-gradient(
-            ellipse at center,
-            rgba(var(--color-accent-rgb), 0.04) 0%,
-            transparent 70%
-        );
+        background: radial-gradient(ellipse at center,
+                rgba(var(--color-accent-rgb), 0.04) 0%,
+                transparent 70%);
         pointer-events: none;
         z-index: 0;
     }
@@ -71,7 +67,9 @@
 .hero__content {
     text-align: left;
 
-    @media (max-width: 900px) { text-align: center; }
+    @media (max-width: 900px) {
+        text-align: center;
+    }
 }
 
 /* Eyebrow label */
@@ -100,8 +98,17 @@
 }
 
 @keyframes pulse-dot {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.5; transform: scale(0.7); }
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(0.7);
+    }
 }
 
 .hero__headline {
@@ -122,9 +129,13 @@
         max-width: 52ch;
         margin-bottom: 0.875rem;
 
-        @media (max-width: 900px) { margin: 0 auto 0.875rem; }
+        @media (max-width: 900px) {
+            margin: 0 auto 0.875rem;
+        }
 
-        &:last-child { margin-bottom: 0; }
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -198,11 +209,17 @@
     color: var(--color-text-muted);
     transition: color var(--transition-fast);
 
-    i { font-size: 0.8rem; transition: transform var(--transition-fast); }
+    i {
+        font-size: 0.8rem;
+        transition: transform var(--transition-fast);
+    }
 
     &:hover {
         color: var(--color-ink);
-        i { transform: translateY(2px); }
+
+        i {
+            transform: translateY(2px);
+        }
     }
 }
 
@@ -266,7 +283,9 @@
     box-shadow: 0 8px 24px rgba(var(--color-black-rgb), 0.08);
     animation: float-badge 4s ease-in-out infinite;
 
-    @media (max-width: 480px) { display: none; }
+    @media (max-width: 480px) {
+        display: none;
+    }
 
     .badge-icon {
         font-size: 1.2rem;
@@ -289,8 +308,15 @@
 }
 
 @keyframes float-badge {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
 }
 
 /* --- Stats strip — */
@@ -301,8 +327,13 @@
     padding-top: 2rem;
     border-top: 1px solid var(--color-border-soft);
 
-    @media (max-width: 900px) { justify-content: center; }
-    @media (max-width: 480px) { gap: 20px; }
+    @media (max-width: 900px) {
+        justify-content: center;
+    }
+
+    @media (max-width: 480px) {
+        gap: 20px;
+    }
 
     .stat-item {
         .stat-num {
@@ -349,17 +380,40 @@
         animation: scroll-line 1.8s ease-in-out infinite;
     }
 
-    @media (max-width: 768px) { display: none; }
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
 
 @keyframes scroll-line {
-    0% { transform: scaleY(0); transform-origin: top; }
-    50% { transform: scaleY(1); transform-origin: top; }
-    51% { transform-origin: bottom; }
-    100% { transform: scaleY(0); transform-origin: bottom; }
+    0% {
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+
+    50% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+
+    51% {
+        transform-origin: bottom;
+    }
+
+    100% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
 }
 
 @keyframes fade-in-up {
-    from { opacity: 0; transform: translate(-50%, 12px); }
-    to { opacity: 1; transform: translate(-50%, 0); }
+    from {
+        opacity: 0;
+        transform: translate(-50%, 12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
 }
