@@ -31,49 +31,19 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
     align-items: center;
     position: relative;
 
-    /* Project number */
-    &::before {
-        content: counter(project-counter, decimal-leading-zero);
-        counter-increment: project-counter;
-        position: absolute;
-        top: -20px;
-        left: -10px;
-        font-size: clamp(4rem, 8vw, 6.5rem);
-        font-weight: 800;
-        color: var(--color-border);
-        line-height: 1;
-        pointer-events: none;
-        z-index: 0;
-        font-variant-numeric: tabular-nums;
-        letter-spacing: -0.04em;
-        transition: color var(--transition-normal);
-    }
-
-    &:hover::before {
-        color: rgba(var(--color-accent-rgb), 0.15);
-    }
-
     /* Alternating */
     &:nth-child(even) {
         grid-template-columns: 1.15fr 1fr;
         .project-media { order: 2; }
         .project-info  { order: 1; }
-
-        &::before {
-            left: auto;
-            right: -10px;
-        }
     }
 
     @media (max-width: 900px) {
         grid-template-columns: 1fr !important;
-        &::before { display: none; }
         .project-media { order: 1 !important; }
         .project-info  { order: 2 !important; text-align: left; }
     }
 }
-
-.project-list { counter-reset: project-counter; }
 
 /* ─── Project Info ─────────────────────────── */
 .project-info {
@@ -100,13 +70,12 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
     }
 
     .project-title {
-        font-family: var(--font-accent);
+        font-family: var(--font-heading);
         font-size: var(--heading-3);
-        font-weight: var(--font-weight-black);
-        text-transform: uppercase;
+        font-weight: 700;
         margin-bottom: 16px;
         line-height: var(--line-tight);
-        letter-spacing: var(--tracking-tight);
+        letter-spacing: -0.01em;
         color: var(--color-ink);
         transition: color var(--transition-fast);
     }
@@ -176,8 +145,7 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--font-accent);
-    text-transform: uppercase;
+    font-family: var(--font-heading);
     color: var(--color-ink) !important;
     text-decoration: none;
     min-height: 44px;

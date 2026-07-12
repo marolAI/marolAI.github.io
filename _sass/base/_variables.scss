@@ -1,74 +1,76 @@
 /* ============================================
    DESIGN TOKENS — Andriamarolahy R. Portfolio
+   Palette: Charcoal & Navy
    ============================================ */
 :root {
     /* — Brand Colors — */
-    --color-ink:           #0d0d0d;
-    --color-ink-strong:    #111;
+    --color-ink:           #111111;
+    --color-ink-strong:    #0a0a0a;
     --color-ink-soft:      #2a2a2a;
 
-    /* — Accent: Deep Electric Indigo — */
-    --color-accent:        #4f46e5;
-    --color-accent-light:  #818cf8;
-    --color-accent-dim:    rgba(79, 70, 229, 0.12);
-    --color-accent-rgb:    79, 70, 229;
+    /* — Accent: Deep Navy — */
+    --color-accent:        #1e3a5f;
+    --color-accent-light:  #2d5a8e;
+    --color-accent-dim:    rgba(30, 58, 95, 0.10);
+    --color-accent-rgb:    30, 58, 95;
 
     /* — Surfaces — */
-    --color-bg:            #fafaf8;
-    --color-bg-alt:        #f3f3ef;
+    --color-bg:            #fafafa;
+    --color-bg-alt:        #f2f2f2;
     --color-surface:       #ffffff;
-    --color-surface-soft:  #f7f7f4;
-    --color-surface-muted: #eeede9;
-    --color-shape:         #e8e8e4;
+    --color-surface-soft:  #f7f7f7;
+    --color-surface-muted: #ebebeb;
+    --color-shape:         #e0e0e0;
 
     /* — Text — */
-    --color-text-primary:   #0d0d0d;
-    --color-text-secondary: #555550;
-    --color-text-muted:     #888882;
+    --color-text-primary:   #111111;
+    --color-text-secondary: #555555;
+    --color-text-muted:     #888888;
     --color-text-faint:     #aaaaaa;
     --color-text-disabled:  #bbbbbb;
-    --color-text-muted-strong: #444440;
+    --color-text-muted-strong: #333333;
 
     /* — Borders — */
-    --color-border:        #e2e2de;
+    --color-border:        #e0e0e0;
     --color-border-soft:   #ebebeb;
-    --color-border-strong: #333;
+    --color-border-strong: #222222;
 
     /* — Utilities — */
     --color-white:         #fff;
     --color-white-rgb:     255, 255, 255;
     --color-black-rgb:     0, 0, 0;
-    --color-overlay-rgb:   10, 10, 16;
+    --color-overlay-rgb:   10, 10, 10;
     --color-primary-500:   var(--color-accent);
-    --color-primary-600:   #4338ca;
-    --color-primary-700:   #3730a3;
+    --color-primary-600:   #152d4a;
+    --color-primary-700:   #0f2139;
     --color-primary-rgb:   var(--color-accent-rgb);
-    --color-primary-700-rgb: 55, 48, 163;
-    --color-primary-100:   #eef2ff;
-    --color-primary-200:   #e0e7ff;
-    --color-primary-900:   #1e1b4b;
-    --color-neutral-50:    #fafaf8;
-    --color-neutral-100:   #f3f3ef;
-    --color-neutral-200:   #e8e8e4;
-    --color-neutral-300:   #d4d4d0;
-    --color-neutral-700:   #737370;
-    --color-neutral-800:   #3a3a38;
-    --color-neutral-900:   #0d0d0d;
-    --color-bg-rgb:        250, 250, 248;
+    --color-primary-700-rgb: 15, 33, 57;
+    --color-primary-100:   #e8eef6;
+    --color-primary-200:   #d1dde9;
+    --color-primary-900:   #0a1628;
+    --color-neutral-50:    #fafafa;
+    --color-neutral-100:   #f2f2f2;
+    --color-neutral-200:   #e0e0e0;
+    --color-neutral-300:   #cccccc;
+    --color-neutral-700:   #666666;
+    --color-neutral-800:   #333333;
+    --color-neutral-900:   #111111;
+    --color-bg-rgb:        250, 250, 250;
     --color-text-quiet:    #999;
     --color-text-subtle:   #777;
-    --color-surface-brush: #f0f0ec;
-    --color-surface-lift:  #f5f5f2;
-    --color-surface-ghost: #fdfdfc;
-    --color-surface-wash:  #ebebeb;
-    --color-surface-dim:   #d8d8d4;
+    --color-surface-brush: #f0f0f0;
+    --color-surface-lift:  #f5f5f5;
+    --color-surface-ghost: #fdfdfd;
+    --color-surface-wash:  #e8e8e8;
+    --color-surface-dim:   #d5d5d5;
     --color-surface-dark:  #1a1a1a;
-    --color-surface-subtle: #ededea;
-    --color-ink-strong:    #111;
+    --color-surface-subtle: #ededed;
+    --color-ink-strong:    #0a0a0a;
 
     /* — Typography — */
     --font-main:      'DM Sans', system-ui, sans-serif;
-    --font-display:   'DM Sans', system-ui, sans-serif;
+    --font-display:   'Space Grotesk', system-ui, sans-serif;
+    --font-heading:   'Space Grotesk', system-ui, sans-serif;
     --font-accent:    "Nanum Pen Script", cursive;
     --font-signature: "Arizonia", cursive;
     --font-mono:      'JetBrains Mono', 'Fira Code', monospace;
@@ -126,61 +128,61 @@
     --color-shape:       var(--color-surface-muted);
 }
 
-/* Dark theme — Premium dark slate */
+/* Dark theme — Charcoal & Navy */
 [data-theme="dark"] {
-    --color-accent:        #818cf8;
-    --color-accent-light:  #a5b4fc;
-    --color-accent-dim:    rgba(129, 140, 248, 0.15);
-    --color-accent-rgb:    129, 140, 248;
+    --color-accent:        #5b8abf;
+    --color-accent-light:  #7da8d4;
+    --color-accent-dim:    rgba(91, 138, 191, 0.15);
+    --color-accent-rgb:    91, 138, 191;
 
-    --color-bg:            #0f0f11;
-    --color-bg-alt:        #161618;
-    --color-surface:       #1a1a1d;
-    --color-surface-soft:  #1f1f22;
-    --color-surface-muted: #252528;
-    --color-shape:         #2a2a2e;
+    --color-bg:            #0a0a0a;
+    --color-bg-alt:        #111111;
+    --color-surface:       #141414;
+    --color-surface-soft:  #1a1a1a;
+    --color-surface-muted: #222222;
+    --color-shape:         #2a2a2a;
 
-    --color-ink:            #f4f4f0;
-    --color-ink-strong:     #fafafa;
-    --color-ink-soft:       #e0e0dc;
-    --color-text-primary:   #f4f4f0;
-    --color-text-secondary: #9999a0;
-    --color-text-muted:     #666670;
-    --color-text-faint:     #555560;
-    --color-text-muted-strong: #b0b0b8;
-    --color-text-quiet:     #505058;
-    --color-text-subtle:    #606068;
-    --color-text-disabled:  #484850;
+    --color-ink:            #ededed;
+    --color-ink-strong:     #ffffff;
+    --color-ink-soft:       #d0d0d0;
+    --color-text-primary:   #ededed;
+    --color-text-secondary: #999999;
+    --color-text-muted:     #666666;
+    --color-text-faint:     #555555;
+    --color-text-muted-strong: #cccccc;
+    --color-text-quiet:     #444444;
+    --color-text-subtle:    #555555;
+    --color-text-disabled:  #404040;
 
-    --color-border:        #2a2a2e;
-    --color-border-soft:   #222226;
-    --color-border-strong: #d0d0d8;
+    --color-border:        #2a2a2a;
+    --color-border-soft:   #1e1e1e;
+    --color-border-strong: #e0e0e0;
 
     --color-white:         #fff;
-    --color-overlay-rgb:   5, 5, 8;
+    --color-overlay-rgb:   5, 5, 5;
     --color-black-rgb:     0, 0, 0;
-    --color-bg-rgb:        15, 15, 17;
+    --color-bg-rgb:        10, 10, 10;
 
-    --color-surface-subtle: #1d1d20;
-    --color-surface-brush:  #1e1e21;
-    --color-surface-lift:   #1c1c1f;
-    --color-surface-ghost:  #191919;
-    --color-surface-wash:   #222225;
-    --color-surface-dim:    #303035;
-    --color-surface-dark:   #0a0a0c;
+    --color-surface-subtle: #181818;
+    --color-surface-brush:  #161616;
+    --color-surface-lift:   #1c1c1c;
+    --color-surface-ghost:  #121212;
+    --color-surface-wash:   #1e1e1e;
+    --color-surface-dim:    #333333;
+    --color-surface-dark:   #080808;
 
     --color-primary-500:   var(--color-accent);
-    --color-primary-600:   #a5b4fc;
-    --color-primary-700:   #c7d2fe;
+    --color-primary-600:   #7da8d4;
+    --color-primary-700:   #a0c4e6;
     --color-primary-rgb:   var(--color-accent-rgb);
-    --color-primary-700-rgb: 199, 210, 254;
-    --color-primary-100:   #1e1b4b;
-    --color-primary-200:   #312e81;
-    --color-neutral-50:    #0f0f11;
-    --color-neutral-100:   #161618;
-    --color-neutral-200:   #2a2a2e;
-    --color-neutral-300:   #404048;
-    --color-neutral-700:   #9999a0;
-    --color-neutral-800:   #d0d0d8;
-    --color-neutral-900:   #f4f4f0;
+    --color-primary-700-rgb: 160, 196, 230;
+    --color-primary-100:   #0f2139;
+    --color-primary-200:   #1a3352;
+    --color-neutral-50:    #0a0a0a;
+    --color-neutral-100:   #111111;
+    --color-neutral-200:   #2a2a2a;
+    --color-neutral-300:   #404040;
+    --color-neutral-700:   #999999;
+    --color-neutral-800:   #cccccc;
+    --color-neutral-900:   #ededed;
 }

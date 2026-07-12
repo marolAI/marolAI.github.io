@@ -125,13 +125,12 @@ $organic-shape: 60% 40% 30% 70% / 60% 30% 70% 40%;
     }
 
     h2 {
-        font-family: var(--font-accent);
+        font-family: var(--font-heading);
         margin-bottom: 20px;
         font-size: var(--heading-3);
-        font-weight: var(--font-weight-black);
-        text-transform: uppercase;
+        font-weight: 700;
         line-height: var(--line-tight);
-        letter-spacing: var(--tracking-tight);
+        letter-spacing: -0.01em;
     }
 
     #modal-description {
@@ -181,12 +180,12 @@ $organic-shape: 60% 40% 30% 70% / 60% 30% 70% 40%;
         &--alt {
             background: var(--color-accent);
             border-color: var(--color-accent);
-            color: #fff;
+            color: #ffffff;
 
             &:hover {
                 background: var(--color-primary-600);
                 border-color: var(--color-primary-600);
-                color: #fff;
+                color: #ffffff;
             }
         }
     }
@@ -204,8 +203,7 @@ $organic-shape: 60% 40% 30% 70% / 60% 30% 70% 40%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: var(--font-accent);
-    text-transform: uppercase;
+    font-family: var(--font-heading);
     color: var(--color-ink) !important;
     text-decoration: none;
     min-height: 44px;
