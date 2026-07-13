@@ -68,64 +68,81 @@
     --color-ink-strong: #0a0a0a;
 
     /* — Typography — */
-    --font-main: 'DM Sans', system-ui, sans-serif;
-    --font-display: 'Space Grotesk', system-ui, sans-serif;
-    --font-heading: 'Space Grotesk', system-ui, sans-serif;
-    --font-accent: "Nanum Pen Script", cursive;
+    --font-main:      'DM Sans', system-ui, sans-serif;
+    --font-display:   'Space Grotesk', system-ui, sans-serif;
+    --font-heading:   'Space Grotesk', system-ui, sans-serif;
+    --font-accent:    "Nanum Pen Script", cursive;
     --font-signature: "Arizonia", cursive;
-    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --font-mono:      'JetBrains Mono', 'Fira Code', monospace;
     --font-family-sans: 'DM Sans', system-ui, sans-serif;
     --font-family-serif: Georgia, serif;
+    --font-weight-light:  300;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
-    --font-weight-bold: 700;
-    --font-weight-black: 800;
+    --font-weight-semibold: 600;
+    --font-weight-bold:   700;
+    --font-weight-black:  800;
 
     /* — Type Scale — */
-    --text-xs: 0.75rem;
-    --text-sm: 0.875rem;
+    --text-xs:   0.75rem;
+    --text-sm:   0.875rem;
     --text-base: 1rem;
-    --text-lg: 1.125rem;
-    --text-xl: 1.25rem;
+    --text-lg:   1.125rem;
+    --text-xl:   1.25rem;
+    --text-2xs:  0.68rem;
     --heading-1: clamp(2.8rem, 6vw, 4.2rem);
     --heading-2: clamp(2rem, 4vw, 2.8rem);
     --heading-3: clamp(1.4rem, 2.6vw, 1.9rem);
     --heading-4: clamp(1.1rem, 2vw, 1.3rem);
-    --line-tight: 1.15;
-    --line-body: 1.75;
+    --line-tight:   1.15;
+    --line-body:    1.75;
     --line-relaxed: 1.85;
-    --tracking-tight: -0.02em;
-    --tracking-normal: 0;
-    --tracking-wide: 0.08em;
-    --tracking-wider: 0.12em;
+    --tracking-tight:  -0.02em;
+    --tracking-normal:  0;
+    --tracking-wide:    0.08em;
+    --tracking-wider:   0.12em;
 
     /* — Spacing — */
-    --space-1: 0.5rem;
-    --space-2: 1rem;
-    --space-3: 1.5rem;
-    --space-4: 2rem;
-    --space-6: 3rem;
-    --space-8: 4rem;
+    --space-1:  0.5rem;
+    --space-2:  1rem;
+    --space-3:  1.5rem;
+    --space-4:  2rem;
+    --space-6:  3rem;
+    --space-8:  4rem;
     --space-12: 6rem;
 
     /* — Radii — */
-    --radius-sm: 4px;
-    --radius-md: 8px;
-    --radius-lg: 16px;
-    --radius-xl: 24px;
+    --radius-sm:   4px;
+    --radius-md:   8px;
+    --radius-lg:   16px;
+    --radius-xl:   24px;
     --radius-full: 9999px;
+    --brush-radius: 120px 15px 100px 15px / 30px 45px 35px 60px;
 
     /* — Transitions — */
-    --transition-fast: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast:   180ms cubic-bezier(0.4, 0, 0.2, 1);
     --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow:   500ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --transition-reveal: 600ms cubic-bezier(0.16, 1, 0.3, 1);
 
     /* — Layout — */
-    --container-width: 1200px;
+    --container-width:   1200px;
     --container-padding: clamp(1rem, 4vw, 2rem);
-    --section-spacing: var(--space-12);
-    --organic-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-    --color-shape: var(--color-surface-muted);
+    --section-spacing:   var(--space-12);
+    --organic-radius:    60% 40% 30% 70% / 60% 30% 70% 40%;
+    --organic-radius-alt: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    --color-shape:       var(--color-surface-muted);
+    --topbar-height:     36px;
+    --header-height:     72px;
+    --blur-header:       blur(20px) saturate(180%);
+    --blur-modal:        blur(8px);
+
+    /* — Shadows — */
+    --shadow-sm:   0 2px 8px rgba(var(--color-black-rgb), 0.08);
+    --shadow-md:   0 6px 20px rgba(var(--color-black-rgb), 0.12);
+    --shadow-lg:   0 24px 80px rgba(var(--color-black-rgb), 0.25);
+    --shadow-xl:   0 20px 40px rgba(var(--color-black-rgb), 0.09);
 }
 
 /* Dark theme — Charcoal & Navy */

@@ -1,13 +1,6 @@
 /* =============================================
    PROJECTS SECTION
    ============================================= */
-:root {
-    --organic-shape: 60% 40% 30% 70% / 60% 30% 70% 40%;
-}
-
-$organic-shape: 60% 40% 30% 70% / 60% 30% 70% 40%;
-$brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
-
 .projects-section {
     padding: var(--space-12) 0 var(--space-8);
     position: relative;
@@ -72,8 +65,8 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
         margin-bottom: 18px;
 
         span {
-            font-size: 0.68rem;
-            font-weight: 700;
+            font-size: var(--text-2xs);
+            font-weight: var(--font-weight-bold);
             text-transform: uppercase;
             letter-spacing: var(--tracking-wide);
             color: var(--color-accent);
@@ -87,10 +80,10 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
     .project-title {
         font-family: var(--font-heading);
         font-size: var(--heading-3);
-        font-weight: 700;
+        font-weight: var(--font-weight-bold);
         margin-bottom: 16px;
         line-height: var(--line-tight);
-        letter-spacing: -0.01em;
+        letter-spacing: var(--tracking-tight);
         color: var(--color-ink);
         transition: color var(--transition-fast);
     }
@@ -100,7 +93,7 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
         line-height: var(--line-relaxed);
         color: var(--color-text-secondary);
         margin-bottom: 32px;
-        font-weight: 300;
+        font-weight: var(--font-weight-light);
     }
 
     .project-actions {
@@ -129,7 +122,7 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
     position: absolute;
     inset: 0;
     background-color: var(--color-surface-subtle);
-    border-radius: $organic-shape;
+    border-radius: var(--organic-radius);
     z-index: 1;
     transition: background var(--transition-normal);
 }
@@ -142,7 +135,7 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
     position: absolute;
     inset: 0;
     z-index: 2;
-    border-radius: $organic-shape;
+    border-radius: var(--organic-radius);
     overflow: hidden;
 }
 
@@ -150,7 +143,7 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: $organic-shape;
+    border-radius: var(--organic-radius);
     box-shadow: 0 20px 40px rgba(var(--color-black-rgb), 0.09);
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -183,10 +176,10 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
         inset: 0;
         background: var(--color-surface-muted);
         z-index: -1;
-        border-radius: $brush-shape;
+        border-radius: var(--brush-radius);
         transform: rotate(-1.5deg);
         pointer-events: none;
-        transition: background 0.3s ease, transform 0.3s ease;
+        transition: background var(--transition-normal), transform var(--transition-normal);
     }
 
     &:hover {
@@ -217,7 +210,7 @@ $brush-shape: 120px 15px 100px 15px / 30px 45px 35px 60px;
     border-radius: var(--radius-lg);
     font-size: 1.1rem;
     text-decoration: none;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all var(--transition-bounce);
 
     &:hover {
         transform: translateY(-3px);

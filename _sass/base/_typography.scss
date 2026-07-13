@@ -22,7 +22,7 @@ p {
 
 .lead {
     font-size: var(--text-xl);
-    font-weight: 300;
+    font-weight: var(--font-weight-light);
     color: var(--color-text-secondary);
     max-width: 60ch;
     line-height: var(--line-relaxed);
