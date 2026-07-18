@@ -20,52 +20,12 @@ $organic-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
 }
 
 .testimonial-grid {
-    display: grid;
-    grid-template-columns: minmax(160px, 200px) 1fr;
-    gap: var(--space-6);
+    display: flex;
+    flex-direction: column;
     align-items: center;
-
-    @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: var(--space-4);
-    }
+    text-align: center;
+    gap: var(--space-4);
 }
-
-.avatar-stage {
-    position: relative;
-    width: 200px;
-    max-width: 100%;
-    aspect-ratio: 1 / 1.2;
-    margin: 0 auto;
-}
-
-.avatar-blob {
-    position: absolute;
-    inset: 0;
-    background: var(--color-surface-muted);
-    border-radius: $organic-radius;
-    z-index: 1;
-}
-
-.avatar-image-mask {
-    position: absolute;
-    inset: 0;
-    border-radius: $organic-radius;
-    overflow: hidden;
-    z-index: 2;
-}
-
-.testimonial-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: var(--organic-radius);
-    box-shadow: var(--shadow-xl);
-    transition: transform var(--transition-slow);
-}
-
-.avatar-stage:hover .testimonial-img { transform: scale(1.04); }
 
 .testimonial-text-content {
     position: relative;
@@ -97,9 +57,8 @@ $organic-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
     .quote-cite {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 12px;
-
-        @media (max-width: 768px) { justify-content: center; }
 
         .author-name {
             font-family: var(--font-heading);
@@ -120,6 +79,5 @@ $organic-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
 
 @media (max-width: 768px) {
     .testimonial-stage { padding: var(--space-6) var(--space-4); }
-    .avatar-stage { width: 160px; }
     .testimonial-text-content .quote-body { font-size: 0.95rem; }
 }
