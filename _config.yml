@@ -1,23 +1,28 @@
-# Site settings
-title: Andriamarolahy R. | Python Specialist | Workflow Automation & AI OCR
+# Global Site Configuration
+title: "Andriamarolahy R."
+tagline: "Python Automation & Web Scraping Specialist"
 email: marolahyrabe@gmail.com
-description: >- 
-  A professional portfolio showcasing projects, skills, and expertise.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+description: "Custom Python automation systems, scalable web scraping pipelines, and AI document processing (OCR) built to eliminate operational business bottlenecks."
+baseurl: ""
+url: "https://marolai.github.io"
+
+author:
+  name: "Andriamarolahy R."
+  twitter: "Massa_Be"
 
 # Build settings
 markdown: kramdown
 plugins:
-  - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
 
 # Collections
 collections:
   projects:
     output: true
     permalink: /projects/:path/
-  
+
 # Exclude from processing
 exclude:
   - Gemfile
@@ -26,10 +31,5 @@ exclude:
   - vendor
   - .gitignore
 
-# Custom variables
-author: Andriamarolahy R.
-
 # Analytics
-# Set this to your Google Analytics Measurement ID (e.g. G-XXXXXXX) to enable tracking.
-# Leave blank to disable.
 google_analytics: ""
