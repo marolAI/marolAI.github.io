@@ -1,39 +1,36 @@
 <section class="hero" id="about">
     <div class="hero__container">
-        <div class="hero__image-column">
-            <div class="image-stage animate-fade-in">
-                <div class="blob-bg"></div>
-                <div class="portrait-image-mask">
-                    <img src="{{ '/assets/images/about.png' | relative_url }}" class="portrait-img" alt="Portrait of Andriamarolahy R." loading="eager">
-                </div>
-                <div class="image-badge">
-                    <span class="badge-icon">🤖</span>
-                    <div class="badge-text">
-                        <strong>AUTOMATION </strong>
-                        & WEB SCRAPING SPECIALIST
-                    </div>
-                </div>
-            </div>
-            <div class="hero-social animate-fade-in delay-3">
-                {% for medium in site.data.media %}
-                    {% if medium.label != "Email" %}
-                        <a href="{{ medium.link }}" target="_blank" rel="noopener noreferrer" aria-label="{{ medium.label }}">
-                            <i class="{{ medium.icon }}"></i>
-                        </a>
-                    {% endif %}
-                {% endfor %}
-            </div>
-        </div>
-
         <div class="hero__content">
             <h1 class="hero__headline animate-fade-in delay-1">Let's eliminate your repetitive workflows.</h1>
 
             <div class="hero__description animate-fade-in delay-2">
-                <p>I build custom Python systems that automate manual tasks, extract data from the web, and turn messy documents into structured data.</p>
-                <p>My work bridges the gap between AI and practical business engineering, specializing in Workflow Automation, Web Scraping, and AI Document Processing (OCR) to save your business dozens of hours every week. From standalone scrapers to production-ready APIs, I turn your operational bottlenecks into reliable, automated systems.</p>
+                <p>I engineer robust Python systems that autonomously extract web data, standardize messy document pipelines, and scale your operations without expanding your payroll.</p>
             </div>
 
-            <p class="hero-quick-cta animate-fade-in delay-3">Have a slow process you want to automate? <a href="mailto:{{ site.email }}">Let's chat.</a></p>
+            <p class="hero-pillars animate-fade-in delay-3">⚙️ Workflow Automation <span>•</span> 🕷️ Web Scraping <span>•</span> 🧠 AI &amp; Document Processing (OCR)</p>
+
+            <div class="hero__cta-group animate-fade-in delay-3">
+                <a href="{{ site.tally_async_audit_url }}" class="btn btn--primary hero__audit-btn" target="_blank" rel="noopener noreferrer">⚡ Request a Free Async Workflow Audit</a>
+                <p class="hero__cta-note">No calendar bookings required. Tell me your bottleneck in 2 minutes, and I’ll reply asynchronously with a custom automation blueprint.</p>
+            </div>
+        </div>
+
+        <div class="hero__tech-banner animate-fade-in delay-2" aria-label="Animated Python automation workflow preview">
+            <div class="tech-grid" aria-hidden="true"></div>
+            <div class="terminal-card">
+                <div class="terminal-topbar">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="terminal-body">
+                    <p class="terminal-command"><span>▶_</span> python pipeline.py</p>
+                    <p class="terminal-line terminal-line--one"><span>[⚙️]</span> Scraping API... <strong>[200 OK]</strong></p>
+                    <p class="terminal-line terminal-line--two"><span>[⚡]</span> Ingesting messy PDF...</p>
+                    <p class="terminal-line terminal-line--three"><span>[🤖]</span> AI processing structured output...</p>
+                    <p class="terminal-line terminal-line--four"><span>[✓]</span> Exporting clean JSON + CSV</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
