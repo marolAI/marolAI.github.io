@@ -18,7 +18,7 @@
     padding: 0 var(--container-padding);
     font-size: var(--text-xs);
     font-weight: var(--font-weight-medium);
-    letter-spacing: 0.03em;
+    letter-spacing: var(--tracking-normal);
 
     a {
         color: var(--color-white);
@@ -32,7 +32,7 @@
 
 .site-header {
     position: fixed;
-    top: var(--topbar-height);
+    top: calc(var(--topbar-height) + var(--topbar-gap));
     left: 0;
     width: 100%;
     z-index: 100;
@@ -98,7 +98,7 @@
         font-family: var(--font-main);
         font-size: var(--text-sm);
         font-weight: var(--font-weight-medium);
-        letter-spacing: 0.04em;
+        letter-spacing: var(--tracking-normal);
         color: var(--color-text-secondary);
         text-decoration: none;
         padding: 6px 14px;
@@ -125,6 +125,7 @@
     font-family: var(--font-main);
     font-size: var(--text-sm);
     font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--tracking-normal);
     color: var(--color-white) !important;
     background: var(--color-accent) !important;
     padding: 7px 18px !important;
@@ -204,10 +205,10 @@
 .mobile-nav {
     display: none;
     position: fixed;
-    top: var(--topbar-height);
+    top: calc(var(--topbar-height) + var(--topbar-gap));
     left: 0;
     width: 100%;
-    height: calc(100vh - var(--topbar-height));
+    height: calc(100vh - var(--topbar-height) - var(--topbar-gap));
     background: var(--color-bg);
     z-index: 90;
     padding: 110px 40px 60px;
@@ -225,9 +226,10 @@
 
     a {
         display: block;
-        font-size: 2.2rem;
+        font-size: clamp(1.85rem, 8vw, 2.35rem);
         font-family: var(--font-heading);
-        font-weight: var(--font-weight-bold);
+        font-weight: var(--font-weight-semibold);
+        line-height: var(--line-heading);
         color: var(--color-ink);
         margin-bottom: 8px;
         text-decoration: none;

@@ -1,7 +1,7 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
-    font-weight: var(--font-weight-bold);
-    line-height: var(--line-tight);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-heading);
     letter-spacing: var(--tracking-tight);
     margin-bottom: var(--space-2);
     color: var(--color-text-primary);
@@ -11,6 +11,8 @@ h1 { font-size: var(--heading-1); }
 h2 { font-size: var(--heading-2); }
 h3 { font-size: var(--heading-3); }
 h4 { font-size: var(--heading-4); }
+h5 { font-size: var(--text-lg); }
+h6 { font-size: var(--text-base); }
 
 p {
     margin-bottom: var(--space-2);
@@ -21,8 +23,8 @@ p {
 }
 
 .lead {
-    font-size: var(--text-xl);
-    font-weight: var(--font-weight-light);
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-normal);
     color: var(--color-text-secondary);
     max-width: 60ch;
     line-height: var(--line-relaxed);

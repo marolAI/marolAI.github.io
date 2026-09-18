@@ -8,11 +8,12 @@
     font-family: var(--font-main);
     font-size: var(--text-sm);
     font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--tracking-normal);
     text-decoration: none;
     cursor: pointer;
     border: none;
     transition: all var(--transition-fast);
-    line-height: 1;
+    line-height: 1.2;
     white-space: nowrap;
 }
 
@@ -49,7 +50,8 @@
     padding: 6px 14px;
     border-radius: var(--radius-md);
     font-size: var(--text-sm);
-    font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.2;
     text-decoration: none;
     transition: all var(--transition-fast);
 
